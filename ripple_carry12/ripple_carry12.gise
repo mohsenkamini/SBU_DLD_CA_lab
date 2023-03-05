@@ -29,6 +29,9 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="full_adder.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="full_adder.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="full_adder.xst"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="ripple_carry12.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ripple_carry12.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ripple_carry12.lso"/>
@@ -48,6 +51,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="ripple_carry12.unroutes" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="ripple_carry12.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ripple_carry12.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ripple_carry12_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="ripple_carry12_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ripple_carry12_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ripple_carry12_map.mrp" xil_pn:subbranch="Map"/>
@@ -58,6 +62,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="ripple_carry12_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="ripple_carry12_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry12_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ripple_carry12_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ripple_carry12_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="ripple_carry12_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry12_xst.xrpt"/>
@@ -95,11 +100,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1677957617" xil_pn:in_ck="-3942490058698967511" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-826854587090858360" xil_pn:start_ts="1677957609">
+    <transform xil_pn:end_ts="1678025634" xil_pn:in_ck="-3942490058698967511" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="4543213220031065876" xil_pn:start_ts="1678025626">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
@@ -119,20 +122,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1677957621" xil_pn:in_ck="-2004491153479710379" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-941403665922596636" xil_pn:start_ts="1677957617">
+    <transform xil_pn:end_ts="1678026233" xil_pn:in_ck="-2004491153479710379" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-941403665922596636" xil_pn:start_ts="1678026228">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="ripple_carry12.bld"/>
       <outfile xil_pn:name="ripple_carry12.ngd"/>
       <outfile xil_pn:name="ripple_carry12_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1677957625" xil_pn:in_ck="-2004491153479710378" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-873285459045022562" xil_pn:start_ts="1677957621">
+    <transform xil_pn:end_ts="1678026238" xil_pn:in_ck="-2004491153479710378" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-873285459045022562" xil_pn:start_ts="1678026233">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="ripple_carry12.pcf"/>
       <outfile xil_pn:name="ripple_carry12_map.map"/>
@@ -143,10 +144,9 @@
       <outfile xil_pn:name="ripple_carry12_summary.xml"/>
       <outfile xil_pn:name="ripple_carry12_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1677957632" xil_pn:in_ck="8415323003970343791" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1677957625">
+    <transform xil_pn:end_ts="1678026250" xil_pn:in_ck="8415323003970343791" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1678026238">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="ripple_carry12.ncd"/>
       <outfile xil_pn:name="ripple_carry12.pad"/>
@@ -158,10 +158,9 @@
       <outfile xil_pn:name="ripple_carry12_pad.txt"/>
       <outfile xil_pn:name="ripple_carry12_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1677957632" xil_pn:in_ck="-2004491153479710510" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1677957631">
+    <transform xil_pn:end_ts="1678026250" xil_pn:in_ck="-2004491153479710510" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1678026246">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="ripple_carry12.twr"/>
       <outfile xil_pn:name="ripple_carry12.twx"/>

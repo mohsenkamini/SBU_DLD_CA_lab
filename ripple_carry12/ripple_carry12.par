@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-MOHSEN-PC::  Sat Mar 04 11:20:26 2023
+MOHSEN-PC::  Sun Mar 05 06:24:00 2023
 
 par -w -intstyle ise -ol high -t 1 ripple_carry12_map.ncd ripple_carry12.ncd
 ripple_carry12.pcf 
@@ -38,7 +38,7 @@ Design Summary Report:
    Number of External Bidir IOBs                  0
 
 
-   Number of Slices                          7 out of 960     1%
+   Number of Slices                         18 out of 960     1%
       Number of SLICEMs                      0 out of 480     0%
 
 
@@ -57,43 +57,43 @@ Total REAL time at the beginning of Placer: 2 secs
 Total CPU  time at the beginning of Placer: 2 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:3e3) REAL time: 3 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:609) REAL time: 3 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:3e3) REAL time: 3 secs 
+Phase 2.7  Design Feasibility Check (Checksum:609) REAL time: 3 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:3e3) REAL time: 3 secs 
+Phase 3.31  Local Placement Optimization (Checksum:609) REAL time: 3 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-.......
-Phase 4.2  Initial Clock and IO Placement (Checksum:3e3) REAL time: 3 secs 
+......
+Phase 4.2  Initial Clock and IO Placement (Checksum:609) REAL time: 3 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:3e3) REAL time: 3 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:609) REAL time: 3 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:3e3) REAL time: 3 secs 
+Phase 6.36  Local Placement Optimization (Checksum:609) REAL time: 3 secs 
 
 Phase 7.3  Local Placement Optimization
-.......
-Phase 7.3  Local Placement Optimization (Checksum:7971846d) REAL time: 3 secs 
+......
+Phase 7.3  Local Placement Optimization (Checksum:7e62b75b) REAL time: 3 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:7971846d) REAL time: 3 secs 
+Phase 8.5  Local Placement Optimization (Checksum:7e62b75b) REAL time: 3 secs 
 
 Phase 9.8  Global Placement
 ..
-Phase 9.8  Global Placement (Checksum:9906fd34) REAL time: 3 secs 
+Phase 9.8  Global Placement (Checksum:dde134db) REAL time: 3 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:9906fd34) REAL time: 3 secs 
+Phase 10.5  Local Placement Optimization (Checksum:dde134db) REAL time: 3 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:93cf9f8f) REAL time: 3 secs 
+Phase 11.18  Placement Optimization (Checksum:d785836d) REAL time: 3 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:93cf9f8f) REAL time: 3 secs 
+Phase 12.5  Local Placement Optimization (Checksum:d785836d) REAL time: 3 secs 
 
 Total REAL time to Placer completion: 3 secs 
 Total CPU  time to Placer completion: 3 secs 
@@ -104,13 +104,13 @@ Writing design to file ripple_carry12.ncd
 Starting Router
 
 
-Phase  1  : 52 unrouted;      REAL time: 4 secs 
+Phase  1  : 85 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 52 unrouted;      REAL time: 4 secs 
+Phase  2  : 85 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 1 unrouted;      REAL time: 4 secs 
+Phase  3  : 4 unrouted;      REAL time: 4 secs 
 
-Phase  4  : 1 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase  4  : 4 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
@@ -125,7 +125,7 @@ Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 4
 Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
 Total REAL time to Router completion: 4 secs 
-Total CPU time to Router completion: 3 secs 
+Total CPU time to Router completion: 4 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -144,10 +144,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 4 secs 
-Total CPU time to PAR completion: 3 secs 
+Total REAL time to PAR completion: 5 secs 
+Total CPU time to PAR completion: 4 secs 
 
-Peak Memory Usage:  553 MB
+Peak Memory Usage:  552 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
