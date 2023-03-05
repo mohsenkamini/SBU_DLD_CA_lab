@@ -14,14 +14,6 @@ module cla12 (a, b, cin, sum, cout);
             g[i] = a[i] & b[i];
             p[i] = a[i] ^ b[i];
             c[i + 1] = g[i] | (p[i] & c[i]);
-            // temp = cin;
-            // for(j = 0; j <= i; j = j + 1) begin
-            //     for(k = i; k >= j; k = k - 1) begin
-            //         temp = temp & p[k];
-            //     end
-            //     c[i + 1] = c[i + 1] | temp;
-            //     temp = 1;
-            // end
             sum[i] = p[i] ^ c[i];
         end
         cout = c[12];
