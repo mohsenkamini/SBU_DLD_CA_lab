@@ -1,0 +1,10 @@
+Command line:
+   ripple_carry12_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49190
+
+Sun Mar 05 07:57:56 2023
+
+
+ Elaboration Time: 0.4375 sec

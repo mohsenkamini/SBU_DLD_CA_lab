@@ -1,0 +1,4 @@
+verilog isim_temp "full_adder.v"
+verilog isim_temp "ripple_carry12.v"
+verilog isim_temp "ripple_carry12_tb.v"
+verilog isim_temp "E:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v"
