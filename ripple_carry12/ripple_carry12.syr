@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -146,17 +146,6 @@ Unit <full_adder> synthesized.
 
 Synthesizing Unit <ripple_carry12>.
     Related source file is "ripple_carry12.v".
-WARNING:Xst:646 - Signal <w9> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <w8> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <w7> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <w6> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <w5> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <w4> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <w3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <w2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <w10> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <w1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <w0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <ripple_carry12> synthesized.
 
 
@@ -191,7 +180,7 @@ Optimizing unit <ripple_carry12> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block ripple_carry12, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block ripple_carry12, actual ratio is 1.
 
 Final Macro Processing ...
 
@@ -226,8 +215,8 @@ Design Statistics
 # IOs                              : 38
 
 Cell Usage :
-# BELS                             : 13
-#      LUT3                        : 13
+# BELS                             : 24
+#      LUT3                        : 24
 # IO Buffers                       : 38
 #      IBUF                        : 25
 #      OBUF                        : 13
@@ -238,8 +227,8 @@ Device utilization summary:
 
 Selected Device : 3s100evq100-5 
 
- Number of Slices:                        7  out of    960     0%  
- Number of 4 input LUTs:                 13  out of   1920     0%  
+ Number of Slices:                       14  out of    960     1%  
+ Number of 4 input LUTs:                 24  out of   1920     1%  
  Number of IOs:                          38
  Number of bonded IOBs:                  38  out of     66    57%  
 
@@ -274,7 +263,7 @@ Speed Grade: -5
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 6.149ns
+   Maximum combinational path delay: 17.446ns
 
 Timing Detail:
 --------------
@@ -282,34 +271,45 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 39 / 13
+  Total number of paths / destination ports: 193 / 13
 -------------------------------------------------------------------------
-Delay:               6.149ns (Levels of Logic = 3)
-  Source:            cin (PAD)
+Delay:               17.446ns (Levels of Logic = 14)
+  Source:            b<0> (PAD)
   Destination:       cout (PAD)
 
-  Data Path: cin to cout
+  Data Path: b<0> to cout
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            13   1.106   0.905  cin_IBUF (cin_IBUF)
+     IBUF:I->O             2   1.106   0.532  b_0_IBUF (b_0_IBUF)
+     LUT3:I0->O            2   0.612   0.449  FA0/cout1 (w0)
+     LUT3:I1->O            2   0.612   0.449  FA1/cout1 (w1)
+     LUT3:I1->O            2   0.612   0.449  FA2/cout1 (w2)
+     LUT3:I1->O            2   0.612   0.449  FA3/cout1 (w3)
+     LUT3:I1->O            2   0.612   0.449  FA4/cout1 (w4)
+     LUT3:I1->O            2   0.612   0.449  FA5/cout1 (w5)
+     LUT3:I1->O            2   0.612   0.449  FA6/cout1 (w6)
+     LUT3:I1->O            2   0.612   0.449  FA7/cout1 (w7)
+     LUT3:I1->O            2   0.612   0.449  FA8/cout1 (w8)
+     LUT3:I1->O            2   0.612   0.449  FA9/cout1 (w9)
+     LUT3:I1->O            2   0.612   0.449  FA10/cout1 (w10)
      LUT3:I1->O            1   0.612   0.357  FA11/cout1 (cout_OBUF)
      OBUF:I->O                 3.169          cout_OBUF (cout)
     ----------------------------------------
-    Total                      6.149ns (4.887ns logic, 1.262ns route)
-                                       (79.5% logic, 20.5% route)
+    Total                     17.446ns (11.619ns logic, 5.827ns route)
+                                       (66.6% logic, 33.4% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.49 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.17 secs
  
 --> 
 
-Total memory usage is 258120 kilobytes
+Total memory usage is 265416 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
