@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vadder12_tb
+Z0 !s110 1678014643
+!i10b 1
+!s100 O<GZA`C855mOQf]g:N2PB3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I5=ko;Q46hhLoHEi>_D9V92
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dE:/Aria/T4/Lab/DLD_CA_lab/carry_look_ahead12
+w1678013884
+8E:/Aria/T4/Lab/DLD_CA_lab/carry_look_ahead12/cla12_tb.v
+FE:/Aria/T4/Lab/DLD_CA_lab/carry_look_ahead12/cla12_tb.v
+!i122 5
+L0 3 25
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1678014643.000000
+!s107 cla12.v|E:/Aria/T4/Lab/DLD_CA_lab/carry_look_ahead12/cla12_tb.v|
+Z6 !s90 -reportprogress|300|-work|work|-stats=none|E:/Aria/T4/Lab/DLD_CA_lab/carry_look_ahead12/cla12_tb.v|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+vcla12
+R0
+!i10b 1
+!s100 FgPIRSldh<D8Ra[dkYD2T3
+R1
+I@[TC9g>?6KLjf1=d69?Lf1
+R2
+R3
+w1678014575
+8cla12.v
+Fcla12.v
+!i122 5
+L0 1 29
+R4
+r1
+!s85 0
+31
+R5
+Z9 !s107 cla12.v|E:/Aria/T4/Lab/DLD_CA_lab/carry_look_ahead12/cla12_tb.v|
+R6
+!i113 1
+R7
+R8
