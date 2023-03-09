@@ -1,0 +1,11 @@
+[Inputs]
+cin
+=a[11:0]=
+=b[11:0]=
+[Outputs]
+cout
+=sum[11:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel cla12
+
