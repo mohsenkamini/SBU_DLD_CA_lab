@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu_isim_beh.exe" -prj "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu_beh.prj" "alu" 

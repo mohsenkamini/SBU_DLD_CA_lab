@@ -30,13 +30,18 @@ module alu(
 
     always @(*) begin 
         case(OP)
-            3'd0: if (A < 0) begin
+            3'd0: if (A[11] == 1'b1) begin
                 Z = -A;
+					 CarryOut= 1'b0;
+					 OV= 1'b0;
                 if (A == 12'b1000_0000_0000)
                     OV = 1'b1;
-            end else  
-                    Z = A;
-                  
+            end else  begin
+				
+						CarryOut= 1'b0;
+						OV= 1'b0;
+                  Z = A;
+                 end
             3'd1: Z = B << 1;
             3'd2: begin Z = A & B; OV = 1'b0; end
             3'd3: begin Z = A | B; OV = 1'b0; end
