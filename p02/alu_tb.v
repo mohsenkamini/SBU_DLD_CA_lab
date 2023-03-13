@@ -1,15 +1,39 @@
-`include "alu.v"
+`timescale 1ns / 1ps
 
-module tb_alu;
+////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer:
+//
+// Create Date:   17:36:16 03/13/2023
+// Design Name:   alu
+// Module Name:   C:/Users/mahdi/alu/alu_tb.v
+// Project Name:  alu
+// Target Device:  
+// Tool versions:  
+// Description: 
+//
+// Verilog Test Fixture created by ISE for module: alu
+//
+// Dependencies:
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+////////////////////////////////////////////////////////////////////////////////
 
-reg [11:0] a, b;
-reg [2:0] op_select;
-wire [11:0] out;
-wire overflow, cout, sign;
 
-alu alu(a, b, op_select, out,, cout, sign, overflow);
+module alu_tb;
 
-initial begin
+	
+	reg [11:0] a, b;
+	reg [2:0] op_select;
+	wire [11:0] out;
+	wire overflow, cout, sign;
+
+	alu alu(a, b, op_select, out, cout, sign, overflow);
+
+	initial begin
     // abs 
     op_select = 3'd0;
     a = 12'b1110_1111_0001;
@@ -61,19 +85,21 @@ initial begin
     op_select = 3'd5;
     #50;
     //sub without overflow negetive numbers
-    op_select = 3'd6;
+    op_select = 3'd7;
     a = 12'b1000_0000_0001;
     b = 12'b1000_0110_0001;
     #50;
     //sub without overflow posetive numbers 
-    op_select = 3'd6;
+    op_select = 3'd7;
     a = 12'b0110_0000_1111;
     b = 12'b0000_0110_0001;
     #50;
     //sub postive nad negetive numbers with overflow
-    op_select = 3'd6;
+    op_select = 3'd7;
     a = 12'b1000_0001_0101;
     b = 12'b0111_0110_1011;
 end
 
+      
 endmodule
+

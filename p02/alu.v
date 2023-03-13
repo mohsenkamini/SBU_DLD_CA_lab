@@ -50,12 +50,12 @@ module alu(
             3'd6: begin {CarryOut,Z} = ({1'b0,A} + {1'b0,B}); 
                 //CarryOut = sum[12]; 
                 //Z = A + B;
-                OV = (A[11] & B[11] & (~Sign)) | ((~A[11]) & (~B[11]) & Sign);
+                OV = (A[11] & B[11] & (~Z[11])) | ((~A[11]) & (~B[11]) & Z[11]);
 					 end 
             3'd7: begin {CarryOut,Z}= {1'b0,A} - {1'b0,B};
                 //CarryOut = sum[12]; 
                 //Z = sum[11:0];
-                OV = (A[11] & B[11] & (~Sign)) | ((~A[11]) & (~B[11]) & Sign);
+                OV = (A[11] & (~B[11]) & (~Z[11])) | ((~A[11]) & (B[11]) & Z[11]);
 					 end
         endcase 
         //sum = {1'b0,A} + {1'b0,B};
