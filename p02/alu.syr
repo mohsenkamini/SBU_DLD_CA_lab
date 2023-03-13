@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: alu.prj
 
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -106,36 +106,19 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Compiling verilog file "alu.v" in library work
 Module <alu> compiled
-ERROR:HDLCompilers:247 - "alu.v" line 12 Reference to vector wire 'sum' is not a legal reg or variable lvalue
-ERROR:HDLCompilers:44 - "alu.v" line 12 Illegal left hand side of blocking assignment
-ERROR:HDLCompilers:247 - "alu.v" line 13 Reference to scalar wire 'Cout' is not a legal reg or variable lvalue
-ERROR:HDLCompilers:44 - "alu.v" line 13 Illegal left hand side of blocking assignment
-ERROR:HDLCompilers:247 - "alu.v" line 15 Reference to vector wire 'Z' is not a legal reg or variable lvalue
-ERROR:HDLCompilers:42 - "alu.v" line 15 Illegal left hand side of procedural assign
-ERROR:HDLCompilers:247 - "alu.v" line 16 Reference to vector wire 'Z' is not a legal reg or variable lvalue
-ERROR:HDLCompilers:42 - "alu.v" line 16 Illegal left hand side of procedural assign
-ERROR:HDLCompilers:247 - "alu.v" line 17 Reference to vector wire 'Z' is not a legal reg or variable lvalue
-ERROR:HDLCompilers:42 - "alu.v" line 17 Illegal left hand side of procedural assign
-ERROR:HDLCompilers:247 - "alu.v" line 18 Reference to vector wire 'Z' is not a legal reg or variable lvalue
-ERROR:HDLCompilers:42 - "alu.v" line 18 Illegal left hand side of procedural assign
-ERROR:HDLCompilers:247 - "alu.v" line 19 Reference to vector wire 'Z' is not a legal reg or variable lvalue
-ERROR:HDLCompilers:42 - "alu.v" line 19 Illegal left hand side of procedural assign
-ERROR:HDLCompilers:247 - "alu.v" line 20 Reference to vector wire 'Z' is not a legal reg or variable lvalue
-ERROR:HDLCompilers:42 - "alu.v" line 20 Illegal left hand side of procedural assign
-ERROR:HDLCompilers:247 - "alu.v" line 21 Reference to vector wire 'Z' is not a legal reg or variable lvalue
-ERROR:HDLCompilers:42 - "alu.v" line 21 Illegal left hand side of procedural assign
-ERROR:HDLCompilers:247 - "alu.v" line 22 Reference to vector wire 'Z' is not a legal reg or variable lvalue
-ERROR:HDLCompilers:42 - "alu.v" line 22 Illegal left hand side of procedural assign
-ERROR:HDLCompilers:247 - "alu.v" line 24 Reference to scalar wire 'Sign' is not a legal reg or variable lvalue
-ERROR:HDLCompilers:42 - "alu.v" line 24 Illegal left hand side of procedural assign
-ERROR:HDLCompilers:247 - "alu.v" line 26 Reference to scalar wire 'OV' is not a legal reg or variable lvalue
-ERROR:HDLCompilers:42 - "alu.v" line 26 Illegal left hand side of procedural assign
+ERROR:HDLCompilers:44 - "alu.v" line 44 Illegal left hand side of blocking assignment
+ERROR:HDLCompilers:108 - "alu.v" line 46 Part-select of scalar reg array 'sum' is illegal
+ERROR:HDLCompilers:45 - "alu.v" line 46 Illegal right hand side of blocking assignment
+ERROR:HDLCompilers:44 - "alu.v" line 49 Illegal left hand side of blocking assignment
+ERROR:HDLCompilers:108 - "alu.v" line 51 Part-select of scalar reg array 'sum' is illegal
+ERROR:HDLCompilers:45 - "alu.v" line 51 Illegal right hand side of blocking assignment
+ERROR:HDLCompilers:44 - "alu.v" line 55 Illegal left hand side of blocking assignment
 Analysis of file <"alu.prj"> failed.
 --> 
 
-Total memory usage is 246372 kilobytes
+Total memory usage is 247140 kilobytes
 
-Number of errors   :   24 (   0 filtered)
+Number of errors   :    7 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

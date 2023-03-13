@@ -5,76 +5,25 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompilers" num="247" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 12 </arg>Reference to <arg fmt="%s" index="2">vector wire &apos;sum&apos;</arg> is not a legal reg or variable lvalue
+<msg type="error" file="HDLCompilers" num="44" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 44 </arg>Illegal left hand side of blocking assignment
 </msg>
 
-<msg type="error" file="HDLCompilers" num="44" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 12 </arg>Illegal left hand side of blocking assignment
+<msg type="error" file="HDLCompilers" num="108" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 46 </arg>Part-select of <arg fmt="%s" index="2">scalar reg array &apos;sum&apos;</arg> is illegal
 </msg>
 
-<msg type="error" file="HDLCompilers" num="247" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 13 </arg>Reference to <arg fmt="%s" index="2">scalar wire &apos;Cout&apos;</arg> is not a legal reg or variable lvalue
+<msg type="error" file="HDLCompilers" num="45" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 46 </arg>Illegal right hand side of blocking assignment
 </msg>
 
-<msg type="error" file="HDLCompilers" num="44" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 13 </arg>Illegal left hand side of blocking assignment
+<msg type="error" file="HDLCompilers" num="44" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 49 </arg>Illegal left hand side of blocking assignment
 </msg>
 
-<msg type="error" file="HDLCompilers" num="247" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 15 </arg>Reference to <arg fmt="%s" index="2">vector wire &apos;Z&apos;</arg> is not a legal reg or variable lvalue
+<msg type="error" file="HDLCompilers" num="108" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 51 </arg>Part-select of <arg fmt="%s" index="2">scalar reg array &apos;sum&apos;</arg> is illegal
 </msg>
 
-<msg type="error" file="HDLCompilers" num="42" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 15 </arg>Illegal left hand side of procedural assign
+<msg type="error" file="HDLCompilers" num="45" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 51 </arg>Illegal right hand side of blocking assignment
 </msg>
 
-<msg type="error" file="HDLCompilers" num="247" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 16 </arg>Reference to <arg fmt="%s" index="2">vector wire &apos;Z&apos;</arg> is not a legal reg or variable lvalue
-</msg>
-
-<msg type="error" file="HDLCompilers" num="42" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 16 </arg>Illegal left hand side of procedural assign
-</msg>
-
-<msg type="error" file="HDLCompilers" num="247" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 17 </arg>Reference to <arg fmt="%s" index="2">vector wire &apos;Z&apos;</arg> is not a legal reg or variable lvalue
-</msg>
-
-<msg type="error" file="HDLCompilers" num="42" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 17 </arg>Illegal left hand side of procedural assign
-</msg>
-
-<msg type="error" file="HDLCompilers" num="247" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 18 </arg>Reference to <arg fmt="%s" index="2">vector wire &apos;Z&apos;</arg> is not a legal reg or variable lvalue
-</msg>
-
-<msg type="error" file="HDLCompilers" num="42" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 18 </arg>Illegal left hand side of procedural assign
-</msg>
-
-<msg type="error" file="HDLCompilers" num="247" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 19 </arg>Reference to <arg fmt="%s" index="2">vector wire &apos;Z&apos;</arg> is not a legal reg or variable lvalue
-</msg>
-
-<msg type="error" file="HDLCompilers" num="42" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 19 </arg>Illegal left hand side of procedural assign
-</msg>
-
-<msg type="error" file="HDLCompilers" num="247" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 20 </arg>Reference to <arg fmt="%s" index="2">vector wire &apos;Z&apos;</arg> is not a legal reg or variable lvalue
-</msg>
-
-<msg type="error" file="HDLCompilers" num="42" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 20 </arg>Illegal left hand side of procedural assign
-</msg>
-
-<msg type="error" file="HDLCompilers" num="247" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 21 </arg>Reference to <arg fmt="%s" index="2">vector wire &apos;Z&apos;</arg> is not a legal reg or variable lvalue
-</msg>
-
-<msg type="error" file="HDLCompilers" num="42" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 21 </arg>Illegal left hand side of procedural assign
-</msg>
-
-<msg type="error" file="HDLCompilers" num="247" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 22 </arg>Reference to <arg fmt="%s" index="2">vector wire &apos;Z&apos;</arg> is not a legal reg or variable lvalue
-</msg>
-
-<msg type="error" file="HDLCompilers" num="42" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 22 </arg>Illegal left hand side of procedural assign
-</msg>
-
-<msg type="error" file="HDLCompilers" num="247" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 24 </arg>Reference to <arg fmt="%s" index="2">scalar wire &apos;Sign&apos;</arg> is not a legal reg or variable lvalue
-</msg>
-
-<msg type="error" file="HDLCompilers" num="42" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 24 </arg>Illegal left hand side of procedural assign
-</msg>
-
-<msg type="error" file="HDLCompilers" num="247" delta="old" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 26 </arg>Reference to <arg fmt="%s" index="2">scalar wire &apos;OV&apos;</arg> is not a legal reg or variable lvalue
-</msg>
-
-<msg type="error" file="HDLCompilers" num="42" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 26 </arg>Illegal left hand side of procedural assign
+<msg type="error" file="HDLCompilers" num="44" delta="new" ><arg fmt="%s" index="1">&quot;alu.v&quot; line 55 </arg>Illegal left hand side of blocking assignment
 </msg>
 
 </messages>

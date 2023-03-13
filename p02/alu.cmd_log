@@ -6,3 +6,5 @@ xst -intstyle ise -ifn "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu.xs
 xst -intstyle ise -ifn "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu.xst" -ofn "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu.syr" 
 xst -intstyle ise -ifn "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu.xst" -ofn "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu.syr" 
 xst -intstyle ise -ifn "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu.xst" -ofn "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu.syr" 
+xst -intstyle ise -ifn "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu.xst" -ofn "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu.syr" 
+xst -intstyle ise -ifn "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu.xst" -ofn "//VBOXSVR/University/Digital-Logic-Design/Lab/p02/alu.syr" 
