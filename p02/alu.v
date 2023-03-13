@@ -33,7 +33,7 @@ module alu(
             3'd0: if (A < 0) begin
                 Z = -A;
                 if (A == 12'b1000_0000_0000)
-                    OV = 1'b0;
+                    OV = 1'b1;
             end else  
                     Z = A;
                   
