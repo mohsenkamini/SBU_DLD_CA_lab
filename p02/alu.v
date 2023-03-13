@@ -26,7 +26,7 @@ module alu(
            output reg Sign, // sign bit 
            output reg OV // Overflow flag 
     );
-    reg sum[12:0];
+    //reg sum[12:0];
 
     always @(*) begin 
         case(OP)
@@ -41,18 +41,18 @@ module alu(
             3'd3: begin Z = A | B; OV = 1'b0; end
             3'd4: begin Z = A ^ B; OV = 1'b0; end 
             3'd5: begin Z = ~A; OV = 1'b0; end 
-            3'd6: begin CarryOut = ({1'b0,A} + {1'b0,B})[12]; 
-                CarryOut = sum[12]; 
-                Z = A + B;
+            3'd6: begin {CarryOut,Z} = ({1'b0,A} + {1'b0,B}); 
+                //CarryOut = sum[12]; 
+                //Z = A + B;
                 OV = (A[11] & B[11] & (~Sign)) | ((~A[11]) & (~B[11]) & Sign);
 					 end 
-            3'd7: begin sum = {1'b0,A} - {1'b0,B};
-                CarryOut = sum[12]; 
-                Z = sum[11:0];
+            3'd7: begin {CarryOut,Z}= {1'b0,A} - {1'b0,B};
+                //CarryOut = sum[12]; 
+                //Z = sum[11:0];
                 OV = (A[11] & B[11] & (~Sign)) | ((~A[11]) & (~B[11]) & Sign);
 					 end
         endcase 
-        sum = {1'b0,A} + {1'b0,B};
+        //sum = {1'b0,A} + {1'b0,B};
         Sign = Z[11];
     end
 endmodule
