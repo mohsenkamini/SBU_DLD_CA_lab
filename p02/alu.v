@@ -8,9 +8,7 @@ module alu(
     );
     reg sum[12:0];
 
-    always @(*) begin
-        sum = {1'b0,A} + {1'b0,B};
-        CarryOut = sum[12]; 
+    always @(*) begin 
         case(OP)
             3'd0: Z = A >> 1;
             3'd1: Z = B << 1;
@@ -18,10 +16,14 @@ module alu(
             3'd3: Z = A | B;
             3'd4: Z = A ^ B;
             3'd5: Z = ~A;
-            3'd6: Z = A + B;
-            3'd7: Z = A - B;
+            3'd6: sum = {1'b0,A} + {1'b0,B};
+                CarryOut = sum[12]; 
+                Z = sum[11:0];
+            3'd7: sum = {1'b0,A} - {1'b0,B};
+                CarryOut = sum[12]; 
+                Z = sum[11:0];
         endcase 
         Sign = Z[11];
-        OV = (A[11] & b[11] & (~sum[11])) | ((~A[11]) & (~b[11]) & sum[11]);
+        OV = (A[11] & B[11] & (~Z[11])) | ((~A[11]) & (~B[11]) & Z[11]);
     end
 endmodule
