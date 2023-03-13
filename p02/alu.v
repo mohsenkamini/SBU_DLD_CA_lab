@@ -23,7 +23,8 @@ module alu(
                 CarryOut = sum[12]; 
                 Z = sum[11:0];
         endcase 
+        sum = {1'b0,A} + {1'b0,B};
         Sign = Z[11];
-        OV = (A[11] & B[11] & (~Z[11])) | ((~A[11]) & (~B[11]) & Z[11]);
+        OV = (A[11] & B[11] & (~Sign)) | ((~A[11]) & (~B[11]) & Sign);
     end
 endmodule
