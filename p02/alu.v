@@ -22,7 +22,7 @@ module alu(
            input [11:0] A,B,  // Inputs                 
            input [2:0] OP,// operation Select
            output reg [11:0] Z, // Output
-           output reg Cout, // Carry Out 
+           output reg CarryOut, // Carry Out 
            output reg Sign, // sign bit 
            output reg OV // Overflow flag 
     );
