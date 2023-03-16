@@ -26,39 +26,36 @@ module alu(
            output reg Sign, // sign bit 
            output reg OV // Overflow flag 
     );
-    //reg sum[12:0];
 
     always @(*) begin 
         case(OP)
             3'd0: if (A[11] == 1'b1) begin
-                Z = -A;
-					 CarryOut= 1'b0;
-					 OV= 1'b0;
-                if (A == 12'b1000_0000_0000)
-                    OV = 1'b1;
-            end else  begin
-				
-						CarryOut= 1'b0;
-						OV= 1'b0;
-                  Z = A;
-                 end
+                	Z = -A;
+	  		CarryOut= 1'b0;
+			OV= 1'b0;
+                  	if (A == 12'b1000_0000_0000)
+                        	OV = 1'b1;
+                  end
+		  else  begin
+			CarryOut= 1'b0;
+			OV= 1'b0;
+                	Z = A;
+                  end
             3'd1: Z = B << 1;
             3'd2: begin Z = A & B; OV = 1'b0; end
             3'd3: begin Z = A | B; OV = 1'b0; end
             3'd4: begin Z = A ^ B; OV = 1'b0; end 
             3'd5: begin Z = ~A; OV = 1'b0; end 
-            3'd6: begin {CarryOut,Z} = ({1'b0,A} + {1'b0,B}); 
-                //CarryOut = sum[12]; 
-                //Z = A + B;
-                OV = (A[11] & B[11] & (~Z[11])) | ((~A[11]) & (~B[11]) & Z[11]);
-					 end 
-            3'd7: begin {CarryOut,Z}= {1'b0,A} - {1'b0,B};
-                //CarryOut = sum[12]; 
-                //Z = sum[11:0];
-                OV = (A[11] & (~B[11]) & (~Z[11])) | ((~A[11]) & (B[11]) & Z[11]);
-					 end
+            3'd6: begin 
+		    {CarryOut,Z} = ({1'b0,A} + {1'b0,B}); 
+                    OV = (A[11] & B[11] & (~Z[11])) | ((~A[11]) & (~B[11]) & Z[11]);
+		  end 
+		
+            3'd7: begin
+	  	    {CarryOut,Z}= {1'b0,A} - {1'b0,B};
+                    OV = (A[11] & (~B[11]) & (~Z[11])) | ((~A[11]) & (B[11]) & Z[11]);
+		  end
         endcase 
-        //sum = {1'b0,A} + {1'b0,B};
         Sign = Z[11];
     end
 endmodule
