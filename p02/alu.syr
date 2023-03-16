@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: alu.prj
 
@@ -131,15 +131,15 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <alu>.
     Related source file is "alu.v".
-WARNING:Xst:737 - Found 12-bit latch for signal <$old_Z_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <CarryOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <OV>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <CarryOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 12-bit xor2 for signal <old_Z_3$xor0000> created at line 42.
+    Found 12-bit adder for signal <old_Z_3$addsub0000> created at line 34.
+    Found 12-bit xor2 for signal <old_Z_3$xor0000> created at line 48.
     Summary:
-	inferred   2 Adder/Subtractor(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  12 Multiplexer(s).
 Unit <alu> synthesized.
 
 
@@ -147,12 +147,14 @@ Unit <alu> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 2
+# Adders/Subtractors                                   : 3
+ 12-bit adder                                          : 1
  13-bit adder                                          : 1
  13-bit subtractor                                     : 1
-# Latches                                              : 3
+# Latches                                              : 2
  1-bit latch                                           : 2
- 12-bit latch                                          : 1
+# Multiplexers                                         : 1
+ 12-bit 8-to-1 multiplexer                             : 1
 # Xors                                                 : 1
  12-bit xor2                                           : 1
 
@@ -167,12 +169,14 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 2
+# Adders/Subtractors                                   : 3
+ 12-bit adder                                          : 1
  13-bit adder                                          : 1
  13-bit subtractor                                     : 1
-# Latches                                              : 3
+# Latches                                              : 2
  1-bit latch                                           : 2
- 12-bit latch                                          : 1
+# Multiplexers                                         : 1
+ 12-bit 8-to-1 multiplexer                             : 1
 # Xors                                                 : 1
  12-bit xor2                                           : 1
 
@@ -186,8 +190,7 @@ Optimizing unit <alu> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block alu, actual ratio is 6.
-Latch _old_Z_3_11 has been replicated 2 time(s) to handle iob=true attribute.
+Found area constraint ratio of 100 (+ 5) on block alu, actual ratio is 8.
 
 Final Macro Processing ...
 
@@ -222,20 +225,20 @@ Design Statistics
 # IOs                              : 42
 
 Cell Usage :
-# BELS                             : 153
+# BELS                             : 216
 #      GND                         : 1
-#      LUT2                        : 38
-#      LUT3                        : 1
-#      LUT4                        : 61
-#      MUXCY                       : 24
-#      MUXF5                       : 2
+#      INV                         : 11
+#      LUT1                        : 1
+#      LUT2                        : 24
+#      LUT3                        : 60
+#      LUT4                        : 9
+#      MUXCY                       : 35
+#      MUXF5                       : 25
+#      MUXF6                       : 12
 #      VCC                         : 1
-#      XORCY                       : 25
-# FlipFlops/Latches                : 16
-#      LD                          : 15
-#      LDE                         : 1
-# Clock Buffers                    : 1
-#      BUFG                        : 1
+#      XORCY                       : 37
+# FlipFlops/Latches                : 2
+#      LD                          : 2
 # IO Buffers                       : 42
 #      IBUF                        : 27
 #      OBUF                        : 15
@@ -246,13 +249,11 @@ Device utilization summary:
 
 Selected Device : 3s100evq100-5 
 
- Number of Slices:                       56  out of    960     5%  
- Number of Slice Flip Flops:              1  out of   1920     0%  
- Number of 4 input LUTs:                100  out of   1920     5%  
+ Number of Slices:                       55  out of    960     5%  
+ Number of 4 input LUTs:                105  out of   1920     5%  
  Number of IOs:                          42
  Number of bonded IOBs:                  42  out of     66    63%  
-    IOB Flip Flops:                      15
- Number of GCLKs:                         1  out of     24     4%  
+    IOB Flip Flops:                       2
 
 ---------------------------
 Partition Resource Summary:
@@ -272,13 +273,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-OP<1>                              | IBUF+BUFG              | 1     |
-OV_or0000(OV_or00001:O)            | NONE(*)(OV)            | 1     |
-old_Z_3_not0001(old_Z_3_not00011:O)| NONE(*)(_old_Z_3_0)    | 14    |
------------------------------------+------------------------+-------+
+-------------------------------------+------------------------+-------+
+Clock Signal                         | Clock buffer(FF name)  | Load  |
+-------------------------------------+------------------------+-------+
+OV_not0001(OV_not00011:O)            | NONE(*)(OV)            | 1     |
+CarryOut_not0001(CarryOut_not00011:O)| NONE(*)(CarryOut)      | 1     |
+-------------------------------------+------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -293,29 +293,66 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 6.682ns
+   Minimum input arrival time before clock: 8.190ns
    Maximum output required time after clock: 4.114ns
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 10.330ns
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'OP<1>'
-  Total number of paths / destination ports: 76 / 2
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OV_not0001'
+  Total number of paths / destination ports: 114 / 1
 -------------------------------------------------------------------------
-Offset:              5.235ns (Levels of Logic = 16)
-  Source:            B<0> (PAD)
-  Destination:       CarryOut (LATCH)
-  Destination Clock: OP<1> falling
+Offset:              8.190ns (Levels of Logic = 19)
+  Source:            A<0> (PAD)
+  Destination:       OV (LATCH)
+  Destination Clock: OV_not0001 falling
 
-  Data Path: B<0> to CarryOut
+  Data Path: A<0> to OV
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             5   1.106   0.607  B_0_IBUF (B_0_IBUF)
-     LUT2:I1->O            1   0.612   0.000  Msub__AUX_2_lut<0> (Msub__AUX_2_lut<0>)
+     IBUF:I->O             7   1.106   0.754  A_0_IBUF (A_0_IBUF)
+     LUT2:I0->O            1   0.612   0.000  Madd__AUX_1_lut<0>1 (Madd__AUX_1_lut<0>1)
+     MUXCY:S->O            1   0.404   0.000  Madd__AUX_1_cy<0> (Madd__AUX_1_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Madd__AUX_1_cy<1> (Madd__AUX_1_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Madd__AUX_1_cy<2> (Madd__AUX_1_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Madd__AUX_1_cy<3> (Madd__AUX_1_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Madd__AUX_1_cy<4> (Madd__AUX_1_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Madd__AUX_1_cy<5> (Madd__AUX_1_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Madd__AUX_1_cy<6> (Madd__AUX_1_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Madd__AUX_1_cy<7> (Madd__AUX_1_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Madd__AUX_1_cy<8> (Madd__AUX_1_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Madd__AUX_1_cy<9> (Madd__AUX_1_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  Madd__AUX_1_cy<10> (Madd__AUX_1_cy<10>)
+     XORCY:CI->O           1   0.699   0.426  Madd__AUX_1_xor<11> (_AUX_1<11>)
+     LUT3:I1->O            1   0.612   0.000  Mmux__old_Z_3_42 (Mmux__old_Z_3_42)
+     MUXF5:I1->O           1   0.278   0.000  Mmux__old_Z_3_3_f5_1 (Mmux__old_Z_3_3_f52)
+     MUXF6:I1->O           3   0.451   0.481  Mmux__old_Z_3_2_f6_1 (Z_11_OBUF)
+     LUT3:I2->O            1   0.612   0.360  OV_mux000018 (OV_mux000018)
+     LUT4:I3->O            1   0.612   0.000  OV_mux000099 (OV_mux0000)
+     LD:D                      0.268          OV
+    ----------------------------------------
+    Total                      8.190ns (6.169ns logic, 2.021ns route)
+                                       (75.3% logic, 24.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CarryOut_not0001'
+  Total number of paths / destination ports: 114 / 1
+-------------------------------------------------------------------------
+Offset:              5.407ns (Levels of Logic = 16)
+  Source:            A<0> (PAD)
+  Destination:       CarryOut (LATCH)
+  Destination Clock: CarryOut_not0001 falling
+
+  Data Path: A<0> to CarryOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.106   0.754  A_0_IBUF (A_0_IBUF)
+     LUT2:I0->O            1   0.612   0.000  Msub__AUX_2_lut<0> (Msub__AUX_2_lut<0>)
      MUXCY:S->O            1   0.404   0.000  Msub__AUX_2_cy<0> (Msub__AUX_2_cy<0>)
      MUXCY:CI->O           1   0.052   0.000  Msub__AUX_2_cy<1> (Msub__AUX_2_cy<1>)
      MUXCY:CI->O           1   0.052   0.000  Msub__AUX_2_cy<2> (Msub__AUX_2_cy<2>)
@@ -328,103 +365,40 @@ Offset:              5.235ns (Levels of Logic = 16)
      MUXCY:CI->O           1   0.052   0.000  Msub__AUX_2_cy<9> (Msub__AUX_2_cy<9>)
      MUXCY:CI->O           1   0.052   0.000  Msub__AUX_2_cy<10> (Msub__AUX_2_cy<10>)
      MUXCY:CI->O           0   0.051   0.000  Msub__AUX_2_cy<11> (Msub__AUX_2_cy<11>)
-     XORCY:CI->O           1   0.699   0.360  Msub__AUX_2_xor<12> (_AUX_2<12>)
-     LUT4:I3->O            1   0.612   0.000  CarryOut_mux00001 (CarryOut_mux0000)
-     LDE:D                     0.268          CarryOut
+     XORCY:CI->O           1   0.699   0.357  Msub__AUX_2_xor<12> (_AUX_2<12>)
+     MUXF5:S->O            1   0.641   0.000  CarryOut_mux00001_f5 (CarryOut_mux0000)
+     LD:D                      0.268          CarryOut
     ----------------------------------------
-    Total                      5.235ns (4.268ns logic, 0.967ns route)
-                                       (81.5% logic, 18.5% route)
+    Total                      5.407ns (4.297ns logic, 1.111ns route)
+                                       (79.5% logic, 20.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'OV_or0000'
-  Total number of paths / destination ports: 4 / 1
--------------------------------------------------------------------------
-Offset:              4.690ns (Levels of Logic = 3)
-  Source:            OP<1> (PAD)
-  Destination:       OV (LATCH)
-  Destination Clock: OV_or0000 falling
-
-  Data Path: OP<1> to OV
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            29   1.106   1.224  OP_1_IBUF (OP_1_IBUF1)
-     LUT2:I0->O           15   0.612   0.867  OV_mux000021 (N32)
-     LUT4:I3->O            1   0.612   0.000  OV_mux00001 (OV_mux0000)
-     LD:D                      0.268          OV
-    ----------------------------------------
-    Total                      4.690ns (2.598ns logic, 2.092ns route)
-                                       (55.4% logic, 44.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'old_Z_3_not0001'
-  Total number of paths / destination ports: 831 / 14
--------------------------------------------------------------------------
-Offset:              6.682ns (Levels of Logic = 5)
-  Source:            OP<1> (PAD)
-  Destination:       _old_Z_3_1 (LATCH)
-  Destination Clock: old_Z_3_not0001 falling
-
-  Data Path: OP<1> to _old_Z_3_1
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            29   1.106   1.141  OP_1_IBUF (OP_1_IBUF1)
-     LUT2:I1->O           11   0.612   0.823  old_Z_3_mux0000<0>41 (old_Z_3_mux0000<0>41)
-     LUT4:I2->O            1   0.612   0.387  old_Z_3_mux0000<1>71 (old_Z_3_mux0000<1>71)
-     LUT4:I2->O            1   0.612   0.509  old_Z_3_mux0000<1>77 (old_Z_3_mux0000<1>77)
-     LUT2:I0->O            1   0.612   0.000  old_Z_3_mux0000<1>101 (old_Z_3_mux0000<1>)
-     LD:D                      0.268          _old_Z_3_1
-    ----------------------------------------
-    Total                      6.682ns (3.822ns logic, 2.860ns route)
-                                       (57.2% logic, 42.8% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'OP<1>'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CarryOut_not0001'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              4.114ns (Levels of Logic = 1)
   Source:            CarryOut (LATCH)
   Destination:       CarryOut (PAD)
-  Source Clock:      OP<1> falling
+  Source Clock:      CarryOut_not0001 falling
 
   Data Path: CarryOut to CarryOut
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q              1   0.588   0.357  CarryOut (CarryOut_OBUF)
+     LD:G->Q               1   0.588   0.357  CarryOut (CarryOut_OBUF)
      OBUF:I->O                 3.169          CarryOut_OBUF (CarryOut)
     ----------------------------------------
     Total                      4.114ns (3.757ns logic, 0.357ns route)
                                        (91.3% logic, 8.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'old_Z_3_not0001'
-  Total number of paths / destination ports: 13 / 13
--------------------------------------------------------------------------
-Offset:              4.114ns (Levels of Logic = 1)
-  Source:            _old_Z_3_11_1 (LATCH)
-  Destination:       Sign (PAD)
-  Source Clock:      old_Z_3_not0001 falling
-
-  Data Path: _old_Z_3_11_1 to Sign
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.588   0.357  _old_Z_3_11_1 (_old_Z_3_11_1)
-     OBUF:I->O                 3.169          Sign_OBUF (Sign)
-    ----------------------------------------
-    Total                      4.114ns (3.757ns logic, 0.357ns route)
-                                       (91.3% logic, 8.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'OV_or0000'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OV_not0001'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              4.114ns (Levels of Logic = 1)
   Source:            OV (LATCH)
   Destination:       OV (PAD)
-  Source Clock:      OV_or0000 falling
+  Source Clock:      OV_not0001 falling
 
   Data Path: OV to OV
                                 Gate     Net
@@ -437,16 +411,50 @@ Offset:              4.114ns (Levels of Logic = 1)
                                        (91.3% logic, 8.7% route)
 
 =========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 783 / 13
+-------------------------------------------------------------------------
+Delay:               10.330ns (Levels of Logic = 18)
+  Source:            A<0> (PAD)
+  Destination:       Z<10> (PAD)
+
+  Data Path: A<0> to Z<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.106   0.754  A_0_IBUF (A_0_IBUF)
+     LUT1:I0->O            1   0.612   0.000  Madd_old_Z_3_addsub0000_cy<0>_rt (Madd_old_Z_3_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.404   0.000  Madd_old_Z_3_addsub0000_cy<0> (Madd_old_Z_3_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_Z_3_addsub0000_cy<1> (Madd_old_Z_3_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_Z_3_addsub0000_cy<2> (Madd_old_Z_3_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_Z_3_addsub0000_cy<3> (Madd_old_Z_3_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_Z_3_addsub0000_cy<4> (Madd_old_Z_3_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_Z_3_addsub0000_cy<5> (Madd_old_Z_3_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_Z_3_addsub0000_cy<6> (Madd_old_Z_3_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_Z_3_addsub0000_cy<7> (Madd_old_Z_3_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_Z_3_addsub0000_cy<8> (Madd_old_Z_3_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_Z_3_addsub0000_cy<9> (Madd_old_Z_3_addsub0000_cy<9>)
+     XORCY:CI->O           1   0.699   0.387  Madd_old_Z_3_addsub0000_xor<10> (old_Z_3_addsub0000<10>)
+     LUT3:I2->O            1   0.612   0.426  old_Z_3_mux0000<10>1 (old_Z_3_mux0000<10>)
+     LUT3:I1->O            1   0.612   0.000  Mmux__old_Z_3_61 (Mmux__old_Z_3_61)
+     MUXF5:I0->O           1   0.278   0.000  Mmux__old_Z_3_4_f5_0 (Mmux__old_Z_3_4_f51)
+     MUXF6:I0->O           1   0.451   0.357  Mmux__old_Z_3_2_f6_0 (Z_10_OBUF)
+     OBUF:I->O                 3.169          Z_10_OBUF (Z<10>)
+    ----------------------------------------
+    Total                     10.330ns (8.406ns logic, 1.924ns route)
+                                       (81.4% logic, 18.6% route)
+
+=========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.05 secs
+Total CPU time to Xst completion: 4.94 secs
  
 --> 
 
-Total memory usage is 261192 kilobytes
+Total memory usage is 259464 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

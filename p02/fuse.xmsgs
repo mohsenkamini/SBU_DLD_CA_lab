@@ -11,8 +11,5 @@
 <msg type="error" file="HDLCompiler" num="1091" delta="unknown" >Save failed due to mkdir failure
 </msg>
 
-<msg type="error" file="HDLCompiler" num="1091" delta="unknown" >Save failed due to mkdir failure
-</msg>
-
 </messages>
 
