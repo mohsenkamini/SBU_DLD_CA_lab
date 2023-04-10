@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module  shift_add_multiply #(parameter n=32)(product,multiplier,multiplicand,start,clk,out);
+module  shift_add_multiply #(parameter n=32)(multiplier,multiplicand,start,clk,out);
   
    input [n - 1:0]  multiplier, multiplicand;
    input         start,clk;
@@ -28,7 +28,8 @@ module  shift_add_multiply #(parameter n=32)(product,multiplier,multiplicand,sta
 
    integer bit = 0;
 //    wire   ready = !bit;
-   reg [n - 1:0]    product;
+	reg			out;
+   reg [n:0]    product;
    reg           c;
    reg [n:0]    m; 
 
