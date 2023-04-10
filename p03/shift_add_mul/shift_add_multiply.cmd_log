@@ -3,3 +3,4 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-tq144-5 shift_add_m
 map -intstyle ise -p xc3s100e-tq144-5 -cm area -ir off -pr off -c 100 -o shift_add_multiply_map.ncd shift_add_multiply.ngd shift_add_multiply.pcf 
 par -w -intstyle ise -ol high -t 1 shift_add_multiply_map.ncd shift_add_multiply.ncd shift_add_multiply.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml shift_add_multiply.twx shift_add_multiply.ncd -o shift_add_multiply.twr shift_add_multiply.pcf 
+xst -intstyle ise -ifn "//VBOXSVR/University/Digital-Logic-Design/Lab/p03/shift_add_mul/shift_add_multiply.xst" -ofn "//VBOXSVR/University/Digital-Logic-Design/Lab/p03/shift_add_mul/shift_add_multiply.syr" 

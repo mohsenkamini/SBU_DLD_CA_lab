@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: shift_add_multiply.prj
 
@@ -42,7 +42,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "shift_add_multiply"
 Output Format                      : NGC
-Target Device                      : xc3s100e-5-tq144
+Target Device                      : xc3s100e-5-vq100
 
 ---- Source Options
 Top Module Name                    : shift_add_multiply
@@ -247,14 +247,16 @@ Cell Usage :
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s100etq144-5 
+Selected Device : 3s100evq100-5 
 
  Number of Slices:                       40  out of    960     4%  
  Number of Slice Flip Flops:             53  out of   1920     2%  
  Number of 4 input LUTs:                 60  out of   1920     3%  
  Number of IOs:                          67
- Number of bonded IOBs:                  67  out of    108    62%  
+ Number of bonded IOBs:                  67  out of     66   101% (*) 
  Number of GCLKs:                         1  out of     24     4%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -382,13 +384,13 @@ Offset:              6.412ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.66 secs
+Total CPU time to Xst completion: 4.59 secs
  
 --> 
 
-Total memory usage is 258696 kilobytes
+Total memory usage is 258824 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

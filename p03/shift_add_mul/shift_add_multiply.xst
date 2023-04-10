@@ -5,7 +5,7 @@ run
 -ifmt mixed
 -ofn shift_add_multiply
 -ofmt NGC
--p xc3s100e-5-tq144
+-p xc3s100e-5-vq100
 -top shift_add_multiply
 -opt_mode Speed
 -opt_level 1

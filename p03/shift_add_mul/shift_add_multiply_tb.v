@@ -53,14 +53,14 @@ module shift_add_multiply_tb;
 	initial begin
 		// Initialize Inputs
 		
-		multiplier = 0;
-		multiplicand = 0;
-		start = 0;
+		start = 1;		
+		multiplier = 12;
+		multiplicand = 4;
 		clk = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-        
+       
 		// Add stimulus here
 
 	end
