@@ -30,7 +30,6 @@ module  shift_add_multiply #(parameter n=32)(multiplier,multiplicand,start,clk,o
 //    wire   ready = !bit;
 	reg			out;
    reg [n:0]    product;
-   reg           c;
    reg [n:0]    m; 
 
    initial bit = 0;
@@ -39,7 +38,6 @@ module  shift_add_multiply #(parameter n=32)(multiplier,multiplicand,start,clk,o
         bit = 0;
         product[n:0] = 0;
         m = {1'b0 , multiplicand};
-        c = 1'd0;
      end else if(bit < n) begin
                  if(multiplier[bit])
                  begin 
