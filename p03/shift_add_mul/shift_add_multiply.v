@@ -27,10 +27,9 @@ module  shift_add_multiply #(parameter n=32)(multiplier,multiplicand,start,clk,o
    integer bit = 0;
    reg			out;
    reg [n:0]    product;
-   initial bit = 0;
 	
    always @(posedge clk )begin 
-     if(bit >= n + n - 1) begin
+     if(start || bit >= n + n - 1) begin
         bit = 0;
         product[n:0] = 0;
 		  out<=0;

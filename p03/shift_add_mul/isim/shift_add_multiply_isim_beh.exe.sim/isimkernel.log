@@ -2,12 +2,12 @@ Command line:
    shift_add_multiply_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49230
+     -socket  49269
 
-Mon Apr 10 05:42:34 2023
+Mon Apr 10 06:14:14 2023
 
 
- Elaboration Time: 0.453125 sec
+ Elaboration Time: 0.796875 sec
 
  Current Memory Usage: 682.394 Meg
 
@@ -16,13 +16,13 @@ Mon Apr 10 05:42:34 2023
  Total Signal Drivers   : 6
  Total Blocks           : 2
  Total Primitive Blocks : 2
- Total Processes        : 9
+ Total Processes        : 8
  Total Traceable Variables  : 22
  Total Scalar Nets and Variables : 258
 
- Total Simulation Time: 0.46875 sec
+ Total Simulation Time: 0.796875 sec
 
- Current Memory Usage: 682.394 Meg
+ Current Memory Usage: 996.966 Meg
 
-Mon Apr 10 05:42:51 2023
+Mon Apr 10 06:15:00 2023
 

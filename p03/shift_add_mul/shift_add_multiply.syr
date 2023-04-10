@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: shift_add_multiply.prj
 
@@ -42,7 +42,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "shift_add_multiply"
 Output Format                      : NGC
-Target Device                      : xc3s100e-5-vq100
+Target Device                      : xc3s1600e-5-fg320
 
 ---- Source Options
 Top Module Name                    : shift_add_multiply
@@ -122,7 +122,6 @@ Analyzing hierarchy for module <shift_add_multiply> in library <work> with param
 =========================================================================
 Analyzing top module <shift_add_multiply>.
 	n = 32'sb00000000000000000000000000100000
-WARNING:Xst:1643 - "shift_add_multiply.v" line 30: You are giving the signal bit a default value. bit already had a default value, which will be overridden by this one.
 Module <shift_add_multiply> is correct for synthesis.
  
 
@@ -134,13 +133,12 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <shift_add_multiply>.
     Related source file is "shift_add_multiply.v".
-WARNING:Xst:647 - Input <start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <out>.
     Found 32-bit register for signal <bit>.
-    Found 32-bit adder for signal <bit$add0000> created at line 43.
-    Found 33-bit adder for signal <old_product_2$addsub0000> created at line 39.
-    Found 33-bit comparator greatequal for signal <old_product_2$cmp_ge0000> created at line 33.
-    Found 33-bit comparator less for signal <old_product_2$cmp_lt0000> created at line 38.
+    Found 32-bit adder for signal <bit$add0000> created at line 42.
+    Found 33-bit adder for signal <old_product_2$addsub0000> created at line 38.
+    Found 33-bit comparator greatequal for signal <old_product_2$cmp_ge0000> created at line 32.
+    Found 33-bit comparator less for signal <old_product_2$cmp_lt0000> created at line 37.
     Found 33-bit register for signal <product>.
     Summary:
 	inferred  66 D-type flip-flop(s).
@@ -203,7 +201,7 @@ Optimizing unit <shift_add_multiply> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block shift_add_multiply, actual ratio is 7.
+Found area constraint ratio of 100 (+ 5) on block shift_add_multiply, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -245,10 +243,10 @@ Cell Usage :
 #      GND                         : 1
 #      INV                         : 2
 #      LUT1                        : 1
-#      LUT2                        : 67
-#      LUT3                        : 16
-#      LUT3_D                      : 2
-#      LUT4                        : 46
+#      LUT2                        : 36
+#      LUT3                        : 48
+#      LUT4                        : 45
+#      LUT4_D                      : 2
 #      MUXCY                       : 82
 #      MUXF5                       : 8
 #      MUXF6                       : 4
@@ -260,21 +258,21 @@ Cell Usage :
 #      FD                          : 65
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 65
-#      IBUF                        : 64
+# IO Buffers                       : 66
+#      IBUF                        : 65
 #      OBUF                        : 1
 =========================================================================
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s100evq100-5 
+Selected Device : 3s1600efg320-5 
 
- Number of Slices:                       70  out of    960     7%  
- Number of Slice Flip Flops:             65  out of   1920     3%  
- Number of 4 input LUTs:                134  out of   1920     6%  
+ Number of Slices:                       70  out of  14752     0%  
+ Number of Slice Flip Flops:             65  out of  29504     0%  
+ Number of 4 input LUTs:                134  out of  29504     0%  
  Number of IOs:                          67
- Number of bonded IOBs:                  66  out of     66   100%  
+ Number of bonded IOBs:                  67  out of    250    26%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -309,8 +307,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 7.923ns (Maximum Frequency: 126.215MHz)
-   Minimum input arrival time before clock: 6.934ns
+   Minimum period: 7.884ns (Maximum Frequency: 126.844MHz)
+   Minimum input arrival time before clock: 6.836ns
    Maximum output required time after clock: 4.040ns
    Maximum combinational path delay: No path found
 
@@ -320,10 +318,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 7.923ns (frequency: 126.215MHz)
+  Clock period: 7.884ns (frequency: 126.844MHz)
   Total number of paths / destination ports: 25052 / 65
 -------------------------------------------------------------------------
-Delay:               7.923ns (Levels of Logic = 44)
+Delay:               7.884ns (Levels of Logic = 44)
   Source:            bit_0 (FF)
   Destination:       bit_31 (FF)
   Source Clock:      clk rising
@@ -344,8 +342,8 @@ Delay:               7.923ns (Levels of Logic = 44)
      MUXCY:CI->O           1   0.051   0.000  Mcompar_old_product_2_cmp_lt0000_cy<6>_0 (Mcompar_old_product_2_cmp_lt0000_cy<6>1)
      MUXCY:CI->O           1   0.051   0.000  Mcompar_old_product_2_cmp_lt0000_cy<7>_0 (Mcompar_old_product_2_cmp_lt0000_cy<7>1)
      MUXCY:CI->O           1   0.051   0.000  Mcompar_old_product_2_cmp_lt0000_cy<8>_0 (Mcompar_old_product_2_cmp_lt0000_cy<8>1)
-     MUXCY:CI->O          35   0.399   1.143  Mcompar_old_product_2_cmp_lt0000_cy<9> (old_product_2_cmp_ge0000)
-     LUT2:I1->O            1   0.612   0.000  Madd_bit_add0000_lut<0> (Madd_bit_add0000_lut<0>)
+     MUXCY:CI->O          34   0.399   1.103  Mcompar_old_product_2_cmp_lt0000_cy<9> (old_product_2_cmp_ge0000)
+     LUT3:I2->O            1   0.612   0.000  Madd_bit_add0000_lut<0> (Madd_bit_add0000_lut<0>)
      MUXCY:S->O            1   0.404   0.000  Madd_bit_add0000_cy<0> (Madd_bit_add0000_cy<0>)
      MUXCY:CI->O           1   0.052   0.000  Madd_bit_add0000_cy<1> (Madd_bit_add0000_cy<1>)
      MUXCY:CI->O           1   0.052   0.000  Madd_bit_add0000_cy<2> (Madd_bit_add0000_cy<2>)
@@ -380,14 +378,14 @@ Delay:               7.923ns (Levels of Logic = 44)
      XORCY:CI->O           1   0.699   0.000  Madd_bit_add0000_xor<31> (bit_add0000<31>)
      FD:D                      0.268          bit_31
     ----------------------------------------
-    Total                      7.923ns (5.869ns logic, 2.053ns route)
-                                       (74.1% logic, 25.9% route)
+    Total                      7.884ns (5.869ns logic, 2.014ns route)
+                                       (74.5% logic, 25.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 2640 / 33
+  Total number of paths / destination ports: 3233 / 65
 -------------------------------------------------------------------------
-Offset:              6.934ns (Levels of Logic = 8)
+Offset:              6.836ns (Levels of Logic = 8)
   Source:            multiplier<1> (PAD)
   Destination:       product_0 (FF)
   Destination Clock: clk rising
@@ -401,13 +399,13 @@ Offset:              6.934ns (Levels of Logic = 8)
      MUXF5:I0->O           1   0.278   0.000  Mmux__COND_1_8_f5 (Mmux__COND_1_8_f5)
      MUXF6:I0->O           1   0.451   0.000  Mmux__COND_1_6_f6 (Mmux__COND_1_6_f6)
      MUXF7:I0->O           1   0.451   0.000  Mmux__COND_1_4_f7 (Mmux__COND_1_4_f7)
-     MUXF8:I0->O           3   0.451   0.481  Mmux__COND_1_2_f8 (_COND_1)
-     LUT3_D:I2->O         31   0.612   1.103  Mmux__old_product_21031 (N2)
+     MUXF8:I0->O           2   0.451   0.383  Mmux__COND_1_2_f8 (_COND_1)
+     LUT4_D:I3->O         31   0.612   1.103  Mmux__old_product_21041 (N3)
      LUT4:I2->O            1   0.612   0.000  Mmux__old_product_2651 (_old_product_2<9>)
      FD:D                      0.268          product_8
     ----------------------------------------
-    Total                      6.934ns (4.841ns logic, 2.093ns route)
-                                       (69.8% logic, 30.2% route)
+    Total                      6.836ns (4.841ns logic, 1.995ns route)
+                                       (70.8% logic, 29.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -431,14 +429,14 @@ Offset:              4.040ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 2.88 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.94 secs
  
 --> 
 
-Total memory usage is 262408 kilobytes
+Total memory usage is 262024 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    4 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
