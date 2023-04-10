@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module #(n=32) shift_add_multiply(product,ready,multiplier,multiplicand,start,clk);
+module  shift_add_multiply #(parameter n=32)(product,ready,multiplier,multiplicand,start,clk);
   
    input [15:0]  multiplier, multiplicand;
    input         start,clk;
@@ -63,4 +63,4 @@ module #(n=32) shift_add_multiply(product,ready,multiplier,multiplicand,start,cl
             bit = bit -1;
       end   
 
-endmodules
+endmodule

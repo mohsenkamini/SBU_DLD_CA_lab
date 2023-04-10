@@ -1,0 +1,394 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: shift_add_multiply.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "shift_add_multiply.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "shift_add_multiply"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-tq144
+
+---- Source Options
+Top Module Name                    : shift_add_multiply
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "shift_add_multiply.v" in library work
+Module <shift_add_multiply> compiled
+No errors in compilation
+Analysis of file <"shift_add_multiply.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <shift_add_multiply> in library <work> with parameters.
+	n = "00000000000000000000000000100000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <shift_add_multiply>.
+	n = 32'sb00000000000000000000000000100000
+Module <shift_add_multiply> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <c> in unit <shift_add_multiply> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <shift_add_multiply>.
+    Related source file is "shift_add_multiply.v".
+    Found 32-bit register for signal <product>.
+    Found 16-bit adder carry out for signal <AUX_1$addsub0000>.
+    Found 5-bit down counter for signal <bit>.
+    Found 16-bit register for signal <m>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  48 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <shift_add_multiply> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 16-bit adder carry out                                : 1
+# Counters                                             : 1
+ 5-bit down counter                                    : 1
+# Registers                                            : 33
+ 1-bit register                                        : 32
+ 16-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 16-bit adder carry out                                : 1
+# Counters                                             : 1
+ 5-bit down counter                                    : 1
+# Registers                                            : 48
+ Flip-Flops                                            : 48
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <shift_add_multiply> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block shift_add_multiply, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : shift_add_multiply.ngr
+Top Level Output File Name         : shift_add_multiply
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 67
+
+Cell Usage :
+# BELS                             : 93
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 21
+#      LUT3                        : 35
+#      LUT3_L                      : 1
+#      LUT4                        : 1
+#      LUT4_D                      : 1
+#      MUXCY                       : 16
+#      XORCY                       : 16
+# FlipFlops/Latches                : 53
+#      FDE                         : 32
+#      FDRE                        : 20
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 66
+#      IBUF                        : 33
+#      OBUF                        : 33
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100etq144-5 
+
+ Number of Slices:                       40  out of    960     4%  
+ Number of Slice Flip Flops:             53  out of   1920     2%  
+ Number of 4 input LUTs:                 60  out of   1920     3%  
+ Number of IOs:                          67
+ Number of bonded IOBs:                  67  out of    108    62%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 53    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 4.737ns (Maximum Frequency: 211.088MHz)
+   Minimum input arrival time before clock: 4.190ns
+   Maximum output required time after clock: 6.412ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.737ns (frequency: 211.088MHz)
+  Total number of paths / destination ports: 953 / 111
+-------------------------------------------------------------------------
+Delay:               4.737ns (Levels of Logic = 18)
+  Source:            product_16 (FF)
+  Destination:       product_30 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: product_16 to product_30
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.514   0.520  product_16 (product_16)
+     LUT2:I1->O            1   0.612   0.000  Madd_AUX_1_addsub0000_lut<0> (Madd_AUX_1_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Madd_AUX_1_addsub0000_cy<0> (Madd_AUX_1_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<1> (Madd_AUX_1_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<2> (Madd_AUX_1_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<3> (Madd_AUX_1_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<4> (Madd_AUX_1_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<5> (Madd_AUX_1_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<6> (Madd_AUX_1_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<7> (Madd_AUX_1_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<8> (Madd_AUX_1_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<9> (Madd_AUX_1_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<10> (Madd_AUX_1_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<11> (Madd_AUX_1_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<12> (Madd_AUX_1_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<13> (Madd_AUX_1_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_AUX_1_addsub0000_cy<14> (Madd_AUX_1_addsub0000_cy<14>)
+     XORCY:CI->O           1   0.699   0.387  Madd_AUX_1_addsub0000_xor<15> (AUX_1_addsub0000<15>)
+     LUT3:I2->O            1   0.612   0.000  product_30_mux00001 (product_30_mux0000)
+     FDRE:D                    0.268          product_30
+    ----------------------------------------
+    Total                      4.737ns (3.830ns logic, 0.907ns route)
+                                       (80.8% logic, 19.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 101 / 85
+-------------------------------------------------------------------------
+Offset:              4.190ns (Levels of Logic = 3)
+  Source:            start (PAD)
+  Destination:       product_15 (FF)
+  Destination Clock: clk rising
+
+  Data Path: start to product_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.106   0.603  start_IBUF (start_IBUF)
+     LUT3:I0->O           21   0.612   0.989  bit_and00001 (bit_and0000)
+     LUT3:I2->O            1   0.612   0.000  product_9_mux00001 (product_9_mux0000)
+     FDE:D                     0.268          product_9
+    ----------------------------------------
+    Total                      4.190ns (2.598ns logic, 1.592ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 37 / 33
+-------------------------------------------------------------------------
+Offset:              6.412ns (Levels of Logic = 3)
+  Source:            bit_0 (FF)
+  Destination:       ready (PAD)
+  Source Clock:      clk rising
+
+  Data Path: bit_0 to ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.541  bit_0 (bit_0)
+     LUT4_D:I3->O          5   0.612   0.607  Mcount_bit_cy<3>11 (Mcount_bit_cy<3>)
+     LUT2:I1->O            1   0.612   0.357  ready1 (ready_OBUF)
+     OBUF:I->O                 3.169          ready_OBUF (ready)
+    ----------------------------------------
+    Total                      6.412ns (4.907ns logic, 1.505ns route)
+                                       (76.5% logic, 23.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.66 secs
+ 
+--> 
+
+Total memory usage is 258696 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

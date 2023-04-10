@@ -1,0 +1,5 @@
+set -tmpdir "//VBOXSVR/University/Digital-Logic-Design/Lab/p03/shift_add_mul/xst/projnav.tmp"
+set -xsthdpdir "//VBOXSVR/University/Digital-Logic-Design/Lab/p03/shift_add_mul/xst"
+elaborate
+-ifn .prj
+-ifmt mixed
