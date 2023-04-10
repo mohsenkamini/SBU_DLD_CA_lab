@@ -20,47 +20,42 @@
 //////////////////////////////////////////////////////////////////////////////////
 module  shift_add_multiply #(parameter n=32)(product,ready,multiplier,multiplicand,start,clk);
   
-   input [15:0]  multiplier, multiplicand;
+   input [n - 1:0]  multiplier, multiplicand;
    input         start,clk;
-   output        product;
+   output        out;
    output        ready;
 
-   reg [4:0]     bit;
-   wire          ready = !bit;
-   reg [31:0]    product;
+   integer bit = 0;
+//    wire   ready = !bit;
+   reg [n - 1:0]    product;
    reg           c;
-   reg [15:0]    m; 
+   reg [n:0]    m; 
 
    initial bit = 0;
-   always @( posedge clk )
-     if( ready && start) begin
-
-        bit = 16;
-        product[31:16] = 16'd0;
-        product[15:0] = multiplier;
-        m = multiplicand;
+   always @(posedge clk )begin 
+     if(start) begin
+        bit = 0;
+        product[n:0] = 0;
+        m = {1'b0 , multiplicand};
         c = 1'd0;
-     end else if(bit) begin
-//add,shift algorithm   for unsigned multiplication.        
-//following the notes.
-                 if(product[0])
+     end else if(bin < n) begin
+                 if(multiplier[bit])
                  begin 
-                   {c,product[31:16]} = product[31:16] + m ;
+                    product = product + m ;
                        //shift
-                     product[31:0] = {c,product[31:1]};
-                       c = 0;
+                    out = product[0]; 
+                    product = {1'b0 ,product[n - 1:1]};
                  end              
                 else
                  begin
-                     product[31:0] = {c,product[31:1]};
-                      c = 0;
+                     out = product[0]; 
+                    product = {1'b0 ,product[n - 1:1]};
                  end 
-//better way of doing is....
-//        if(product[0]) {c,product[31:16]} = product[31:16] + m ;
-//              
-//         product[31:0] = {c,product[31:1]};
-//          c = 0;
-            bit = bit -1;
-      end   
-
+    end 
+     else if (bin < 2 * n - 1) begin
+        out = product[0]; 
+        product = {1'b0 ,product[n - 1:1]};
+        end    
+    bit = bit  + 1;
+   end
 endmodule
