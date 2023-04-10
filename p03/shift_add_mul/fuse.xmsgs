@@ -5,10 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"//VBOXSVR/University/Digital-Logic-Design/Lab/p03/shift_add_mul/shift_add_multiply_tb.v" Line 51: Syntax error near &quot;<arg fmt="%s" index="1">end</arg>&quot;.
+<msg type="error" file="HDLCompiler" num="1091" delta="unknown" >Save failed due to mkdir failure
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="unknown" >"//VBOXSVR/University/Digital-Logic-Design/Lab/p03/shift_add_mul/shift_add_multiply_tb.v" Line 25: Module &lt;<arg fmt="%s" index="1">shift_add_multiply_tb</arg>&gt; ignored due to previous errors.
+<msg type="error" file="HDLCompiler" num="1091" delta="unknown" >Save failed due to mkdir failure
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1091" delta="unknown" >Save failed due to mkdir failure
 </msg>
 
 </messages>

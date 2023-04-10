@@ -122,7 +122,7 @@ Analyzing hierarchy for module <shift_add_multiply> in library <work> with param
 =========================================================================
 Analyzing top module <shift_add_multiply>.
 	n = 32'sb00000000000000000000000000100000
-WARNING:Xst:1643 - "shift_add_multiply.v" line 35: You are giving the signal bit a default value. bit already had a default value, which will be overridden by this one.
+WARNING:Xst:1643 - "shift_add_multiply.v" line 30: You are giving the signal bit a default value. bit already had a default value, which will be overridden by this one.
 Module <shift_add_multiply> is correct for synthesis.
  
 
@@ -134,19 +134,18 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <shift_add_multiply>.
     Related source file is "shift_add_multiply.v".
+WARNING:Xst:647 - Input <start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <out>.
     Found 32-bit register for signal <bit>.
-    Found 32-bit adder for signal <bit$add0000> created at line 59.
-    Found 33-bit register for signal <m>.
-    Found 33-bit comparator greatequal for signal <out$cmp_ge0000> created at line 55.
+    Found 32-bit adder for signal <bit$add0000> created at line 43.
+    Found 33-bit adder for signal <old_product_2$addsub0000> created at line 39.
+    Found 33-bit comparator greatequal for signal <old_product_2$cmp_ge0000> created at line 33.
+    Found 33-bit comparator less for signal <old_product_2$cmp_lt0000> created at line 38.
     Found 33-bit register for signal <product>.
-    Found 33-bit comparator less for signal <product$cmp_lt0000> created at line 41.
-    Found 33-bit comparator less for signal <product$cmp_lt0001> created at line 55.
-    Found 33-bit 4-to-1 multiplexer for signal <product$mux0000>.
     Summary:
-	inferred  99 D-type flip-flop(s).
+	inferred  66 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred   3 Comparator(s).
+	inferred   2 Comparator(s).
 	inferred  34 Multiplexer(s).
 Unit <shift_add_multiply> synthesized.
 
@@ -158,13 +157,13 @@ Macro Statistics
 # Adders/Subtractors                                   : 2
  32-bit adder                                          : 1
  33-bit adder                                          : 1
-# Registers                                            : 4
+# Registers                                            : 3
  1-bit register                                        : 1
  32-bit register                                       : 1
- 33-bit register                                       : 2
-# Comparators                                          : 3
+ 33-bit register                                       : 1
+# Comparators                                          : 2
  33-bit comparator greatequal                          : 1
- 33-bit comparator less                                : 2
+ 33-bit comparator less                                : 1
 # Multiplexers                                         : 2
  1-bit 32-to-1 multiplexer                             : 1
  33-bit 4-to-1 multiplexer                             : 1
@@ -175,21 +174,21 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <m_32> (without init value) has a constant value of 0 in block <shift_add_multiply>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2404 -  FFs/Latches <m<32:32>> (without init value) have a constant value of 0 in block <shift_add_multiply>.
-WARNING:Xst:2677 - Node <product_32> of sequential type is unconnected in block <shift_add_multiply>.
+WARNING:Xst:1710 - FF/Latch <product_32> (without init value) has a constant value of 0 in block <shift_add_multiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <product<32:32>> (without init value) have a constant value of 0 in block <shift_add_multiply>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # Adders/Subtractors                                   : 2
- 32-bit adder                                          : 2
-# Registers                                            : 97
- Flip-Flops                                            : 97
-# Comparators                                          : 3
+ 32-bit adder                                          : 1
+ 33-bit adder                                          : 1
+# Registers                                            : 65
+ Flip-Flops                                            : 65
+# Comparators                                          : 2
  33-bit comparator greatequal                          : 1
- 33-bit comparator less                                : 2
+ 33-bit comparator less                                : 1
 # Multiplexers                                         : 2
  1-bit 32-to-1 multiplexer                             : 1
  33-bit 4-to-1 multiplexer                             : 1
@@ -199,13 +198,12 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <product_31> (without init value) has a constant value of 0 in block <shift_add_multiply>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <shift_add_multiply> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block shift_add_multiply, actual ratio is 9.
+Found area constraint ratio of 100 (+ 5) on block shift_add_multiply, actual ratio is 7.
 
 Final Macro Processing ...
 
@@ -213,8 +211,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 96
- Flip-Flops                                            : 96
+# Registers                                            : 65
+ Flip-Flops                                            : 65
 
 =========================================================================
 
@@ -243,28 +241,27 @@ Design Statistics
 # IOs                              : 67
 
 Cell Usage :
-# BELS                             : 294
+# BELS                             : 297
 #      GND                         : 1
 #      INV                         : 2
 #      LUT1                        : 1
-#      LUT2                        : 68
-#      LUT3                        : 17
-#      LUT4                        : 44
-#      MUXCY                       : 81
+#      LUT2                        : 67
+#      LUT3                        : 16
+#      LUT3_D                      : 2
+#      LUT4                        : 46
+#      MUXCY                       : 82
 #      MUXF5                       : 8
 #      MUXF6                       : 4
 #      MUXF7                       : 2
 #      MUXF8                       : 1
 #      VCC                         : 1
 #      XORCY                       : 64
-# FlipFlops/Latches                : 96
-#      FD                          : 32
-#      FDE                         : 33
-#      FDRE                        : 31
+# FlipFlops/Latches                : 65
+#      FD                          : 65
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 66
-#      IBUF                        : 65
+# IO Buffers                       : 65
+#      IBUF                        : 64
 #      OBUF                        : 1
 =========================================================================
 
@@ -273,14 +270,12 @@ Device utilization summary:
 
 Selected Device : 3s100evq100-5 
 
- Number of Slices:                       87  out of    960     9%  
- Number of Slice Flip Flops:             96  out of   1920     5%  
- Number of 4 input LUTs:                132  out of   1920     6%  
+ Number of Slices:                       70  out of    960     7%  
+ Number of Slice Flip Flops:             65  out of   1920     3%  
+ Number of 4 input LUTs:                134  out of   1920     6%  
  Number of IOs:                          67
- Number of bonded IOBs:                  67  out of     66   101% (*) 
+ Number of bonded IOBs:                  66  out of     66   100%  
  Number of GCLKs:                         1  out of     24     4%  
-
-WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -303,7 +298,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 96    |
+clk                                | BUFGP                  | 65    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -314,8 +309,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 6.203ns (Maximum Frequency: 161.210MHz)
-   Minimum input arrival time before clock: 5.876ns
+   Minimum period: 7.923ns (Maximum Frequency: 126.215MHz)
+   Minimum input arrival time before clock: 6.934ns
    Maximum output required time after clock: 4.040ns
    Maximum combinational path delay: No path found
 
@@ -325,51 +320,32 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.203ns (frequency: 161.210MHz)
-  Total number of paths / destination ports: 5922 / 96
+  Clock period: 7.923ns (frequency: 126.215MHz)
+  Total number of paths / destination ports: 25052 / 65
 -------------------------------------------------------------------------
-Delay:               6.203ns (Levels of Logic = 11)
-  Source:            bit_5 (FF)
-  Destination:       product_0 (FF)
+Delay:               7.923ns (Levels of Logic = 44)
+  Source:            bit_0 (FF)
+  Destination:       bit_31 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: bit_5 to product_0
+  Data Path: bit_0 to bit_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               3   0.514   0.603  bit_5 (bit_5)
-     LUT1:I0->O            1   0.612   0.000  Mcompar_product_cmp_lt0000_cy<0>_rt (Mcompar_product_cmp_lt0000_cy<0>_rt)
-     MUXCY:S->O            1   0.404   0.000  Mcompar_product_cmp_lt0000_cy<0> (Mcompar_product_cmp_lt0000_cy<0>)
-     MUXCY:CI->O           1   0.051   0.000  Mcompar_product_cmp_lt0000_cy<1> (Mcompar_product_cmp_lt0000_cy<1>)
-     MUXCY:CI->O           1   0.051   0.000  Mcompar_product_cmp_lt0000_cy<2> (Mcompar_product_cmp_lt0000_cy<2>)
-     MUXCY:CI->O           1   0.052   0.000  Mcompar_product_cmp_lt0000_cy<3> (Mcompar_product_cmp_lt0000_cy<3>)
-     MUXCY:CI->O           1   0.052   0.000  Mcompar_product_cmp_lt0000_cy<4> (Mcompar_product_cmp_lt0000_cy<4>)
-     MUXCY:CI->O           1   0.052   0.000  Mcompar_product_cmp_lt0000_cy<5> (Mcompar_product_cmp_lt0000_cy<5>)
-     MUXCY:CI->O           1   0.052   0.000  Mcompar_product_cmp_lt0000_cy<6> (Mcompar_product_cmp_lt0000_cy<6>)
-     MUXCY:CI->O           1   0.052   0.000  Mcompar_product_cmp_lt0000_cy<7> (Mcompar_product_cmp_lt0000_cy<7>)
-     MUXCY:CI->O          33   0.399   1.142  Mcompar_product_cmp_lt0000_cy<8> (Mcompar_product_cmp_lt0000_cy<8>)
-     LUT2:I1->O           31   0.612   1.073  product_not00011 (product_not0001)
-     FDRE:CE                   0.483          product_0
-    ----------------------------------------
-    Total                      6.203ns (3.385ns logic, 2.818ns route)
-                                       (54.6% logic, 45.4% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 1648 / 160
--------------------------------------------------------------------------
-Offset:              5.876ns (Levels of Logic = 34)
-  Source:            start (PAD)
-  Destination:       bit_31 (FF)
-  Destination Clock: clk rising
-
-  Data Path: start to bit_31
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            96   1.106   1.242  start_IBUF (start_IBUF)
-     LUT2:I0->O            1   0.612   0.000  Madd_bit_add0000_lut<0> (Madd_bit_add0000_lut<0>)
+     FD:C->Q              18   0.514   0.911  bit_0 (bit_0)
+     LUT4:I3->O            1   0.612   0.000  Mcompar_old_product_2_cmp_lt0000_lut<0> (Mcompar_old_product_2_cmp_lt0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Mcompar_old_product_2_cmp_lt0000_cy<0>_0 (Mcompar_old_product_2_cmp_lt0000_cy<0>1)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_product_2_cmp_lt0000_cy<1>_0 (Mcompar_old_product_2_cmp_lt0000_cy<1>1)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_product_2_cmp_lt0000_cy<2>_0 (Mcompar_old_product_2_cmp_lt0000_cy<2>1)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_product_2_cmp_lt0000_cy<3>_0 (Mcompar_old_product_2_cmp_lt0000_cy<3>1)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_product_2_cmp_lt0000_cy<4>_0 (Mcompar_old_product_2_cmp_lt0000_cy<4>1)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_product_2_cmp_lt0000_cy<5>_0 (Mcompar_old_product_2_cmp_lt0000_cy<5>1)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_product_2_cmp_lt0000_cy<6>_0 (Mcompar_old_product_2_cmp_lt0000_cy<6>1)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_product_2_cmp_lt0000_cy<7>_0 (Mcompar_old_product_2_cmp_lt0000_cy<7>1)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_product_2_cmp_lt0000_cy<8>_0 (Mcompar_old_product_2_cmp_lt0000_cy<8>1)
+     MUXCY:CI->O          35   0.399   1.143  Mcompar_old_product_2_cmp_lt0000_cy<9> (old_product_2_cmp_ge0000)
+     LUT2:I1->O            1   0.612   0.000  Madd_bit_add0000_lut<0> (Madd_bit_add0000_lut<0>)
      MUXCY:S->O            1   0.404   0.000  Madd_bit_add0000_cy<0> (Madd_bit_add0000_cy<0>)
      MUXCY:CI->O           1   0.052   0.000  Madd_bit_add0000_cy<1> (Madd_bit_add0000_cy<1>)
      MUXCY:CI->O           1   0.052   0.000  Madd_bit_add0000_cy<2> (Madd_bit_add0000_cy<2>)
@@ -404,8 +380,34 @@ Offset:              5.876ns (Levels of Logic = 34)
      XORCY:CI->O           1   0.699   0.000  Madd_bit_add0000_xor<31> (bit_add0000<31>)
      FD:D                      0.268          bit_31
     ----------------------------------------
-    Total                      5.876ns (4.634ns logic, 1.242ns route)
-                                       (78.9% logic, 21.1% route)
+    Total                      7.923ns (5.869ns logic, 2.053ns route)
+                                       (74.1% logic, 25.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2640 / 33
+-------------------------------------------------------------------------
+Offset:              6.934ns (Levels of Logic = 8)
+  Source:            multiplier<1> (PAD)
+  Destination:       product_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: multiplier<1> to product_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.509  multiplier_1_IBUF (multiplier_1_IBUF)
+     LUT3:I0->O            1   0.612   0.000  Mmux__COND_1_10 (Mmux__COND_1_10)
+     MUXF5:I0->O           1   0.278   0.000  Mmux__COND_1_8_f5 (Mmux__COND_1_8_f5)
+     MUXF6:I0->O           1   0.451   0.000  Mmux__COND_1_6_f6 (Mmux__COND_1_6_f6)
+     MUXF7:I0->O           1   0.451   0.000  Mmux__COND_1_4_f7 (Mmux__COND_1_4_f7)
+     MUXF8:I0->O           3   0.451   0.481  Mmux__COND_1_2_f8 (_COND_1)
+     LUT3_D:I2->O         31   0.612   1.103  Mmux__old_product_21031 (N2)
+     LUT4:I2->O            1   0.612   0.000  Mmux__old_product_2651 (_old_product_2<9>)
+     FD:D                      0.268          product_8
+    ----------------------------------------
+    Total                      6.934ns (4.841ns logic, 2.093ns route)
+                                       (69.8% logic, 30.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -420,7 +422,7 @@ Offset:              4.040ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              1   0.514   0.357  out (out_OBUF)
+     FD:C->Q               1   0.514   0.357  out (out_OBUF)
      OBUF:I->O                 3.169          out_OBUF (out)
     ----------------------------------------
     Total                      4.040ns (3.683ns logic, 0.357ns route)
@@ -429,14 +431,14 @@ Offset:              4.040ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 2.95 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.88 secs
  
 --> 
 
-Total memory usage is 262728 kilobytes
+Total memory usage is 262408 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

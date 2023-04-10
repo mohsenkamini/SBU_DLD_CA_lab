@@ -25,8 +25,8 @@
 module shift_add_multiply_tb;
 
 	// Inputs
-	reg [15:0] multiplier;
-	reg [15:0] multiplicand;
+	reg [31:0] multiplier;
+	reg [31:0] multiplicand;
 	reg start;
 	reg clk;
 
@@ -47,14 +47,14 @@ module shift_add_multiply_tb;
 	always
 	begin
 		clk<=!clk;
-		#10
+		#10;
 	end
 
 	initial begin
 		// Initialize Inputs
 		
 		start = 1;		
-		multiplier = 12;
+		multiplier = 3;
 		multiplicand = 4;
 		clk = 0;
 
