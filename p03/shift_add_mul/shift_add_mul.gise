@@ -52,6 +52,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="shift_add_multiply.unroutes" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="shift_add_multiply.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="shift_add_multiply.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="shift_add_multiply_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="shift_add_multiply_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="shift_add_multiply_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="shift_add_multiply_map.mrp" xil_pn:subbranch="Map"/>
@@ -86,6 +87,10 @@
     <transform xil_pn:end_ts="1681124984" xil_pn:in_ck="8768048941099284231" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1681124984">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="shift_add_multiply.v"/>
       <outfile xil_pn:name="shift_add_multiply_tb.v"/>
     </transform>
@@ -117,9 +122,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1681124997" xil_pn:in_ck="-3378970470751009463" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="2500393965828060970" xil_pn:start_ts="1681124991">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
+    <transform xil_pn:end_ts="1681127597" xil_pn:in_ck="-3378970470751009463" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="2500393965828060970" xil_pn:start_ts="1681127595">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -127,7 +131,6 @@
       <outfile xil_pn:name="shift_add_multiply.ngc"/>
       <outfile xil_pn:name="shift_add_multiply.ngr"/>
       <outfile xil_pn:name="shift_add_multiply.prj"/>
-      <outfile xil_pn:name="shift_add_multiply.stx"/>
       <outfile xil_pn:name="shift_add_multiply.syr"/>
       <outfile xil_pn:name="shift_add_multiply.xst"/>
       <outfile xil_pn:name="shift_add_multiply_stx_beh.prj"/>
@@ -145,6 +148,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>

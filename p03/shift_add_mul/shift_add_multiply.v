@@ -18,12 +18,13 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module  shift_add_multiply #(parameter n=32)(product,ready,multiplier,multiplicand,start,clk);
+module  shift_add_multiply #(parameter n=32)(product,multiplier,multiplicand,start,clk,out);
   
    input [n - 1:0]  multiplier, multiplicand;
    input         start,clk;
    output        out;
-   output        ready;
+	//output			product;
+  // output        ready;
 
    integer bit = 0;
 //    wire   ready = !bit;
@@ -38,7 +39,7 @@ module  shift_add_multiply #(parameter n=32)(product,ready,multiplier,multiplica
         product[n:0] = 0;
         m = {1'b0 , multiplicand};
         c = 1'd0;
-     end else if(bin < n) begin
+     end else if(bit < n) begin
                  if(multiplier[bit])
                  begin 
                     product = product + m ;
@@ -48,11 +49,11 @@ module  shift_add_multiply #(parameter n=32)(product,ready,multiplier,multiplica
                  end              
                 else
                  begin
-                     out = product[0]; 
+                    out = product[0]; 
                     product = {1'b0 ,product[n - 1:1]};
                  end 
     end 
-     else if (bin < 2 * n - 1) begin
+     else if (bit < 2 * n - 1) begin
         out = product[0]; 
         product = {1'b0 ,product[n - 1:1]};
         end    
