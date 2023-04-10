@@ -23,39 +23,21 @@ module  shift_add_multiply #(parameter n=32)(multiplier,multiplicand,start,clk,o
    input [n - 1:0]  multiplier, multiplicand;
    input         start,clk;
    output        out;
-	//output			product;
-  // output        ready;
 
    integer bit = 0;
-//    wire   ready = !bit;
-	reg			out;
+    reg			out;
    reg [n:0]    product;
-   reg [n:0]    m; 
 
    initial bit = 0;
    always @(posedge clk )begin 
-     if(start) begin
+     if(start || bit >= 2 * n - 1) begin
         bit = 0;
         product[n:0] = 0;
-        m = {1'b0 , multiplicand};
-     end else if(bit < n) begin
-                 if(multiplier[bit])
-                 begin 
-                    product = product + m ;
-                       //shift
-                    out = product[0]; 
-                    product = {1'b0 ,product[n - 1:1]};
-                 end              
-                else
-                 begin
-                    out = product[0]; 
-                    product = {1'b0 ,product[n - 1:1]};
-                 end 
-    end 
-     else if (bit < 2 * n - 1) begin
-        out = product[0]; 
-        product = {1'b0 ,product[n - 1:1]};
-        end    
+     end else if(bit < n && multiplier[bit]) begin
+            product = product + {1'b0 , multiplicand} ;          
+    end  
+    product = product << 1;
+    out = product[0]; 
     bit = bit  + 1;
    end
 endmodule
