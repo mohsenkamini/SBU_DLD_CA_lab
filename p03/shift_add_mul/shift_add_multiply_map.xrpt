@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Mon Apr 10 06:15:31 2023">
+  <application stringID="Map" timeStamp="Mon Apr 10 07:00:19 2023">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -69,16 +69,16 @@
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="0"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="415988"/>
-        <item stringID="MAP_TOTAL_REAL_TIME" value="2 secs "/>
-        <item stringID="MAP_TOTAL_CPU_TIME" value="2 secs "/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="415412"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="1 secs "/>
+        <item stringID="MAP_TOTAL_CPU_TIME" value="1 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">
-        <item AVAILABLE="29504" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="65"/>
-        <item AVAILABLE="29504" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="134">
-          <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="1"/>
+        <item AVAILABLE="29504" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="73"/>
+        <item AVAILABLE="29504" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="109">
+          <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="7"/>
         </item>
-        <item AVAILABLE="14752" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="68">
+        <item AVAILABLE="14752" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="56">
           <item dataType="int" label="Number of Slices containing unrelated logic" stringID="MAP_NUM_SLICE_UNRELATED" value="0"/>
         </item>
       </section>
@@ -581,7 +581,7 @@
       </section>
       <section stringID="MAP_RPM_MACROS">
         <section stringID="MAP_SHAPE_SECTION">
-          <item dataType="int" stringID="MAP_NUM_SHAPE" value="5"/>
+          <item dataType="int" stringID="MAP_NUM_SHAPE" value="2"/>
         </section>
       </section>
       <section stringID="MAP_GUIDE_REPORT"/>

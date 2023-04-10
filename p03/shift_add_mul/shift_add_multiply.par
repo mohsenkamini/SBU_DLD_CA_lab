@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-MOHSEN-PC::  Mon Apr 10 06:15:34 2023
+MOHSEN-PC::  Mon Apr 10 07:00:21 2023
 
 par -w -intstyle ise -ol high -t 1 shift_add_multiply_map.ncd
 shift_add_multiply.ncd shift_add_multiply.pcf 
@@ -39,8 +39,8 @@ Design Summary Report:
 
 
    Number of BUFGMUXs                        1 out of 24      4%
-   Number of Slices                         68 out of 14752   1%
-      Number of SLICEMs                      4 out of 7376    1%
+   Number of Slices                         56 out of 14752   1%
+      Number of SLICEMs                      0 out of 7376    0%
 
 
 
@@ -49,59 +49,56 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 3 secs 
-Finished initial Timing Analysis.  REAL time: 3 secs 
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
 
 
 Starting Placer
-Total REAL time at the beginning of Placer: 3 secs 
-Total CPU  time at the beginning of Placer: 3 secs 
+Total REAL time at the beginning of Placer: 2 secs 
+Total CPU  time at the beginning of Placer: 2 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:23e1) REAL time: 3 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:1dcf) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:23e1) REAL time: 3 secs 
+Phase 2.7  Design Feasibility Check (Checksum:1dcf) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:23e1) REAL time: 3 secs 
+Phase 3.31  Local Placement Optimization (Checksum:1dcf) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 .....
-Phase 4.2  Initial Clock and IO Placement (Checksum:4d9962e2) REAL time: 3 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:ab0d0073) REAL time: 2 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:4d9962e2) REAL time: 3 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:ab0d0073) REAL time: 2 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:4d9962e2) REAL time: 3 secs 
+Phase 6.36  Local Placement Optimization (Checksum:ab0d0073) REAL time: 2 secs 
 
 Phase 7.3  Local Placement Optimization
-......
-Phase 7.3  Local Placement Optimization (Checksum:c7834ef1) REAL time: 3 secs 
+.....
+Phase 7.3  Local Placement Optimization (Checksum:ee80a14c) REAL time: 2 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:c7834ef1) REAL time: 3 secs 
+Phase 8.5  Local Placement Optimization (Checksum:ee80a14c) REAL time: 2 secs 
 
 Phase 9.8  Global Placement
-....
 ..
 ..
-..
-..
-Phase 9.8  Global Placement (Checksum:24d75140) REAL time: 5 secs 
+Phase 9.8  Global Placement (Checksum:1f62bd8b) REAL time: 4 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:24d75140) REAL time: 5 secs 
+Phase 10.5  Local Placement Optimization (Checksum:1f62bd8b) REAL time: 4 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:b7f1b766) REAL time: 5 secs 
+Phase 11.18  Placement Optimization (Checksum:95226b43) REAL time: 4 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:b7f1b766) REAL time: 5 secs 
+Phase 12.5  Local Placement Optimization (Checksum:95226b43) REAL time: 4 secs 
 
-Total REAL time to Placer completion: 5 secs 
-Total CPU  time to Placer completion: 5 secs 
+Total REAL time to Placer completion: 4 secs 
+Total CPU  time to Placer completion: 4 secs 
 Writing design to file shift_add_multiply.ncd
 
 
@@ -109,102 +106,30 @@ Writing design to file shift_add_multiply.ncd
 Starting Router
 
 
-Phase  1  : 501 unrouted;      REAL time: 13 secs 
+Phase  1  : 362 unrouted;      REAL time: 11 secs 
 
-Phase  2  : 466 unrouted;      REAL time: 13 secs 
+Phase  2  : 323 unrouted;      REAL time: 12 secs 
 
-Phase  3  : 87 unrouted;      REAL time: 13 secs 
+Phase  3  : 33 unrouted;      REAL time: 12 secs 
 
-Phase  4  : 143 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
+Phase  4  : 48 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
 Updating file: shift_add_multiply.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
-  Intermediate status: 8 unrouted; (0)      REAL time: 15 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-  Intermediate status: 7 unrouted; (0)      REAL time: 15 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
 
-  Intermediate status: 7 unrouted; (0)      REAL time: 15 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
 
-  Intermediate status: 7 unrouted; (0)      REAL time: 15 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
 
-  Intermediate status: 7 unrouted; (0)      REAL time: 15 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
 
-  Intermediate status: 7 unrouted; (0)      REAL time: 15 secs 
-
-  Intermediate status: 7 unrouted; (0)      REAL time: 15 secs 
-
-  Intermediate status: 7 unrouted; (0)      REAL time: 15 secs 
-
-  Intermediate status: 9 unrouted; (0)      REAL time: 15 secs 
-
-  Intermediate status: 9 unrouted; (0)      REAL time: 15 secs 
-
-  Intermediate status: 9 unrouted; (0)      REAL time: 15 secs 
-
-  Intermediate status: 9 unrouted; (0)      REAL time: 15 secs 
-
-  Intermediate status: 9 unrouted; (0)      REAL time: 15 secs 
-
-  Intermediate status: 9 unrouted; (0)      REAL time: 15 secs 
-
-  Intermediate status: 7 unrouted; (0)      REAL time: 15 secs 
-
-  Intermediate status: 5 unrouted; (0)      REAL time: 15 secs 
-
-  Intermediate status: 4 unrouted; (0)      REAL time: 15 secs 
-
-  Intermediate status: 2 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 2 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 2 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 2 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 3 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 3 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 3 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 5 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 1 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 1 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 1 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 1 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 1 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 1 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 3 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 2 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 2 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 3 unrouted; (0)      REAL time: 16 secs 
-
-  Intermediate status: 0 unrouted; (0)      REAL time: 16 secs 
-
-
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
-
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
-
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
-
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
-
-Total REAL time to Router completion: 16 secs 
-Total CPU time to Router completion: 16 secs 
+Total REAL time to Router completion: 15 secs 
+Total CPU time to Router completion: 15 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -222,7 +147,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X2Y10| No   |   34 |  0.015     |  0.340      |
+|           clk_BUFGP | BUFGMUX_X2Y10| No   |   38 |  0.016     |  0.341      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -242,8 +167,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     7.316ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     1.166ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     5.350ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     1.098ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -259,10 +184,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 17 secs 
-Total CPU time to PAR completion: 16 secs 
+Total REAL time to PAR completion: 15 secs 
+Total CPU time to PAR completion: 15 secs 
 
-Peak Memory Usage:  609 MB
+Peak Memory Usage:  608 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

@@ -51,7 +51,7 @@ module shift_add_mul_tb;
 	initial begin
 		// Initialize Inputs
 		multiplier = 32'd5;
-		multiplicand = 32'd13;
+		multiplicand = 32'd5;
 		start = 1;
 		clk = 0;
 		
@@ -65,7 +65,6 @@ module shift_add_mul_tb;
 		#10;
 		clk = 0;
 				start = 0;
-
 		#10;
 		#10;
 		clk = 1;

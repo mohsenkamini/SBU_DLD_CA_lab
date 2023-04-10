@@ -45,71 +45,71 @@ Setup/Hold to clock clk
                 |Max Setup to|Max Hold to |                  | Clock  |
 Source          | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ----------------+------------+------------+------------------+--------+
-multiplicand<0> |    5.280(R)|   -1.511(R)|clk_BUFGP         |   0.000|
-multiplicand<1> |    5.118(R)|   -1.566(R)|clk_BUFGP         |   0.000|
-multiplicand<2> |    4.870(R)|   -1.160(R)|clk_BUFGP         |   0.000|
-multiplicand<3> |    4.792(R)|   -1.214(R)|clk_BUFGP         |   0.000|
-multiplicand<4> |    4.929(R)|   -1.105(R)|clk_BUFGP         |   0.000|
-multiplicand<5> |    5.171(R)|   -1.582(R)|clk_BUFGP         |   0.000|
-multiplicand<6> |    4.534(R)|   -1.053(R)|clk_BUFGP         |   0.000|
-multiplicand<7> |    4.387(R)|   -1.043(R)|clk_BUFGP         |   0.000|
-multiplicand<8> |    4.144(R)|   -0.842(R)|clk_BUFGP         |   0.000|
-multiplicand<9> |    3.864(R)|   -0.625(R)|clk_BUFGP         |   0.000|
-multiplicand<10>|    3.611(R)|   -0.222(R)|clk_BUFGP         |   0.000|
-multiplicand<11>|    3.428(R)|   -0.276(R)|clk_BUFGP         |   0.000|
-multiplicand<12>|    3.480(R)|   -0.253(R)|clk_BUFGP         |   0.000|
-multiplicand<13>|    3.572(R)|   -0.391(R)|clk_BUFGP         |   0.000|
-multiplicand<14>|    3.132(R)|   -0.040(R)|clk_BUFGP         |   0.000|
-multiplicand<15>|    3.020(R)|    0.050(R)|clk_BUFGP         |   0.000|
-multiplicand<16>|    3.039(R)|    0.345(R)|clk_BUFGP         |   0.000|
-multiplicand<17>|    3.151(R)|   -0.264(R)|clk_BUFGP         |   0.000|
-multiplicand<18>|    3.160(R)|   -0.065(R)|clk_BUFGP         |   0.000|
-multiplicand<19>|    2.752(R)|   -0.002(R)|clk_BUFGP         |   0.000|
-multiplicand<20>|    2.948(R)|   -0.139(R)|clk_BUFGP         |   0.000|
-multiplicand<21>|    2.735(R)|   -0.052(R)|clk_BUFGP         |   0.000|
-multiplicand<22>|    2.636(R)|   -0.052(R)|clk_BUFGP         |   0.000|
-multiplicand<23>|    2.542(R)|   -0.145(R)|clk_BUFGP         |   0.000|
-multiplicand<24>|    2.443(R)|   -0.066(R)|clk_BUFGP         |   0.000|
-multiplicand<25>|    2.212(R)|    0.119(R)|clk_BUFGP         |   0.000|
-multiplicand<26>|    2.202(R)|    0.366(R)|clk_BUFGP         |   0.000|
-multiplicand<27>|    1.992(R)|    0.151(R)|clk_BUFGP         |   0.000|
-multiplicand<28>|    1.982(R)|    0.377(R)|clk_BUFGP         |   0.000|
-multiplicand<29>|    2.113(R)|   -0.233(R)|clk_BUFGP         |   0.000|
-multiplicand<30>|    1.763(R)|   -0.031(R)|clk_BUFGP         |   0.000|
-multiplicand<31>|    1.604(R)|    0.046(R)|clk_BUFGP         |   0.000|
-multiplier<0>   |    4.760(R)|   -1.796(R)|clk_BUFGP         |   0.000|
-multiplier<1>   |    4.665(R)|   -1.719(R)|clk_BUFGP         |   0.000|
-multiplier<2>   |    6.087(R)|   -2.857(R)|clk_BUFGP         |   0.000|
-multiplier<3>   |    4.847(R)|   -1.865(R)|clk_BUFGP         |   0.000|
-multiplier<4>   |    4.584(R)|   -1.655(R)|clk_BUFGP         |   0.000|
-multiplier<5>   |    4.703(R)|   -1.750(R)|clk_BUFGP         |   0.000|
-multiplier<6>   |    4.556(R)|   -1.632(R)|clk_BUFGP         |   0.000|
-multiplier<7>   |    4.415(R)|   -1.519(R)|clk_BUFGP         |   0.000|
-multiplier<8>   |    4.470(R)|   -1.564(R)|clk_BUFGP         |   0.000|
-multiplier<9>   |    4.482(R)|   -1.573(R)|clk_BUFGP         |   0.000|
-multiplier<10>  |    4.587(R)|   -1.658(R)|clk_BUFGP         |   0.000|
-multiplier<11>  |    4.639(R)|   -1.699(R)|clk_BUFGP         |   0.000|
-multiplier<12>  |    4.768(R)|   -1.802(R)|clk_BUFGP         |   0.000|
-multiplier<13>  |    4.912(R)|   -1.917(R)|clk_BUFGP         |   0.000|
-multiplier<14>  |    4.910(R)|   -1.916(R)|clk_BUFGP         |   0.000|
-multiplier<15>  |    4.699(R)|   -1.747(R)|clk_BUFGP         |   0.000|
-multiplier<16>  |    5.013(R)|   -1.997(R)|clk_BUFGP         |   0.000|
-multiplier<17>  |    5.100(R)|   -2.067(R)|clk_BUFGP         |   0.000|
-multiplier<18>  |    5.448(R)|   -2.345(R)|clk_BUFGP         |   0.000|
-multiplier<19>  |    5.090(R)|   -2.059(R)|clk_BUFGP         |   0.000|
-multiplier<20>  |    5.204(R)|   -2.151(R)|clk_BUFGP         |   0.000|
-multiplier<21>  |    5.533(R)|   -2.414(R)|clk_BUFGP         |   0.000|
-multiplier<22>  |    5.309(R)|   -2.235(R)|clk_BUFGP         |   0.000|
-multiplier<23>  |    6.264(R)|   -2.999(R)|clk_BUFGP         |   0.000|
-multiplier<24>  |    6.573(R)|   -3.246(R)|clk_BUFGP         |   0.000|
-multiplier<25>  |    6.467(R)|   -3.161(R)|clk_BUFGP         |   0.000|
-multiplier<26>  |    6.231(R)|   -2.973(R)|clk_BUFGP         |   0.000|
-multiplier<27>  |    6.109(R)|   -2.875(R)|clk_BUFGP         |   0.000|
-multiplier<28>  |    6.016(R)|   -2.800(R)|clk_BUFGP         |   0.000|
-multiplier<29>  |    6.205(R)|   -2.951(R)|clk_BUFGP         |   0.000|
-multiplier<30>  |    6.174(R)|   -2.927(R)|clk_BUFGP         |   0.000|
-multiplier<31>  |    6.148(R)|   -2.906(R)|clk_BUFGP         |   0.000|
-start           |    5.504(R)|   -0.184(R)|clk_BUFGP         |   0.000|
+multiplicand<0> |    4.729(R)|   -1.161(R)|clk_BUFGP         |   0.000|
+multiplicand<1> |    4.667(R)|   -1.053(R)|clk_BUFGP         |   0.000|
+multiplicand<2> |    4.953(R)|   -1.321(R)|clk_BUFGP         |   0.000|
+multiplicand<3> |    4.443(R)|   -0.932(R)|clk_BUFGP         |   0.000|
+multiplicand<4> |    4.505(R)|   -0.940(R)|clk_BUFGP         |   0.000|
+multiplicand<5> |    4.132(R)|   -0.683(R)|clk_BUFGP         |   0.000|
+multiplicand<6> |    4.761(R)|   -0.877(R)|clk_BUFGP         |   0.000|
+multiplicand<7> |    3.959(R)|   -0.664(R)|clk_BUFGP         |   0.000|
+multiplicand<8> |    4.042(R)|   -0.650(R)|clk_BUFGP         |   0.000|
+multiplicand<9> |    3.565(R)|   -0.475(R)|clk_BUFGP         |   0.000|
+multiplicand<10>|    4.370(R)|   -0.927(R)|clk_BUFGP         |   0.000|
+multiplicand<11>|    3.283(R)|   -0.372(R)|clk_BUFGP         |   0.000|
+multiplicand<12>|    3.500(R)|   -0.380(R)|clk_BUFGP         |   0.000|
+multiplicand<13>|    3.356(R)|   -0.633(R)|clk_BUFGP         |   0.000|
+multiplicand<14>|    3.037(R)|   -0.263(R)|clk_BUFGP         |   0.000|
+multiplicand<15>|    2.944(R)|   -0.303(R)|clk_BUFGP         |   0.000|
+multiplicand<16>|    2.731(R)|   -0.089(R)|clk_BUFGP         |   0.000|
+multiplicand<17>|    2.964(R)|   -0.316(R)|clk_BUFGP         |   0.000|
+multiplicand<18>|    2.690(R)|    0.027(R)|clk_BUFGP         |   0.000|
+multiplicand<19>|    2.697(R)|   -0.004(R)|clk_BUFGP         |   0.000|
+multiplicand<20>|    2.773(R)|    0.143(R)|clk_BUFGP         |   0.000|
+multiplicand<21>|    2.427(R)|   -0.251(R)|clk_BUFGP         |   0.000|
+multiplicand<22>|    2.389(R)|   -0.240(R)|clk_BUFGP         |   0.000|
+multiplicand<23>|    2.276(R)|    0.024(R)|clk_BUFGP         |   0.000|
+multiplicand<24>|    2.322(R)|    0.101(R)|clk_BUFGP         |   0.000|
+multiplicand<25>|    2.093(R)|   -0.050(R)|clk_BUFGP         |   0.000|
+multiplicand<26>|    2.171(R)|    0.198(R)|clk_BUFGP         |   0.000|
+multiplicand<27>|    1.775(R)|    0.245(R)|clk_BUFGP         |   0.000|
+multiplicand<28>|    1.853(R)|    0.261(R)|clk_BUFGP         |   0.000|
+multiplicand<29>|    2.011(R)|    0.129(R)|clk_BUFGP         |   0.000|
+multiplicand<30>|    1.678(R)|    0.267(R)|clk_BUFGP         |   0.000|
+multiplicand<31>|    1.587(R)|    0.107(R)|clk_BUFGP         |   0.000|
+multiplier<0>   |    1.601(R)|   -0.092(R)|clk_BUFGP         |   0.000|
+multiplier<1>   |    0.027(R)|    1.167(R)|clk_BUFGP         |   0.000|
+multiplier<2>   |   -0.205(R)|    1.352(R)|clk_BUFGP         |   0.000|
+multiplier<3>   |   -0.247(R)|    1.386(R)|clk_BUFGP         |   0.000|
+multiplier<4>   |   -0.097(R)|    1.265(R)|clk_BUFGP         |   0.000|
+multiplier<5>   |   -0.176(R)|    1.329(R)|clk_BUFGP         |   0.000|
+multiplier<6>   |   -0.006(R)|    1.189(R)|clk_BUFGP         |   0.000|
+multiplier<7>   |   -0.172(R)|    1.323(R)|clk_BUFGP         |   0.000|
+multiplier<8>   |   -0.091(R)|    1.257(R)|clk_BUFGP         |   0.000|
+multiplier<9>   |   -0.170(R)|    1.321(R)|clk_BUFGP         |   0.000|
+multiplier<10>  |    0.824(R)|    0.530(R)|clk_BUFGP         |   0.000|
+multiplier<11>  |    0.628(R)|    0.687(R)|clk_BUFGP         |   0.000|
+multiplier<12>  |    0.749(R)|    0.587(R)|clk_BUFGP         |   0.000|
+multiplier<13>  |    0.693(R)|    0.632(R)|clk_BUFGP         |   0.000|
+multiplier<14>  |    1.420(R)|    0.052(R)|clk_BUFGP         |   0.000|
+multiplier<15>  |    0.815(R)|    0.537(R)|clk_BUFGP         |   0.000|
+multiplier<16>  |    0.934(R)|    0.440(R)|clk_BUFGP         |   0.000|
+multiplier<17>  |    1.588(R)|   -0.083(R)|clk_BUFGP         |   0.000|
+multiplier<18>  |    1.023(R)|    0.370(R)|clk_BUFGP         |   0.000|
+multiplier<19>  |    0.945(R)|    0.432(R)|clk_BUFGP         |   0.000|
+multiplier<20>  |    1.379(R)|    0.086(R)|clk_BUFGP         |   0.000|
+multiplier<21>  |    1.592(R)|   -0.085(R)|clk_BUFGP         |   0.000|
+multiplier<22>  |    1.147(R)|    0.270(R)|clk_BUFGP         |   0.000|
+multiplier<23>  |    1.516(R)|   -0.025(R)|clk_BUFGP         |   0.000|
+multiplier<24>  |    1.407(R)|    0.062(R)|clk_BUFGP         |   0.000|
+multiplier<25>  |    2.028(R)|   -0.435(R)|clk_BUFGP         |   0.000|
+multiplier<26>  |    1.662(R)|   -0.142(R)|clk_BUFGP         |   0.000|
+multiplier<27>  |    1.472(R)|    0.010(R)|clk_BUFGP         |   0.000|
+multiplier<28>  |    1.867(R)|   -0.306(R)|clk_BUFGP         |   0.000|
+multiplier<29>  |    1.796(R)|   -0.249(R)|clk_BUFGP         |   0.000|
+multiplier<30>  |    1.838(R)|   -0.283(R)|clk_BUFGP         |   0.000|
+multiplier<31>  |    1.922(R)|   -0.350(R)|clk_BUFGP         |   0.000|
+start           |    5.114(R)|   -1.724(R)|clk_BUFGP         |   0.000|
 ----------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -117,7 +117,7 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-out         |    7.968(R)|clk_BUFGP         |   0.000|
+out         |    7.135(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -125,18 +125,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    7.316|         |         |         |
+clk            |    5.350|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Apr 10 06:15:53 2023 
+Analysis completed Mon Apr 10 07:00:38 2023 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 212 MB
+Peak Memory Usage: 211 MB
 
 
 
