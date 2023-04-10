@@ -44,8 +44,15 @@ module shift_add_multiply_tb;
 		.clk(clk)
 	);
 
+	always
+	begin
+		clk<=!clk;
+		#10
+	end
+
 	initial begin
 		// Initialize Inputs
+		
 		multiplier = 0;
 		multiplicand = 0;
 		start = 0;
