@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   03:55:48 04/10/2023
+// Create Date:   05:44:52 04/10/2023
 // Design Name:   shift_add_multiply
-// Module Name:   //VBOXSVR/University/Digital-Logic-Design/Lab/p03/shift_add_mul/shift_add_multiply_tb.v
+// Module Name:   C:/Users/mohsen/Desktop/shift_add_mul/shift_add_mul_tb.v
 // Project Name:  shift_add_mul
 // Target Device:  
 // Tool versions:  
@@ -22,48 +22,52 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module shift_add_multiply_tb;
+module shift_add_mul_tb;
 
 	// Inputs
-	reg [31:0] multiplier;
-	reg [31:0] multiplicand;
+	reg [30:0] multiplier;
+	reg [30:0] multiplicand;
 	reg start;
 	reg clk;
 
 	// Outputs
-	wire [31:0] product;
-	wire ready;
+	wire out;
 
 	// Instantiate the Unit Under Test (UUT)
 	shift_add_multiply uut (
-		.product(product), 
-		.ready(ready), 
 		.multiplier(multiplier), 
 		.multiplicand(multiplicand), 
 		.start(start), 
-		.clk(clk)
+		.clk(clk), 
+		.out(out)
 	);
 
-	always
+	/*always
 	begin
-		clk<=!clk;
-		#10;
+		clk <= !clk;
+		#50;
 	end
-
+	*/
 	initial begin
 		// Initialize Inputs
-		
-		start = 1;		
-		multiplier = 3;
-		multiplicand = 4;
+		multiplier = 31'd8;
+		multiplicand = 31'd8;
+		start = 1;
 		clk = 0;
-
+		
 		// Wait 100 ns for global reset to finish
-		#100;
-       
-		// Add stimulus here
+		#10;
+		#10;
+		clk = 1;
+
+		#10;
+		#10;
+		clk = 0;
+				start = 0;
+		forever #(20) clk = ~clk;
 
 	end
       
 endmodule
+
 
