@@ -81,7 +81,18 @@ module RAM_tb;
 		EN = 1;
 		WE = 0;
 		#40;
-        
+      
+		
+		RST = 1;
+		
+		
+		Din = 10'd0;
+		ADDR = 8'd1;
+		RST = 0;
+		EN = 1;
+		WE = 0;
+		#40;
+      
 		// Add stimulus here
 
 	end

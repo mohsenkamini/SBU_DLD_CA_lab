@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Sun Apr 30 08:15:24 2023">
+  <application stringID="Map" timeStamp="Sun Apr 30 09:10:22 2023">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -66,25 +66,23 @@
         <item stringID="MAP_SPEED" value="-5"/>
       </section>
       <section stringID="MAP_DESIGN_SUMMARY">
-        <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
+        <item dataType="int" stringID="MAP_NUM_ERRORS" value="2"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="0"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="396468"/>
-        <item stringID="MAP_TOTAL_REAL_TIME" value="2 secs "/>
-        <item stringID="MAP_TOTAL_CPU_TIME" value="1 secs "/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="424308"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="5 secs "/>
+        <item stringID="MAP_TOTAL_CPU_TIME" value="3 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">
-        <item AVAILABLE="1920" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="10"/>
-        <item AVAILABLE="1920" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="211">
-          <item dataType="int" stringID="MAP_NUM_RAM32" value="160"/>
-        </item>
-        <item AVAILABLE="960" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="106">
+        <item AVAILABLE="1920" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="2570"/>
+        <item AVAILABLE="1920" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="1598"/>
+        <item AVAILABLE="960" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="2079">
           <item dataType="int" label="Number of Slices containing unrelated logic" stringID="MAP_NUM_SLICE_UNRELATED" value="0"/>
         </item>
       </section>
       <section stringID="MAP_IOB_REPORTING">
         <section stringID="MAP_IOB_DATA">
-          <item AVAILABLE="66" dataType="int" stringID="MAP_AGG_BONDED_IO" value="31"/>
+          <item AVAILABLE="66" dataType="int" stringID="MAP_AGG_BONDED_IO" value="32"/>
         </section>
       </section>
       <section stringID="MAP_HARD_IP_REPORTING">
@@ -337,6 +335,13 @@
             <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
           </row>
           <row stringID="row" value="31">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="RST"/>
+            <item stringID="Type" value="IBUF"/>
+            <item stringID="Direction" value="INPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
+          </row>
+          <row stringID="row" value="32">
             <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="WE"/>
             <item stringID="Type" value="IBUF"/>
             <item stringID="Direction" value="INPUT"/>
@@ -347,7 +352,7 @@
       </section>
       <section stringID="MAP_RPM_MACROS">
         <section stringID="MAP_SHAPE_SECTION">
-          <item dataType="int" stringID="MAP_NUM_SHAPE" value="10"/>
+          <item dataType="int" stringID="MAP_NUM_SHAPE" value="90"/>
         </section>
       </section>
       <section stringID="MAP_GUIDE_REPORT"/>

@@ -31,9 +31,16 @@ module RAM #(parameter ADDR_WIDTH = 8,
 	
 	reg [DATA_WIDTH-1:0] MEM [MEM_SIZE-1:0] ;
 	reg [DATA_WIDTH-1:0] TMP_Dout ;
+	integer i;
+	integer n;
+
+			
 	always@(posedge CLK)
 	begin
-		if(EN & WE)
+		if (RST)
+			for (i=0 ; i < MEM_SIZE ; i = i+1) 
+				MEM [i] <= 'd0;
+		else if(EN & WE)
 		 	MEM [ADDR]<= Din;
 		else if (EN)
 			TMP_Dout <= MEM [ADDR];
