@@ -37,9 +37,9 @@ module RAM #(parameter ADDR_WIDTH = 8,
 			
 	always@(posedge CLK)
 	begin
-		if (RST)
-			for (i=0 ; i < MEM_SIZE ; i = i+1) 
-				MEM [i] <= 'd0;
+		//if (RST)
+		//	for (i=0 ; i < MEM_SIZE ; i = i+1) 
+		//		MEM [i] <= 'd0;
 		else if(EN & WE)
 		 	MEM [ADDR]<= Din;
 		else if (EN)
