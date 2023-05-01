@@ -100,10 +100,10 @@ module FIFO_gen_tb;
 		#40;
 		
 		
-		din = 10'd32;
+		din = 10'd0;
 		rst = 0;
-		rd_en = 0;
-		wr_en = 1;
+		rd_en = 1;
+		wr_en = 0;
 		#40;   
 		#10000;
 		end
