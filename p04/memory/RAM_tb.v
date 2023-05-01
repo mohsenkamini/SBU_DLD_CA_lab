@@ -24,6 +24,7 @@
 
 module RAM_tb;
 
+
 	// Inputs
 	reg [9:0] Din;
 	reg [7:0] ADDR;
@@ -87,11 +88,44 @@ module RAM_tb;
 		
 		
 		Din = 10'd0;
-		ADDR = 8'd1;
+		ADDR = 8'd0;
 		RST = 0;
 		EN = 1;
 		WE = 0;
 		#40;
+		
+		
+		Din = 10'd13;
+		ADDR = 8'd2;
+		RST = 0;
+		EN = 1;
+		WE = 1;
+		#40;
+		
+		
+		Din = 10'd565;
+		ADDR = 8'd3;
+		RST = 0;
+		EN = 1;
+		WE = 1;
+		#40;
+		
+		
+		Din = 10'd0;
+		ADDR = 8'd3;
+		RST = 0;
+		EN = 1;
+		WE = 1;
+		#40;
+      
+		Din = 10'd0;
+		ADDR = 8'd3;
+		RST = 0;
+		EN = 1;
+		WE = 0;
+		#40;
+		
+	
       
 		// Add stimulus here
 

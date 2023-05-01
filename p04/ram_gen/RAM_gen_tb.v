@@ -24,6 +24,7 @@
 
 module RAM_tb;
 
+
 	// Inputs
 	reg [9:0] dina;
 	reg [7:0] addra;
@@ -36,14 +37,15 @@ module RAM_tb;
 	wire [9:0] douta;
 
 	// Instantiate the Unit Under Test (UUT)
-	ram_dar_had_no uut (
-		.clka(clka), 
-		.wea(wea), 
-		.addra(addra), 
+	RAM uut (
 		.dina(dina), 
+		.addra(addra), 
+
+
+		.wea(wea), 
+		.clka(clka), 
 		.douta(douta)
 	);
-	
 
 	always #(20) clka = ~clka;
 	
@@ -86,11 +88,44 @@ module RAM_tb;
 		
 		
 		dina = 10'd0;
-		addra = 8'd1;
+		addra = 8'd0;
 
 
 		wea = 0;
 		#40;
+		
+		
+		dina = 10'd13;
+		addra = 8'd2;
+
+
+		wea = 1;
+		#40;
+		
+		
+		dina = 10'd565;
+		addra = 8'd3;
+
+
+		wea = 1;
+		#40;
+		
+		
+		dina = 10'd0;
+		addra = 8'd3;
+
+
+		wea = 1;
+		#40;
+      
+		dina = 10'd0;
+		addra = 8'd3;
+
+
+		wea = 0;
+		#40;
+		
+	
       
 		// Add stimulus here
 
