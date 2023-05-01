@@ -30,21 +30,21 @@ module RAM_tb;
 
 
 	reg wea;
-	reg clk;
+	reg clka;
 
 	// Outputs
 	wire [9:0] douta;
 
 	// Instantiate the Unit Under Test (UUT)
 	ram_dar_had_no uut (
-		.clk(clk), 
+		.clka(clka), 
 		.wea(wea), 
 		.addra(addra), 
 		.dina(dina), 
 		.douta(douta)
 	);
 
-	always #(20) clk = ~clk;
+	always #(20) clka = ~clka;
 	
 	initial begin
 		// Initialize Inputs
@@ -53,7 +53,7 @@ module RAM_tb;
 
 
 		wea = 0;
-		clk = 0;
+		clka = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
