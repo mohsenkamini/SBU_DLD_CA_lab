@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon May 01 05:37:52 2023
+Mon May 01 05:57:57 2023
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -73,13 +73,13 @@ Pinout by Pin Number:
 |P51       |           |         |DONE                  |         |           |              |          |         |           |         |         |          |           |                |
 |P52       |           |         |GND                   |         |           |              |          |         |           |         |         |          |           |                |
 |P53       |RD_EN      |IBUF     |IO_L01P_1             |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P54       |Empty      |IOB      |IO_L01N_1             |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
+|P54       |           |DIFFS    |IO_L01N_1             |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P55       |           |         |VCCO_1                |         |           |1             |          |         |           |         |2.50     |          |           |                |
 |P56       |           |         |VCCINT                |         |           |              |          |         |           |         |1.2      |          |           |                |
 |P57       |Full       |IOB      |IO_L02P_1             |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
 |P58       |           |DIFFS    |IO_L02N_1             |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P59       |           |         |GND                   |         |           |              |          |         |           |         |         |          |           |                |
-|P60       |           |DIFFM    |IO_L03P_1/RHCLK0      |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|P60       |Empty      |IOB      |IO_L03P_1/RHCLK0      |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
 |P61       |           |DIFFS    |IO_L03N_1/RHCLK1      |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P62       |           |DIFFM    |IO_L04P_1/RHCLK2      |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P63       |           |DIFFS    |IO_L04N_1/RHCLK3/TRDY1|UNUSED   |           |1             |          |         |           |         |         |          |           |                |

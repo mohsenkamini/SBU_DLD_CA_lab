@@ -14,5 +14,5 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 3 Verilog Units
 Built simulation executable C:/Users/mohsen/Desktop/verilog/memory/FIFO/FIFO_tb_isim_beh.exe
-Fuse Memory Usage: 26824 KB
-Fuse CPU Usage: 343 ms
+Fuse Memory Usage: 26808 KB
+Fuse CPU Usage: 358 ms

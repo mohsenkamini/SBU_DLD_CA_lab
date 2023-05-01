@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: FIFO.prj
 
@@ -128,6 +128,7 @@ Analyzing top module <FIFO>.
 	MEM_SIZE = 32'sb00000000000000000000000100000000
 INFO:Xst:1433 - Contents of array <MEM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 INFO:Xst:1433 - Contents of array <MEM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1464 - "FIFO.v" line 56: Exactly equal expression will be synthesized as an equal expression, simulation mismatch is possible.
 Module <FIFO> is correct for synthesis.
  
 
@@ -136,24 +137,25 @@ Module <FIFO> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
-INFO:Xst:2679 - Register <TMP_Empty> in unit <FIFO> has a constant value of 1 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <FIFO>.
     Related source file is "FIFO.v".
 WARNING:Xst:647 - Input <RST> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1872 - Variable <TMP_index> is used but never assigned.
     Found 256x10-bit dual-port RAM <Mram_MEM> for signal <MEM>.
     Found 10-bit tristate buffer for signal <Dout>.
-    Found 9-bit adder for signal <old_rdIndex_1$addsub0000> created at line 49.
-    Found 9-bit adder for signal <old_wrIndex_2$addsub0000> created at line 45.
+    Found 9-bit adder for signal <old_rdIndex_1$addsub0000> created at line 50.
+    Found 9-bit adder for signal <old_wrIndex_2$addsub0000> created at line 46.
     Found 9-bit register for signal <rdIndex>.
     Found 10-bit register for signal <TMP_Dout>.
+    Found 1-bit register for signal <TMP_Empty>.
+    Found 8-bit comparator equal for signal <TMP_Empty$cmp_eq0001> created at line 56.
+    Found 1-bit xor2 for signal <TMP_Empty$xor0000> created at line 52.
     Found 1-bit register for signal <TMP_Full>.
-    Found 8-bit comparator not equal for signal <TMP_Full$cmp_ne0000> created at line 53.
-    Found 1-bit xor2 for signal <TMP_Full$xor0000> created at line 51.
     Found 9-bit register for signal <wrIndex>.
     Summary:
 	inferred   1 RAM(s).
-	inferred  29 D-type flip-flop(s).
+	inferred  30 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
 	inferred  10 Tristate(s).
@@ -168,12 +170,12 @@ Macro Statistics
  256x10-bit dual-port RAM                              : 1
 # Adders/Subtractors                                   : 2
  9-bit adder                                           : 2
-# Registers                                            : 4
- 1-bit register                                        : 1
+# Registers                                            : 5
+ 1-bit register                                        : 2
  10-bit register                                       : 1
  9-bit register                                        : 2
 # Comparators                                          : 1
- 8-bit comparator not equal                            : 1
+ 8-bit comparator equal                                : 1
 # Tristates                                            : 1
  10-bit tristate buffer                                : 1
 # Xors                                                 : 1
@@ -185,8 +187,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1426 - The value init of the FF/Latch TMP_Full hinder the constant cleaning in the block FIFO.
-   You should achieve better results by setting this init to 1.
 
 Synthesizing (advanced) Unit <FIFO>.
 INFO:Xst:3226 - The RAM <Mram_MEM> will be implemented as a BLOCK RAM, absorbing the following register(s): <TMP_Dout>
@@ -223,10 +223,10 @@ Macro Statistics
  256x10-bit dual-port block RAM                        : 1
 # Adders/Subtractors                                   : 2
  9-bit adder                                           : 2
-# Registers                                            : 19
- Flip-Flops                                            : 19
+# Registers                                            : 20
+ Flip-Flops                                            : 20
 # Comparators                                          : 1
- 8-bit comparator not equal                            : 1
+ 8-bit comparator equal                                : 1
 # Xors                                                 : 1
  1-bit xor2                                            : 1
 
@@ -235,8 +235,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1426 - The value init of the FF/Latch TMP_Full hinder the constant cleaning in the block FIFO.
-   You should achieve better results by setting this init to 1.
 
 Optimizing unit <FIFO> ...
 
@@ -250,8 +248,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 19
- Flip-Flops                                            : 19
+# Registers                                            : 20
+ Flip-Flops                                            : 20
 
 =========================================================================
 
@@ -280,17 +278,20 @@ Design Statistics
 # IOs                              : 26
 
 Cell Usage :
-# BELS                             : 82
+# BELS                             : 78
 #      GND                         : 1
 #      INV                         : 3
 #      LUT1                        : 16
-#      LUT3                        : 17
-#      LUT4                        : 5
-#      MUXCY                       : 21
+#      LUT3                        : 12
+#      LUT3_L                      : 5
+#      LUT4                        : 6
+#      MUXCY                       : 16
 #      VCC                         : 1
 #      XORCY                       : 18
-# FlipFlops/Latches                : 19
-#      FDE                         : 19
+# FlipFlops/Latches                : 20
+#      FDE                         : 18
+#      FDRE                        : 1
+#      FDSE                        : 1
 # RAMS                             : 1
 #      RAMB16_S18_S18              : 1
 # Clock Buffers                    : 1
@@ -307,8 +308,8 @@ Device utilization summary:
 Selected Device : 3s100evq100-5 
 
  Number of Slices:                       24  out of    960     2%  
- Number of Slice Flip Flops:             19  out of   1920     0%  
- Number of 4 input LUTs:                 41  out of   1920     2%  
+ Number of Slice Flip Flops:             20  out of   1920     1%  
+ Number of 4 input LUTs:                 42  out of   1920     2%  
  Number of IOs:                          26
  Number of bonded IOBs:                  25  out of     66    37%  
  Number of BRAMs:                         1  out of      4    25%  
@@ -335,7 +336,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 20    |
+CLK                                | BUFGP                  | 21    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -346,8 +347,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 6.662ns (Maximum Frequency: 150.098MHz)
-   Minimum input arrival time before clock: 5.549ns
+   Minimum period: 6.946ns (Maximum Frequency: 143.973MHz)
+   Minimum input arrival time before clock: 5.897ns
    Maximum output required time after clock: 5.962ns
    Maximum combinational path delay: 6.573ns
 
@@ -357,63 +358,61 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 6.662ns (frequency: 150.098MHz)
-  Total number of paths / destination ports: 214 / 35
+  Clock period: 6.946ns (frequency: 143.973MHz)
+  Total number of paths / destination ports: 322 / 38
 -------------------------------------------------------------------------
-Delay:               6.662ns (Levels of Logic = 10)
-  Source:            wrIndex_1 (FF)
-  Destination:       TMP_Full (FF)
+Delay:               6.946ns (Levels of Logic = 11)
+  Source:            rdIndex_1 (FF)
+  Destination:       TMP_Empty (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: wrIndex_1 to TMP_Full
+  Data Path: rdIndex_1 to TMP_Empty
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.514   0.603  wrIndex_1 (wrIndex_1)
-     LUT1:I0->O            1   0.612   0.000  Madd_old_wrIndex_2_addsub0000_cy<1>_rt (Madd_old_wrIndex_2_addsub0000_cy<1>_rt)
-     MUXCY:S->O            1   0.404   0.000  Madd_old_wrIndex_2_addsub0000_cy<1> (Madd_old_wrIndex_2_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.051   0.000  Madd_old_wrIndex_2_addsub0000_cy<2> (Madd_old_wrIndex_2_addsub0000_cy<2>)
-     XORCY:CI->O           2   0.699   0.410  Madd_old_wrIndex_2_addsub0000_xor<3> (old_wrIndex_2_addsub0000<3>)
-     LUT3:I2->O            1   0.612   0.509  _old_wrIndex_2<3>1 (_old_wrIndex_2<3>)
-     LUT4:I0->O            1   0.612   0.000  TMP_Full_not0001_wg_lut<1> (TMP_Full_not0001_wg_lut<1>)
-     MUXCY:S->O            1   0.404   0.000  TMP_Full_not0001_wg_cy<1> (TMP_Full_not0001_wg_cy<1>)
-     MUXCY:CI->O           1   0.051   0.000  TMP_Full_not0001_wg_cy<2> (TMP_Full_not0001_wg_cy<2>)
-     MUXCY:CI->O           1   0.051   0.000  TMP_Full_not0001_wg_cy<3> (TMP_Full_not0001_wg_cy<3>)
-     MUXCY:CI->O           1   0.288   0.357  TMP_Full_not0001_wg_cy<4> (TMP_Full_not0001)
-     FDE:CE                    0.483          TMP_Full
+     FDE:C->Q              3   0.514   0.603  rdIndex_1 (rdIndex_1)
+     LUT1:I0->O            1   0.612   0.000  Madd_old_rdIndex_1_addsub0000_cy<1>_rt (Madd_old_rdIndex_1_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  Madd_old_rdIndex_1_addsub0000_cy<1> (Madd_old_rdIndex_1_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_rdIndex_1_addsub0000_cy<2> (Madd_old_rdIndex_1_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_rdIndex_1_addsub0000_cy<3> (Madd_old_rdIndex_1_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_rdIndex_1_addsub0000_cy<4> (Madd_old_rdIndex_1_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_rdIndex_1_addsub0000_cy<5> (Madd_old_rdIndex_1_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_old_rdIndex_1_addsub0000_cy<6> (Madd_old_rdIndex_1_addsub0000_cy<6>)
+     XORCY:CI->O           2   0.699   0.410  Madd_old_rdIndex_1_addsub0000_xor<7> (old_rdIndex_1_addsub0000<7>)
+     LUT3:I2->O            1   0.612   0.387  _old_rdIndex_1<7>1 (_old_rdIndex_1<7>)
+     LUT4:I2->O            1   0.612   0.360  TMP_Empty_cmp_eq00018141_SW0 (N01)
+     LUT4:I3->O            2   0.612   0.380  TMP_Empty_cmp_eq00018141 (TMP_Empty_cmp_eq0001)
+     FDSE:CE                   0.483          TMP_Empty
     ----------------------------------------
-    Total                      6.662ns (4.783ns logic, 1.879ns route)
-                                       (71.8% logic, 28.2% route)
+    Total                      6.946ns (4.806ns logic, 2.140ns route)
+                                       (69.2% logic, 30.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 48 / 31
+  Total number of paths / destination ports: 66 / 34
 -------------------------------------------------------------------------
-Offset:              5.549ns (Levels of Logic = 7)
+Offset:              5.897ns (Levels of Logic = 4)
   Source:            WR_EN (PAD)
-  Destination:       TMP_Full (FF)
+  Destination:       TMP_Empty (FF)
   Destination Clock: CLK rising
 
-  Data Path: WR_EN to TMP_Full
+  Data Path: WR_EN to TMP_Empty
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            19   1.106   1.074  WR_EN_IBUF (WR_EN_IBUF)
-     LUT3:I0->O            1   0.612   0.509  _old_wrIndex_2<3>1 (_old_wrIndex_2<3>)
-     LUT4:I0->O            1   0.612   0.000  TMP_Full_not0001_wg_lut<1> (TMP_Full_not0001_wg_lut<1>)
-     MUXCY:S->O            1   0.404   0.000  TMP_Full_not0001_wg_cy<1> (TMP_Full_not0001_wg_cy<1>)
-     MUXCY:CI->O           1   0.051   0.000  TMP_Full_not0001_wg_cy<2> (TMP_Full_not0001_wg_cy<2>)
-     MUXCY:CI->O           1   0.051   0.000  TMP_Full_not0001_wg_cy<3> (TMP_Full_not0001_wg_cy<3>)
-     MUXCY:CI->O           1   0.288   0.357  TMP_Full_not0001_wg_cy<4> (TMP_Full_not0001)
-     FDE:CE                    0.483          TMP_Full
+     LUT3:I0->O            1   0.612   0.509  _old_wrIndex_2<0>1 (_old_wrIndex_2<0>)
+     LUT4:I0->O            1   0.612   0.509  TMP_Empty_cmp_eq00018112 (TMP_Empty_cmp_eq00018112)
+     LUT4:I0->O            2   0.612   0.380  TMP_Empty_cmp_eq00018141 (TMP_Empty_cmp_eq0001)
+     FDSE:CE                   0.483          TMP_Empty
     ----------------------------------------
-    Total                      5.549ns (3.608ns logic, 1.940ns route)
-                                       (65.0% logic, 35.0% route)
+    Total                      5.897ns (3.425ns logic, 2.472ns route)
+                                       (58.1% logic, 41.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 11 / 11
+  Total number of paths / destination ports: 12 / 12
 -------------------------------------------------------------------------
 Offset:              5.962ns (Levels of Logic = 1)
   Source:            Mram_MEM (RAM)
@@ -453,13 +452,13 @@ Delay:               6.573ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.69 secs
+Total CPU time to Xst completion: 4.88 secs
  
 --> 
 
-Total memory usage is 274632 kilobytes
+Total memory usage is 274824 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

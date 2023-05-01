@@ -45,17 +45,17 @@ Setup/Hold to clock CLK
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
 Din<0>      |    0.037(R)|    1.222(R)|CLK_BUFGP         |   0.000|
-Din<1>      |    0.357(R)|    0.966(R)|CLK_BUFGP         |   0.000|
+Din<1>      |    0.371(R)|    0.955(R)|CLK_BUFGP         |   0.000|
 Din<2>      |    0.347(R)|    0.974(R)|CLK_BUFGP         |   0.000|
 Din<3>      |    0.251(R)|    1.051(R)|CLK_BUFGP         |   0.000|
-Din<4>      |    0.577(R)|    0.789(R)|CLK_BUFGP         |   0.000|
-Din<5>      |    0.672(R)|    0.714(R)|CLK_BUFGP         |   0.000|
+Din<4>      |    0.209(R)|    1.084(R)|CLK_BUFGP         |   0.000|
+Din<5>      |    0.568(R)|    0.797(R)|CLK_BUFGP         |   0.000|
 Din<6>      |    0.322(R)|    0.994(R)|CLK_BUFGP         |   0.000|
-Din<7>      |    1.009(R)|    0.444(R)|CLK_BUFGP         |   0.000|
+Din<7>      |    1.006(R)|    0.447(R)|CLK_BUFGP         |   0.000|
 Din<8>      |    0.653(R)|    0.729(R)|CLK_BUFGP         |   0.000|
-Din<9>      |    1.216(R)|    0.278(R)|CLK_BUFGP         |   0.000|
-RD_EN       |    4.878(R)|    0.486(R)|CLK_BUFGP         |   0.000|
-WR_EN       |    4.849(R)|    0.782(R)|CLK_BUFGP         |   0.000|
+Din<9>      |    0.827(R)|    0.590(R)|CLK_BUFGP         |   0.000|
+RD_EN       |    4.655(R)|    0.508(R)|CLK_BUFGP         |   0.000|
+WR_EN       |    4.845(R)|    0.571(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -68,12 +68,13 @@ Dout<1>     |    8.803(R)|CLK_BUFGP         |   0.000|
 Dout<2>     |    8.953(R)|CLK_BUFGP         |   0.000|
 Dout<3>     |    8.980(R)|CLK_BUFGP         |   0.000|
 Dout<4>     |    9.366(R)|CLK_BUFGP         |   0.000|
-Dout<5>     |    9.342(R)|CLK_BUFGP         |   0.000|
+Dout<5>     |    9.376(R)|CLK_BUFGP         |   0.000|
 Dout<6>     |    9.101(R)|CLK_BUFGP         |   0.000|
 Dout<7>     |    9.407(R)|CLK_BUFGP         |   0.000|
 Dout<8>     |    9.406(R)|CLK_BUFGP         |   0.000|
 Dout<9>     |    9.447(R)|CLK_BUFGP         |   0.000|
-Full        |    7.197(R)|CLK_BUFGP         |   0.000|
+Empty       |    7.338(R)|CLK_BUFGP         |   0.000|
+Full        |    7.113(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -81,7 +82,7 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    6.611|         |         |         |
+CLK            |    6.895|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
@@ -94,14 +95,14 @@ RD_EN          |Dout<2>        |    5.572|
 RD_EN          |Dout<3>        |    5.792|
 RD_EN          |Dout<4>        |    5.511|
 RD_EN          |Dout<5>        |    6.040|
-RD_EN          |Dout<6>        |    5.997|
-RD_EN          |Dout<7>        |    6.001|
+RD_EN          |Dout<6>        |    6.001|
+RD_EN          |Dout<7>        |    6.005|
 RD_EN          |Dout<8>        |    6.280|
-RD_EN          |Dout<9>        |    6.688|
+RD_EN          |Dout<9>        |    6.690|
 ---------------+---------------+---------+
 
 
-Analysis completed Mon May 01 05:37:55 2023 
+Analysis completed Mon May 01 05:58:00 2023 
 --------------------------------------------------------------------------------
 
 Trace Settings:
