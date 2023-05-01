@@ -134,18 +134,18 @@ Module <RAM> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
-INFO:Xst:2679 - Register <i> in unit <RAM> has a constant value of 100000000 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <RAM>.
     Related source file is "RAM.v".
+WARNING:Xst:647 - Input <RST> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1872 - Variable <n> is used but never assigned.
+WARNING:Xst:1872 - Variable <i> is used but never assigned.
+    Found 256x10-bit single-port RAM <Mram_MEM> for signal <MEM>.
     Found 10-bit tristate buffer for signal <Dout>.
-    Found 2560-bit register for signal <MEM>.
     Found 10-bit register for signal <TMP_Dout>.
-INFO:Xst:738 - HDL ADVISOR - 2560 flip-flops were inferred for signal <MEM>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Summary:
-	inferred 2570 D-type flip-flop(s).
-	inferred  10 Multiplexer(s).
+	inferred   1 RAM(s).
+	inferred  10 D-type flip-flop(s).
 	inferred  10 Tristate(s).
 Unit <RAM> synthesized.
 
@@ -154,10 +154,10 @@ Unit <RAM> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 257
- 10-bit register                                       : 257
-# Multiplexers                                         : 1
- 10-bit 256-to-1 multiplexer                           : 1
+# RAMs                                                 : 1
+ 256x10-bit single-port RAM                            : 1
+# Registers                                            : 1
+ 10-bit register                                       : 1
 # Tristates                                            : 1
  10-bit tristate buffer                                : 1
 
@@ -168,14 +168,29 @@ Macro Statistics
 =========================================================================
 
 
+Synthesizing (advanced) Unit <RAM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_MEM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 10-bit                   |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <ADDR>          |          |
+    |     diA            | connected to signal <Din>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RAM> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 2570
- Flip-Flops                                            : 2570
-# Multiplexers                                         : 1
- 10-bit 256-to-1 multiplexer                           : 1
+# RAMs                                                 : 1
+ 256x10-bit single-port distributed RAM                : 1
+# Registers                                            : 10
+ Flip-Flops                                            : 10
 
 =========================================================================
 
@@ -187,9 +202,7 @@ Optimizing unit <RAM> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block RAM, actual ratio is 222.
-Optimizing block <RAM> to meet ratio 100 (+ 5) of 960 slices :
-WARNING:Xst:2254 - Area constraint could not be met for block <RAM>, final ratio is 222.
+Found area constraint ratio of 100 (+ 5) on block RAM, actual ratio is 11.
 
 Final Macro Processing ...
 
@@ -197,8 +210,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2570
- Flip-Flops                                            : 2570
+# Registers                                            : 10
+ Flip-Flops                                            : 10
 
 =========================================================================
 
@@ -227,21 +240,20 @@ Design Statistics
 # IOs                              : 32
 
 Cell Usage :
-# BELS                             : 2828
-#      LUT2                        : 1
-#      LUT3                        : 1321
-#      LUT4                        : 276
-#      MUXF5                       : 660
-#      MUXF6                       : 330
-#      MUXF7                       : 160
-#      MUXF8                       : 80
-# FlipFlops/Latches                : 2570
+# BELS                             : 81
+#      LUT2                        : 3
+#      LUT3                        : 40
+#      LUT4                        : 8
+#      MUXF5                       : 20
+#      MUXF6                       : 10
+# FlipFlops/Latches                : 10
 #      FDE                         : 10
-#      FDRE                        : 2560
+# RAMS                             : 80
+#      RAM32X1S                    : 80
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 31
-#      IBUF                        : 21
+# IO Buffers                       : 30
+#      IBUF                        : 20
 #      OBUFT                       : 10
 =========================================================================
 
@@ -250,14 +262,14 @@ Device utilization summary:
 
 Selected Device : 3s100evq100-5 
 
- Number of Slices:                     2132  out of    960   222% (*) 
- Number of Slice Flip Flops:           2570  out of   1920   133% (*) 
- Number of 4 input LUTs:               1598  out of   1920    83%  
+ Number of Slices:                      106  out of    960    11%  
+ Number of Slice Flip Flops:             10  out of   1920     0%  
+ Number of 4 input LUTs:                211  out of   1920    10%  
+    Number used as logic:                51
+    Number used as RAMs:                160
  Number of IOs:                          32
- Number of bonded IOBs:                  32  out of     66    48%  
+ Number of bonded IOBs:                  31  out of     66    46%  
  Number of GCLKs:                         1  out of     24     4%  
-
-WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -280,7 +292,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 2570  |
+CLK                                | BUFGP                  | 90    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -291,10 +303,10 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.218ns (Maximum Frequency: 191.644MHz)
-   Minimum input arrival time before clock: 6.735ns
+   Minimum period: 3.967ns (Maximum Frequency: 252.080MHz)
+   Minimum input arrival time before clock: 5.181ns
    Maximum output required time after clock: 4.040ns
-   Maximum combinational path delay: 6.357ns
+   Maximum combinational path delay: 6.240ns
 
 Timing Detail:
 --------------
@@ -302,59 +314,50 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 5.218ns (frequency: 191.644MHz)
-  Total number of paths / destination ports: 2560 / 10
+  Clock period: 3.967ns (frequency: 252.080MHz)
+  Total number of paths / destination ports: 80 / 10
 -------------------------------------------------------------------------
-Delay:               5.218ns (Levels of Logic = 8)
-  Source:            MEM_0_0 (FF)
+Delay:               3.967ns (Levels of Logic = 3)
+  Source:            Mram_MEM1 (RAM)
   Destination:       TMP_Dout_0 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: MEM_0_0 to TMP_Dout_0
+  Data Path: Mram_MEM1 to TMP_Dout_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             1   0.514   0.426  MEM_0_0 (MEM_0_0)
-     LUT3:I1->O            1   0.612   0.000  Mmux__COND_1_172 (Mmux__COND_1_172)
-     MUXF5:I0->O           1   0.278   0.000  Mmux__COND_1_15_f5_1 (Mmux__COND_1_15_f52)
-     MUXF6:I0->O           1   0.451   0.000  Mmux__COND_1_13_f6_1 (Mmux__COND_1_13_f62)
-     MUXF7:I0->O           1   0.451   0.000  Mmux__COND_1_11_f7_1 (Mmux__COND_1_11_f72)
-     MUXF8:I0->O           1   0.451   0.426  Mmux__COND_1_9_f8_1 (Mmux__COND_1_9_f82)
-     LUT3:I1->O            1   0.612   0.000  Mmux__COND_1_6 (Mmux__COND_1_6)
-     MUXF5:I0->O           1   0.278   0.000  Mmux__COND_1_4_f5 (Mmux__COND_1_4_f5)
-     MUXF6:I0->O           1   0.451   0.000  Mmux__COND_1_2_f6 (_COND_1<0>)
+     RAM32X1S:WCLK->O      1   1.932   0.426  Mram_MEM1 (N10)
+     LUT3:I1->O            1   0.612   0.000  inst_LPM_MUX_6 (inst_LPM_MUX_6)
+     MUXF5:I0->O           1   0.278   0.000  inst_LPM_MUX_4_f5 (inst_LPM_MUX_4_f5)
+     MUXF6:I0->O           1   0.451   0.000  inst_LPM_MUX_2_f6 (_varindex0000<0>)
      FDE:D                     0.268          TMP_Dout_0
     ----------------------------------------
-    Total                      5.218ns (4.366ns logic, 0.852ns route)
-                                       (83.7% logic, 16.3% route)
+    Total                      3.967ns (3.541ns logic, 0.426ns route)
+                                       (89.3% logic, 10.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 33300 / 7700
+  Total number of paths / destination ports: 1370 / 580
 -------------------------------------------------------------------------
-Offset:              6.735ns (Levels of Logic = 9)
-  Source:            ADDR<0> (PAD)
+Offset:              5.181ns (Levels of Logic = 5)
+  Source:            ADDR<3> (PAD)
   Destination:       TMP_Dout_0 (FF)
   Destination Clock: CLK rising
 
-  Data Path: ADDR<0> to TMP_Dout_0
+  Data Path: ADDR<3> to TMP_Dout_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1284   1.106   1.351  ADDR_0_IBUF (ADDR_0_IBUF)
-     LUT3:I0->O            1   0.612   0.000  Mmux__COND_1_11 (Mmux__COND_1_11)
-     MUXF5:I1->O           1   0.278   0.000  Mmux__COND_1_10_f5 (Mmux__COND_1_10_f5)
-     MUXF6:I1->O           1   0.451   0.000  Mmux__COND_1_9_f6 (Mmux__COND_1_9_f6)
-     MUXF7:I1->O           1   0.451   0.000  Mmux__COND_1_8_f7 (Mmux__COND_1_8_f7)
-     MUXF8:I1->O           1   0.451   0.426  Mmux__COND_1_7_f8 (Mmux__COND_1_7_f8)
-     LUT3:I1->O            1   0.612   0.000  Mmux__COND_1_4 (Mmux__COND_1_4)
-     MUXF5:I1->O           1   0.278   0.000  Mmux__COND_1_3_f5 (Mmux__COND_1_3_f5)
-     MUXF6:I1->O           1   0.451   0.000  Mmux__COND_1_2_f6 (_COND_1<0>)
+     IBUF:I->O           320   1.106   1.150  ADDR_3_IBUF (ADDR_3_IBUF)
+     RAM32X1S:A3->O        1   0.890   0.426  Mram_MEM1 (N10)
+     LUT3:I1->O            1   0.612   0.000  inst_LPM_MUX_6 (inst_LPM_MUX_6)
+     MUXF5:I0->O           1   0.278   0.000  inst_LPM_MUX_4_f5 (inst_LPM_MUX_4_f5)
+     MUXF6:I0->O           1   0.451   0.000  inst_LPM_MUX_2_f6 (_varindex0000<0>)
      FDE:D                     0.268          TMP_Dout_0
     ----------------------------------------
-    Total                      6.735ns (4.958ns logic, 1.776ns route)
-                                       (73.6% logic, 26.4% route)
+    Total                      5.181ns (3.605ns logic, 1.576ns route)
+                                       (69.6% logic, 30.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
@@ -379,7 +382,7 @@ Offset:              4.040ns (Levels of Logic = 1)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 20 / 10
 -------------------------------------------------------------------------
-Delay:               6.357ns (Levels of Logic = 3)
+Delay:               6.240ns (Levels of Logic = 3)
   Source:            WE (PAD)
   Destination:       Dout<9> (PAD)
 
@@ -387,24 +390,24 @@ Delay:               6.357ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             6   1.106   0.721  WE_IBUF (WE_IBUF)
+     IBUF:I->O             3   1.106   0.603  WE_IBUF (WE_IBUF)
      LUT2:I0->O           10   0.612   0.750  Dout_and0000_inv1 (Dout_and0000_inv)
      OBUFT:T->O                3.169          Dout_9_OBUFT (Dout<9>)
     ----------------------------------------
-    Total                      6.357ns (4.887ns logic, 1.470ns route)
-                                       (76.9% logic, 23.1% route)
+    Total                      6.240ns (4.887ns logic, 1.353ns route)
+                                       (78.3% logic, 21.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 16.17 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.72 secs
  
 --> 
 
-Total memory usage is 310472 kilobytes
+Total memory usage is 275016 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

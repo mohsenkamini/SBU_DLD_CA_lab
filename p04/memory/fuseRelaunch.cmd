@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/mohsen/Desktop/verilog/memory/RAM_tb_isim_beh.exe" -prj "C:/Users/mohsen/Desktop/verilog/memory/RAM_tb_beh.prj" "work.RAM_tb" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "//VBOXSVR/University/Digital-Logic-Design/Lab/p04/memory/RAM_tb_isim_beh.exe" -prj "//VBOXSVR/University/Digital-Logic-Design/Lab/p04/memory/RAM_tb_beh.prj" "work.RAM_tb" "work.glbl" 
