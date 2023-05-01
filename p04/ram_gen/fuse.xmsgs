@@ -5,17 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="267" delta="unknown" >"Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_gen_tb.v" Line 39: Cannot find port <arg fmt="%s" index="1">clk</arg> on this module
-</msg>
-
-<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_gen_tb.v" Line 40: Module &lt;<arg fmt="%s" index="1">ram_dar_had_no</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">clk</arg>&gt;.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_gen_tb.v" Line 39: Port <arg fmt="%s" index="1">clka</arg> is not connected to this instance
-</msg>
-
-<msg type="error" file="Simulator" num="778" delta="unknown" >Static elaboration of top level Verilog design unit(s) in library <arg fmt="%s" index="1">work</arg> failed
-</msg>
-
 </messages>
 

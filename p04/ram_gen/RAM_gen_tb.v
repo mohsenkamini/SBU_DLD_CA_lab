@@ -43,6 +43,7 @@ module RAM_tb;
 		.dina(dina), 
 		.douta(douta)
 	);
+	
 
 	always #(20) clka = ~clka;
 	

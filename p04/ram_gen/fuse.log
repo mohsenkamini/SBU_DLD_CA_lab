@@ -8,7 +8,18 @@ Analyzing Verilog file "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/ram_dar_had_no.v" into
 Analyzing Verilog file "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_gen_tb.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:267 - "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_gen_tb.v" Line 39: Cannot find port clk on this module
-ERROR:HDLCompiler:25 - "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_gen_tb.v" Line 40: Module <ram_dar_had_no> does not have a port named <clk>.
-WARNING:HDLCompiler:1016 - "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_gen_tb.v" Line 39: Port clka is not connected to this instance
-ERROR:Simulator:778 - Static elaboration of top level Verilog design unit(s) in library work failed
+Completed static elaboration
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module RAM
+Compiling module ram_dar_had_no
+Compiling module RAM_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 8 Verilog Units
+Built simulation executable Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_tb_isim_beh.exe
+Fuse Memory Usage: 33328 KB
+Fuse CPU Usage: 529 ms
