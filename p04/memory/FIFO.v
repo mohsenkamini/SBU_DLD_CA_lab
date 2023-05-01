@@ -1,6 +1,7 @@
 `include "RAM.v"
 
-module moduleName #( parameter ADDR_WIDTH = 8, parameter DATA_WIDTH = 10, parameter MEM_SIZE = 256) (
+module FIFO #( parameter ADDR_WIDTH = 8, parameter DATA_WIDTH = 10,
+							parameter MEM_SIZE = 256) (
     input [DATA_WIDTH-1:0] Din,
     input RST,RD_EN,WR_EN,
     input CLK,

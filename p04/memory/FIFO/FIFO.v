@@ -23,24 +23,31 @@ module FIFO #(parameter ADDR_WIDTH = 8,
 				 parameter MEM_SIZE = 256)(
 
     input [DATA_WIDTH-1:0] Din,
-    input [ADDR_WIDTH-1:0] ADDR,
-    input RST,EN,WE,
+	 input RST,
+    input RD_EN,WR_EN,
+	 output Empty,Full,
     input CLK,
     output [DATA_WIDTH-1:0] Dout
     );
 	
 	reg [DATA_WIDTH-1:0] MEM [MEM_SIZE-1:0] ;
 	reg [DATA_WIDTH-1:0] TMP_Dout ;
-	always@(RST)
-		for (integer i=0 ; i < MEM_SIZE ; i = i+1)
-			MEM [i] <= 0;
+	reg []rdIndex=0,wrIndex=0;
+	
+	//always@(RST)
+	//	for (integer i=0 ; i < MEM_SIZE ; i = i+1)
+	//		MEM [i] <= 0;
 			
 	always@(posedge CLK)
 	begin
-		if(EN & WE)
-		 	MEM [ADDR]<= Din;
-		else if (EN)
-			TMP_Dout <= MEM [ADDR];
+		if(WR_EN)begin
+		 	MEM [wrIndex]<= Din;
+			wrIndex = wrIndex +1;
+		end
+		if (RD_EN) begin
+			TMP_Dout <= MEM [rdIndex];
+			rdIndex = rdIndex + 1;
+		end
 	end
 	
 	assign Dout = (EN & !WE) ? TMP_Dout : 'bz;
