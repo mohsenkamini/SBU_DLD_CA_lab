@@ -48,62 +48,62 @@ module FIFO_gen_tb;
 		.empty(empty)
 	);
 	
-			always #(20) CLK = ~CLK;
+			always #(20) clk = ~clk;
 	
 	
 	initial begin
 		// Initialize Inputs
 		clk=0;
 		din = 0;
-		RST = 0;
+		rst = 0;
 		rd_en = 0;
-		WR_EN = 0;
+		wr_en = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
 		
-		Din = 10'd32;
-		RST = 0;
+		din = 10'd32;
+		rst = 0;
 		rd_en = 0;
-		WR_EN = 1;
+		wr_en = 1;
 		#40;
         
-		Din = 10'd29;
-		RST = 0;
-		RD_EN = 0;
-		WR_EN = 1;
+		din = 10'd29;
+		rst = 0;
+		rd_en = 0;
+		wr_en = 1;
 		#40;
 		
 		
-		Din = 10'd53;
-		RST = 0;
-		RD_EN = 0;
-		WR_EN = 1;
+		din = 10'd53;
+		rst = 0;
+		rd_en = 0;
+		wr_en = 1;
 		#40;
 		
-		Din = 10'd0;
-		RST = 0;
-		RD_EN = 1;
-		WR_EN = 0;
+		din = 10'd0;
+		rst = 0;
+		rd_en = 1;
+		wr_en = 0;
 		#40;   
 		
-		Din = 10'd32;
-		RST = 0;
-		RD_EN = 0;
-		WR_EN = 1;
+		din = 10'd32;
+		rst = 0;
+		rd_en = 0;
+		wr_en = 1;
 		#40;   
 
-		Din = 10'd0;
-		RST = 0;
-		RD_EN = 1;
-		WR_EN = 0;
+		din = 10'd0;
+		rst = 0;
+		rd_en = 1;
+		wr_en = 0;
 		#40;
 		
 		
-		Din = 10'd32;
-		RST = 0;
-		RD_EN = 0;
-		WR_EN = 1;
+		din = 10'd32;
+		rst = 0;
+		rd_en = 0;
+		wr_en = 1;
 		#40;   
 		#10000;
 		end
