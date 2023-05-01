@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "Z:/Lab/ALU/DLD_CA_lab/p04/fifo_gen/fifo_dar_had_no_isim_beh.exe" -prj "Z:/Lab/ALU/DLD_CA_lab/p04/fifo_gen/fifo_dar_had_no_beh.prj" "work.fifo_dar_had_no" "work.glbl" 

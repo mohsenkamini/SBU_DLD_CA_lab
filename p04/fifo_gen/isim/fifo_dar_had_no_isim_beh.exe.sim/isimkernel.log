@@ -1,0 +1,28 @@
+Command line:
+   fifo_dar_had_no_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49162
+
+Mon May 01 18:41:38 2023
+
+
+ Elaboration Time: 0.0936 sec
+
+ Current Memory Usage: 673.866 Meg
+
+ Total Signals          : 524
+ Total Nets             : 2034
+ Total Signal Drivers   : 100
+ Total Blocks           : 8
+ Total Primitive Blocks : 3
+ Total Processes        : 136
+ Total Traceable Variables  : 499
+ Total Scalar Nets and Variables : 17956
+
+ Total Simulation Time: 0.1092 sec
+
+ Current Memory Usage: 673.866 Meg
+
+Mon May 01 18:42:03 2023
+
