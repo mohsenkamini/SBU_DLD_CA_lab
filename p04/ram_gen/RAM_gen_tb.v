@@ -125,6 +125,7 @@ module RAM_tb;
 		wea = 0;
 		#40;
 		
+		
 	
       
 		// Add stimulus here

@@ -1,4 +1,4 @@
 verilog work "ipcore_dir/FIFO.v"
 verilog work "FIFO.v"
 verilog work "FIFO_gen_tb.v"
-verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
+verilog work "E:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v"

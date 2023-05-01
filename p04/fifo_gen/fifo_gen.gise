@@ -100,11 +100,11 @@
       <outfile xil_pn:name="FIFO.v"/>
       <outfile xil_pn:name="FIFO_gen_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1682950877" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2329531655888926871" xil_pn:start_ts="1682950877">
+    <transform xil_pn:end_ts="1682954957" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2329531655888926871" xil_pn:start_ts="1682954957">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1682950877" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6158060945732788245" xil_pn:start_ts="1682950877">
+    <transform xil_pn:end_ts="1682954957" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6158060945732788245" xil_pn:start_ts="1682954957">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -120,7 +120,7 @@
       <outfile xil_pn:name="FIFO.v"/>
       <outfile xil_pn:name="FIFO_gen_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1682951008" xil_pn:in_ck="3572615882755603605" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8660699573650864691" xil_pn:start_ts="1682951006">
+    <transform xil_pn:end_ts="1682954959" xil_pn:in_ck="3572615882755603605" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8660699573650864691" xil_pn:start_ts="1682954957">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -132,9 +132,11 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1682951009" xil_pn:in_ck="-570134198401509646" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8934019713950274838" xil_pn:start_ts="1682951008">
+    <transform xil_pn:end_ts="1682954959" xil_pn:in_ck="-570134198401509646" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8934019713950274838" xil_pn:start_ts="1682954959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="FIFO_gen_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>

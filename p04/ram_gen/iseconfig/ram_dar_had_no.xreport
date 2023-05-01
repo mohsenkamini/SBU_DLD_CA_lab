@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2023-05-01T19:15:12</DateModified>
+  <DateModified>2023-05-01T08:33:06</DateModified>
   <ModuleName>ram_dar_had_no</ModuleName>
   <SummaryTimeStamp>2023-05-01T19:05:55</SummaryTimeStamp>
-  <SavedFilePath>Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/iseconfig/ram_dar_had_no.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/mohsen/Desktop/verilog/p04/ram_gen/iseconfig/ram_dar_had_no.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/mohsen/Desktop/verilog/p04/ram_gen\</ImplementationReportsDirectory>
   <DateInitialized>2023-05-01T19:03:08</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

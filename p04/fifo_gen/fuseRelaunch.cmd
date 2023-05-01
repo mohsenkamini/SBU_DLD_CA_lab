@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "Z:/Lab/ALU/DLD_CA_lab/p04/fifo_gen/FIFO_gen_tb_isim_beh.exe" -prj "Z:/Lab/ALU/DLD_CA_lab/p04/fifo_gen/FIFO_gen_tb_beh.prj" "work.FIFO_gen_tb" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/mohsen/Desktop/verilog/p04/fifo_gen/FIFO_gen_tb_isim_beh.exe" -prj "C:/Users/mohsen/Desktop/verilog/p04/fifo_gen/FIFO_gen_tb_beh.prj" "work.FIFO_gen_tb" "work.glbl" 
