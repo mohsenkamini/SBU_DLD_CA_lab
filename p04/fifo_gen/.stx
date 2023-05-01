@@ -1,0 +1,30 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to Z:/Lab/ALU/DLD_CA_lab/p04/fifo_gen/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> Parameter xsthdpdir set to Z:/Lab/ALU/DLD_CA_lab/p04/fifo_gen/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "fifo_dar_had_no.v" in library work
+ERROR:HDLCompilers:26 - "fifo_dar_had_no.v" line 60 expecting 'EOF', found 'FIFO'
+Analysis of file <".prj"> failed.
+--> 
+
+Total memory usage is 215416 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

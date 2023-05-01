@@ -1,0 +1,5 @@
+set -tmpdir "Z:/Lab/ALU/DLD_CA_lab/p04/fifo_gen/xst/projnav.tmp"
+set -xsthdpdir "Z:/Lab/ALU/DLD_CA_lab/p04/fifo_gen/xst"
+elaborate
+-ifn .prj
+-ifmt mixed

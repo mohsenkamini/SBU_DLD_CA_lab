@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Z:/Lab/ALU/DLD_CA_lab/p04/fifo_gen/FIFO.xst" -ofn "Z:/Lab/ALU/DLD_CA_lab/p04/fifo_gen/FIFO.syr" 
