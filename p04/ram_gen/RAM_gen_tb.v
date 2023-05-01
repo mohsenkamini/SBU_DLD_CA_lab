@@ -36,13 +36,11 @@ module RAM_tb;
 	wire [9:0] douta;
 
 	// Instantiate the Unit Under Test (UUT)
-	RAM uut (
-		.dina(dina), 
-		.addra(addra), 
-
-
-		.wea(wea), 
+	ram_dar_had_no uut (
 		.clk(clk), 
+		.wea(wea), 
+		.addra(addra), 
+		.dina(dina), 
 		.douta(douta)
 	);
 

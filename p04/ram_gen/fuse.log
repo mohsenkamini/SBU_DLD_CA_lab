@@ -1,0 +1,14 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_tb_isim_beh.exe -prj Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_tb_beh.prj work.RAM_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/ipcore_dir/RAM.v" into library work
+Analyzing Verilog file "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/ram_dar_had_no.v" into library work
+Analyzing Verilog file "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_gen_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:267 - "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_gen_tb.v" Line 39: Cannot find port clk on this module
+ERROR:HDLCompiler:25 - "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_gen_tb.v" Line 40: Module <ram_dar_had_no> does not have a port named <clk>.
+WARNING:HDLCompiler:1016 - "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_gen_tb.v" Line 39: Port clka is not connected to this instance
+ERROR:Simulator:778 - Static elaboration of top level Verilog design unit(s) in library work failed

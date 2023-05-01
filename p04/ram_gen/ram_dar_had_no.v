@@ -19,7 +19,26 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ram_dar_had_no(
-    );
 
+  clka,
+  wea,
+  addra,
+  dina,
+  douta
+);
+
+input clka;
+input [0 : 0] wea;
+input [7 : 0] addra;
+input [9 : 0] dina;
+output [9 : 0] douta;
+
+RAM your_instance_name (
+  .clka(clka), // input clka
+  .wea(wea), // input [0 : 0] wea
+  .addra(addra), // input [7 : 0] addra
+  .dina(dina), // input [9 : 0] dina
+  .douta(douta) // output [9 : 0] douta
+);
 
 endmodule

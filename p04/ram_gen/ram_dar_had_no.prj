@@ -1,0 +1,2 @@
+verilog work "ipcore_dir/RAM.v"
+verilog work "ram_dar_had_no.v"

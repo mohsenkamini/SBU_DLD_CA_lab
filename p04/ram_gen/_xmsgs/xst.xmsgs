@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="sim" num="172" delta="old" >Generating IP...
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">ipcore_dir/RAM.v</arg>&quot; line <arg fmt="%d" index="2">36</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">RAM</arg>&gt;.
 </msg>
 
 </messages>

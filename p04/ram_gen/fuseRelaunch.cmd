@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_tb_isim_beh.exe" -prj "Z:/Lab/ALU/DLD_CA_lab/p04/ram_gen/RAM_tb_beh.prj" "work.RAM_tb" "work.glbl" 
