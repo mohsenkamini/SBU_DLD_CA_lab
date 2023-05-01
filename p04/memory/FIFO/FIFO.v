@@ -32,8 +32,8 @@ module FIFO #(parameter ADDR_WIDTH = 8,
 	
 	reg [DATA_WIDTH-1:0] MEM [MEM_SIZE-1:0] ;
 	reg [DATA_WIDTH-1:0] TMP_Dout ;
-	reg []rdIndex=0,wrIndex=0;
-	
+	reg [ADDR_WIDTH:0] rdIndex=0,wrIndex=0;
+	reg TMP_Empty=1, TMP_Full=0;
 	//always@(RST)
 	//	for (integer i=0 ; i < MEM_SIZE ; i = i+1)
 	//		MEM [i] <= 0;
@@ -42,14 +42,20 @@ module FIFO #(parameter ADDR_WIDTH = 8,
 	begin
 		if(WR_EN)begin
 		 	MEM [wrIndex]<= Din;
-			wrIndex = wrIndex +1;
+				wrIndex = wrIndex +1;
 		end
 		if (RD_EN) begin
 			TMP_Dout <= MEM [rdIndex];
 			rdIndex = rdIndex + 1;
 		end
+		if (rdIndex[ADDR_WIDTH] == wrIndex[ADDR_WIDTH])
+			TMP_Empty <= 1;
+		else if (rdIndex[ADDR_WIDTH-1:0] == wrIndex[ADDR_WIDTH-1:0])
+			TMP_Full <= 1;
 	end
 	
-	assign Dout = (EN & !WE) ? TMP_Dout : 'bz;
+	assign Dout = (RD_EN) ? TMP_Dout : 'bz;
+	assign Empty = TMP_Empty;
+	assign Full =  TMP_Full;
 
 endmodule
