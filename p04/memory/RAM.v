@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module RAM #(parameter ADDR_WIDTH = 10, 
+module RAM #(parameter ADDR_WIDTH = 8, 
 				 parameter DATA_WIDTH = 10,
 				 parameter MEM_SIZE = 256)(
 
