@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: moduleName.prj
 
@@ -104,47 +104,43 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "RAM.v" in library work
-ERROR:HDLCompilers:26 - "RAM.v" line 43 unexpected token: 'else'
-Module <RAM> compiled
-ERROR:HDLCompilers:26 - "RAM.v" line 43 expecting 'endmodule', found 'if'
 Compiling verilog file "FIFO.v" in library work
 Compiling verilog include file "RAM.v"
-ERROR:HDLCompilers:27 - "RAM.v" line 21 Illegal redeclaration of 'RAM'
-ERROR:HDLCompilers:26 - "RAM.v" line 43 unexpected token: 'else'
 Module <RAM> compiled
-ERROR:HDLCompilers:26 - "RAM.v" line 43 expecting 'endmodule', found 'if'
-ERROR:HDLCompilers:28 - "FIFO.v" line 17 'front' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 18 'rear' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 28 'wirte' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 32 'front' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 33 'rear' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 38 'front' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 38 'rear' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 38 'size' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 38 'rear' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 38 'front' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 38 'size' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 43 'front' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 45 'front' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 46 'rear' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 47 'rear' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 51 'rear' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 51 'front' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 53 'rear' has not been declared
-ERROR:HDLCompilers:28 - "FIFO.v" line 55 'rear' has not been declared
-ERROR:HDLCompilers:26 - "FIFO.v" line 60 unexpected token: 'rear'
-ERROR:HDLCompilers:26 - "FIFO.v" line 60 expecting 'end', found '+'
-ERROR:HDLCompilers:26 - "FIFO.v" line 60 expecting 'end', found '1'
-ERROR:HDLCompilers:28 - "FIFO.v" line 61 'rear' has not been declared
 Module <moduleName> compiled
-ERROR:HDLCompilers:26 - "FIFO.v" line 64 expecting 'endmodule', found 'end'
-Analysis of file <"moduleName.prj"> failed.
+No errors in compilation
+Analysis of file <"moduleName.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <moduleName> in library <work> with parameters.
+	ADDR_WIDTH = "00000000000000000000000000001000"
+	DATA_WIDTH = "00000000000000000000000000001010"
+	MEM_SIZE = "00000000000000000000000100000000"
+
+Analyzing hierarchy for module <RAM> in library <work> with parameters.
+	ADDR_WIDTH = "00000000000000000000000000001000"
+	DATA_WIDTH = "00000000000000000000000000001010"
+	MEM_SIZE = "00000000000000000000000100000000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <moduleName>.
+	ADDR_WIDTH = 32'sb00000000000000000000000000001000
+	DATA_WIDTH = 32'sb00000000000000000000000000001010
+	MEM_SIZE = 32'sb00000000000000000000000100000000
+ERROR:Xst:867 - "FIFO.v" line 42: Operator % is only supported when the second operand is a power of 2.
+ 
+Found 1 error(s). Aborting synthesis.
 --> 
 
-Total memory usage is 246244 kilobytes
+Total memory usage is 251428 kilobytes
 
-Number of errors   :   29 (   0 filtered)
+Number of errors   :    1 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

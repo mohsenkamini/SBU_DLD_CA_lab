@@ -4,28 +4,32 @@ module moduleName #( parameter ADDR_WIDTH = 8, parameter DATA_WIDTH = 10, parame
     input [DATA_WIDTH-1:0] Din,
     input RST,RD_EN,WR_EN,
     input CLK,
-    output full, Empty,
+    output reg full, Empty,
     output [DATA_WIDTH-1:0] Dout
 );
-
+	 reg[ADDR_WIDTH - 1:0] addr;
     reg write, read;
     RAM RAM(Din, addr, RST, read, write, CLK, Dout);
     // reg[ADDR_WIDTH - 1:0] head, tail;
-    integer head, tail;
+    integer front, rear;
 
     initial begin
         front = -1;
         rear = -1;
     end
 
+	always @(posedge RST) begin 
+		  front = -1;
+        rear = -1;
+	end
 
 
-    always @(posedge CLK, RST) begin
+    always @(posedge CLK) begin
 
     full = 0;
     Empty = 0;
     read = 0;
-    wirte = 0;
+    write = 0;
 
     if (RST)
     begin 
@@ -35,7 +39,7 @@ module moduleName #( parameter ADDR_WIDTH = 8, parameter DATA_WIDTH = 10, parame
 
     
     if (WR_EN) begin
-        if ((front == 0 && rear == size-1) || (rear == (front-1)%(size-1)))
+        if ((front == 0 && rear == -1) || (rear == (front-1)%(MEM_SIZE-1)))
         begin
             full = 1'b1;
         end
@@ -57,7 +61,7 @@ module moduleName #( parameter ADDR_WIDTH = 8, parameter DATA_WIDTH = 10, parame
     
         else
         begin
-            rear += 1;
+            rear = rear + 1;
             addr = rear;
             write = 1'b1;
         end
@@ -66,23 +70,19 @@ module moduleName #( parameter ADDR_WIDTH = 8, parameter DATA_WIDTH = 10, parame
     else if (RD_EN) begin 
 
         if (front == -1)
-        {
             Empty = 1'b1;
-        }
     
         addr = front;
         read = 1'b1;
-        int data = arr[front];
-        arr[front] = -1;
         if (front == rear)
-        {
+        begin
             front = -1;
             rear = -1;
-        }
-        else if (front == size-1)
+        end
+        else if (front == MEM_SIZE-1)
             front = 0;
         else
-            front += 1;
+            front = front + 1;
 
 
     end   

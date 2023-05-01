@@ -40,7 +40,7 @@ module RAM #(parameter ADDR_WIDTH = 8,
 		//if (RST)
 		//	for (i=0 ; i < MEM_SIZE ; i = i+1) 
 		//		MEM [i] <= 'd0;
-		else if(EN & WE)
+		if(EN & WE)
 		 	MEM [ADDR]<= Din;
 		else if (EN)
 			TMP_Dout <= MEM [ADDR];
