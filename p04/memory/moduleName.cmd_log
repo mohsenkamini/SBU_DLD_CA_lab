@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "//VBOXSVR/University/Digital-Logic-Design/Lab/p04/memory/moduleName.xst" -ofn "//VBOXSVR/University/Digital-Logic-Design/Lab/p04/memory/moduleName.syr" 

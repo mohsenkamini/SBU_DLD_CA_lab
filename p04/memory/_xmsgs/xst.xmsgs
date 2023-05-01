@@ -5,19 +5,91 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">i</arg>&gt; in unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; has a constant value of <arg fmt="%s" index="3">100000000</arg> during circuit operation. The register is replaced by logic.
+<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">RAM.v</arg>&quot; line <arg fmt="%d" index="2">43</arg> <arg fmt="%s" index="3">unexpected token: &apos;else&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1872" delta="new" >Variable &lt;<arg fmt="%s" index="1">n</arg>&gt; is used but never assigned.
+<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">RAM.v</arg>&quot; line <arg fmt="%d" index="2">43</arg> <arg fmt="%s" index="3">expecting &apos;endmodule&apos;, found &apos;if&apos;</arg>
 </msg>
 
-<msg type="info" file="Xst" num="738" delta="old" >HDL ADVISOR - <arg fmt="%d" index="1">2560</arg> flip-flops were inferred for signal &lt;<arg fmt="%s" index="2">MEM</arg>&gt;. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+<msg type="error" file="HDLCompilers" num="27" delta="new" ><arg fmt="%s" index="1">&quot;RAM.v&quot; line 21 </arg>Illegal redeclaration of &apos;<arg fmt="%s" index="2">RAM</arg>&apos;
 </msg>
 
-<msg type="warning" file="Xst" num="2254" delta="new" >Area constraint could not be met for block &lt;<arg fmt="%s" index="1">RAM</arg>&gt;, final ratio is <arg fmt="%i" index="2">222</arg>.
+<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">RAM.v</arg>&quot; line <arg fmt="%d" index="2">43</arg> <arg fmt="%s" index="3">unexpected token: &apos;else&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1336" delta="new" > (*) More than 100% of Device resources are used
+<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">RAM.v</arg>&quot; line <arg fmt="%d" index="2">43</arg> <arg fmt="%s" index="3">expecting &apos;endmodule&apos;, found &apos;if&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 17 </arg>&apos;<arg fmt="%s" index="2">front</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 18 </arg>&apos;<arg fmt="%s" index="2">rear</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 28 </arg>&apos;<arg fmt="%s" index="2">wirte</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 32 </arg>&apos;<arg fmt="%s" index="2">front</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 33 </arg>&apos;<arg fmt="%s" index="2">rear</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 38 </arg>&apos;<arg fmt="%s" index="2">front</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 38 </arg>&apos;<arg fmt="%s" index="2">rear</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 38 </arg>&apos;<arg fmt="%s" index="2">size</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 38 </arg>&apos;<arg fmt="%s" index="2">rear</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 38 </arg>&apos;<arg fmt="%s" index="2">front</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 38 </arg>&apos;<arg fmt="%s" index="2">size</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 43 </arg>&apos;<arg fmt="%s" index="2">front</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 45 </arg>&apos;<arg fmt="%s" index="2">front</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 46 </arg>&apos;<arg fmt="%s" index="2">rear</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 47 </arg>&apos;<arg fmt="%s" index="2">rear</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 51 </arg>&apos;<arg fmt="%s" index="2">rear</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 51 </arg>&apos;<arg fmt="%s" index="2">front</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 53 </arg>&apos;<arg fmt="%s" index="2">rear</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 55 </arg>&apos;<arg fmt="%s" index="2">rear</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">FIFO.v</arg>&quot; line <arg fmt="%d" index="2">60</arg> <arg fmt="%s" index="3">unexpected token: &apos;rear&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">FIFO.v</arg>&quot; line <arg fmt="%d" index="2">60</arg> <arg fmt="%s" index="3">expecting &apos;end&apos;, found &apos;+&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">FIFO.v</arg>&quot; line <arg fmt="%d" index="2">60</arg> <arg fmt="%s" index="3">expecting &apos;end&apos;, found &apos;1&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;FIFO.v&quot; line 61 </arg>&apos;<arg fmt="%s" index="2">rear</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">FIFO.v</arg>&quot; line <arg fmt="%d" index="2">64</arg> <arg fmt="%s" index="3">expecting &apos;endmodule&apos;, found &apos;end&apos;</arg>
 </msg>
 
 </messages>
