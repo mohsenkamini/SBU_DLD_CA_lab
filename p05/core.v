@@ -26,7 +26,7 @@ controller ctrl(
     .stop(stop), .open_door(open_door)
 );
 
-always @ (S1 or S2 or S3 or S4 or U1 or D1 or U2 or D2 or U3 or D3 or U4 or D4 or F1 or F2 or F3 or F4)
+always @ (U1 or D1 or U2 or D2 or U3 or D3 or U4 or D4 or F1 or F2 or F3 or F4)
 begin 
     if (U1)
         U1_latch <= 1'b1;
@@ -52,11 +52,11 @@ begin
         F3_latch <= 1'b1;
     else if (F4)
         F4_latch <= 1'b1;
-//end
+end
 
 
-//always @ (S1 or S2 or S3 or S4)
-//begin 
+always @ (S1 or S2 or S3 or S4)
+begin 
     if (S1) begin 
         monitor <= 2'b00;
         if (open_door)
@@ -86,6 +86,5 @@ begin
         F4_latch <= 1'b0;
     end
 end 
-
 
 endmodule
