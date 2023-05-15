@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon May 15 05:59:44 2023
+Mon May 15 06:17:22 2023
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -72,40 +72,40 @@ Pinout by Pin Number:
 |P50       |           |DIFFS    |IO_L09N_2/CCLK        |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P51       |           |         |DONE                  |         |           |              |          |         |           |         |         |          |           |                |
 |P52       |           |         |GND                   |         |           |              |          |         |           |         |         |          |           |                |
-|P53       |S1         |IBUF     |IO_L01P_1             |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P54       |U1         |IBUF     |IO_L01N_1             |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P53       |F1         |IBUF     |IO_L01P_1             |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P54       |open_door  |IOB      |IO_L01N_1             |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
 |P55       |           |         |VCCO_1                |         |           |1             |          |         |           |         |2.50     |          |           |                |
 |P56       |           |         |VCCINT                |         |           |              |          |         |           |         |1.2      |          |           |                |
-|P57       |D4         |IBUF     |IO_L02P_1             |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P58       |D3         |IBUF     |IO_L02N_1             |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P57       |D2         |IBUF     |IO_L02P_1             |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P58       |U3         |IBUF     |IO_L02N_1             |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
 |P59       |           |         |GND                   |         |           |              |          |         |           |         |         |          |           |                |
-|P60       |U4         |IBUF     |IO_L03P_1/RHCLK0      |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P61       |F1         |IBUF     |IO_L03N_1/RHCLK1      |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P62       |D2         |IBUF     |IO_L04P_1/RHCLK2      |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P63       |U3         |IBUF     |IO_L04N_1/RHCLK3/TRDY1|INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P60       |D3         |IBUF     |IO_L03P_1/RHCLK0      |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P61       |U1         |IBUF     |IO_L03N_1/RHCLK1      |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P62       |S2         |IBUF     |IO_L04P_1/RHCLK2      |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P63       |U2         |IBUF     |IO_L04N_1/RHCLK3/TRDY1|INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
 |P64       |           |         |GND                   |         |           |              |          |         |           |         |         |          |           |                |
-|P65       |F3         |IBUF     |IO_L05P_1/RHCLK4/IRDY1|INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P66       |F4         |IBUF     |IO_L05N_1/RHCLK5      |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P67       |monitor<1> |IOB      |IO_L06P_1/RHCLK6      |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |YES        |NONE            |
-|P68       |down       |IOB      |IO_L06N_1/RHCLK7      |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
-|P69       |F2         |IBUF     |IP/VREF_1             |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P70       |U2         |IBUF     |IO_L07P_1             |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P71       |up         |IOB      |IO_L07N_1             |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
+|P65       |down       |IOB      |IO_L05P_1/RHCLK4/IRDY1|OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
+|P66       |D4         |IBUF     |IO_L05N_1/RHCLK5      |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P67       |reset      |IBUF     |IO_L06P_1/RHCLK6      |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P68       |up         |IOB      |IO_L06N_1/RHCLK7      |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
+|P69       |U4         |IBUF     |IP/VREF_1             |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P70       |monitor<1> |IOB      |IO_L07P_1             |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |YES        |NONE            |
+|P71       |monitor<0> |IOB      |IO_L07N_1             |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |YES        |NONE            |
 |P72       |           |         |GND                   |         |           |              |          |         |           |         |         |          |           |                |
 |P73       |           |         |VCCO_1                |         |           |1             |          |         |           |         |2.50     |          |           |                |
 |P74       |           |         |VCCAUX                |         |           |              |          |         |           |         |2.5      |          |           |                |
 |P75       |           |         |TMS                   |         |           |              |          |         |           |         |         |          |           |                |
 |P76       |           |         |TDO                   |         |           |              |          |         |           |         |         |          |           |                |
 |P77       |           |         |TCK                   |         |           |              |          |         |           |         |         |          |           |                |
-|P78       |reset      |IBUF     |IO_L01P_0             |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P79       |open_door  |IOB      |IO_L01N_0             |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
+|P78       |S3         |IBUF     |IO_L01P_0             |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P79       |stop       |IOB      |IO_L01N_0             |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
 |P80       |           |         |VCCINT                |         |           |              |          |         |           |         |1.2      |          |           |                |
 |P81       |           |         |GND                   |         |           |              |          |         |           |         |         |          |           |                |
 |P82       |           |         |VCCO_0                |         |           |0             |          |         |           |         |2.50     |          |           |                |
-|P83       |S2         |IBUF     |IO_L02P_0/GCLK4       |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P84       |monitor<0> |IOB      |IO_L02N_0/GCLK5       |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |         |UNLOCATED |YES        |NONE            |
-|P85       |S3         |IBUF     |IO_L03P_0/GCLK6       |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|P86       |stop       |IOB      |IO_L03N_0/GCLK7       |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
+|P83       |F3         |IBUF     |IO_L02P_0/GCLK4       |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P84       |F4         |IBUF     |IO_L02N_0/GCLK5       |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P85       |F2         |IBUF     |IO_L03P_0/GCLK6       |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|P86       |S1         |IBUF     |IO_L03N_0/GCLK7       |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
 |P87       |           |         |GND                   |         |           |              |          |         |           |         |         |          |           |                |
 |P88       |           |DIFFMI   |IP_L04P_0/GCLK8       |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |P89       |clk        |IBUF     |IP_L04N_0/GCLK9       |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
