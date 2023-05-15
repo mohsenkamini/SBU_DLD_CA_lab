@@ -13,7 +13,7 @@ module controller (
     input F1, F2, F3, F4, //inside elevator buttons
     input clk, //clock
     input reset, //reset
-    output reg up, down, stop, //motor states
+    output reg up, down, stop, //motor statesnt
     output open_door //open door it means open the door 
 );
 
