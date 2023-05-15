@@ -14,7 +14,6 @@ module controller (
     input clk, //clock
     input reset, //reset
     output reg up, down, stop, //motor states
-    output [1:0] monitor, //monitor
     output open_door //open door it means open the door 
 );
 
@@ -30,19 +29,6 @@ reg [1:0] next_state;
 reg [3:0] counter;
 reg last_direction; // if it is 1 it means up, if it is 0 it means down
 reg [1:0] state;
-reg [1:0] floor;
-
-always @ (S1 or S2 or S3 or S4)
-begin
-    if (S1)
-        floor <= 2'b00;
-    else if (S2)
-        floor <= 2'b01;
-    else if (S3)
-        floor <= 2'b10;
-    else if (S4)
-        floor <= 2'b11;
-end
 
 //next state logic
 always @ (posedge clk or posedge reset)
@@ -136,8 +122,6 @@ begin
             open_door <= 0;
         end
     endcase
-
-    monitor <= floor;
 end
 
 endmodule
