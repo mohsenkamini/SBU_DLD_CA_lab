@@ -14,7 +14,7 @@ module controller (
     input clk, //clock
     input reset, //reset
     output reg up, down, stop, //motor statesnt
-    output open_door //open door it means open the door 
+    output reg opendoor //open door it means open the door 
 );
 
 //states
@@ -87,7 +87,7 @@ begin
                     next_state <= state1;
             end
             state2: begin
-                if (s3 && (D3 || F3 || (U3 && !(U2 || D2 || U1 || F2 || F1))))
+                if (S3 && (D3 || F3 || (U3 && !(U2 || D2 || U1 || F2 || F1))))
                     next_state <= state0;
                 else if (S2 && (D2 || F2 || (U2 && !(U1 || F1))))
                     next_state <= state0;
@@ -107,19 +107,19 @@ begin
             up <= 0;
             down <= 0;
             stop <= 1;
-            open_door <= 1;
+            opendoor <= 1;
         end
         state1: begin
             up <= 1;
             down <= 0;
             stop <= 0;
-            open_door <= 0;
+            opendoor <= 0;
         end
         state2: begin
             up <= 0;
             down <= 1;
             stop <= 0;
-            open_door <= 0;
+            opendoor <= 0;
         end
     endcase
 end

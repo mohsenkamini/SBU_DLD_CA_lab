@@ -1,0 +1,2 @@
+verilog work "controller.v"
+verilog work "core.v"
