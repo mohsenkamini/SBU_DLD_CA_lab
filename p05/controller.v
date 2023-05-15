@@ -70,55 +70,45 @@ begin
                 else if (S4 && (F1 || F2 || F3 || F4))
                     next_state <= state1;
                 else if (S1 && (D2 || D3 || D4))
+                    next_state <= state1;
+                else if (S2 && (D3 || D4))
+                    next_state <= state1;
+                else if (S3 && (D4))
+                    next_state <= state1;
+                else if (S4 && (D3 || D2 || F1 || F2 || F3))
                     next_state <= state2;
-                else if (S2 && (D2 || D3 || D4))
+                else if (S3 && (D2 || F1 || F2))
                     next_state <= state2;
-                else if (S3 && (D3 || D4))
+                else if (S2 && F1)
                     next_state <= state2;
-                else if (S4 && (D4))
+                else if (S4 && (U1 || U2 || U3))
+                    next_state <= state2;
+                else if (S3 && (U1 || U2))
+                    next_state <= state2;
+                else if (S2 && U1)
                     next_state <= state2;
                 else
                     next_state <= state0;
             end
             state1: begin
-                if (S1 && (U2 || U3 ||  F1 || F2 || F3 || F4))
-                    next_state <= state1;
-                else if (S2 && (U3 ||  F1 || F2 || F3 || F4))
-                    next_state <= state1;
-                else if (S3 && ( F1 || F2 || F3 || F4))
-                    next_state <= state1;
-                else if (S4 && (F1 || F2 || F3 || F4))
-                    next_state <= state1;
-                else if (S1 && (D2 || D3 || D4))
-                    next_state <= state2;
-                else if (S2 && (D2 || D3 || D4))
-                    next_state <= state2;
-                else if (S3 && (D3 || D4))
-                    next_state <= state2;
-                else if (S4 && (D4))
-                    next_state <= state2;
-                else
+                if (S2 && (U2 || F2 || (D2 && !(U3 || D3 || D4 || F3 || F4))))
                     next_state <= state0;
+                else if (S3 && (U3 || F3 || (D3 && !(D4 || F4))))
+                    next_state <= state0;
+                else if (S4)
+                    next_state <= state0;
+                else
+                    next_state <= state1;
             end
             state2: begin
-                if (S1 && (U1 || U2 || U3 ||  F1 || F2 || F3 || F4))
-                    next_state <= state1;
-                else if (S2 && (U2 || U3 ||  F1 || F2 || F3 || F4))
-                    next_state <= state1;
-                else if (S3 && (U3 ||  F1 || F2 || F3 || F4))
-                    next_state <= state1;
-                else if (S4 && (F1 || F2 || F3 || F4))
-                    next_state <= state1;
-                else if (S1 && (D2 || D3 || D4))
-                    next_state <= state2;
-                else if (S2 && (D2 || D3 || D4))
-                    next_state <= state2;
-                else if (S3 && (D2 || D3 || D4))
-                    next_state <= state2;
-                else if (S4 && (D2 || D3 || D4))
-                    next_state <= state2;
-                else
+                if (s3 && (D3 || F3 || (U3 && !(U2 || D2 || U1 || F2 || F1))))
                     next_state <= state0;
+                else if (S2 && (D2 || F2 || (U2 && !(U1 || F1))))
+                    next_state <= state0;
+                else if (S1)
+                    next_state <= state0;
+                else
+                    next_state <= state2;
             end
         endcase
 end
