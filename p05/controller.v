@@ -52,11 +52,9 @@ begin
             state0: begin
                 if (S1 && (U2 || U3 || F2 || F3 || F4))
                     next_state <= state1;
-                else if (S2 && (U3 ||  F1 || F2 || F3 || F4))
+                else if (S2 && (U3 || F3 || F4))
                     next_state <= state1;
-                else if (S3 && (F1 || F2 || F3 || F4))
-                    next_state <= state1;
-                else if (S4 && (F1 || F2 || F3 || F4))
+                else if (S3 && F4)
                     next_state <= state1;
                 else if (S1 && (D2 || D3 || D4))
                     next_state <= state1;
