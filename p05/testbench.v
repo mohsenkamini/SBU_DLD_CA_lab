@@ -78,6 +78,8 @@ module testbench;
 		.open_door(open_door)
 	);
 
+	always #(20) clk = ~clk;
+			
 	initial begin
 		// Initialize Inputs
 		S1 = 0;
@@ -97,8 +99,141 @@ module testbench;
 		F3 = 0;
 		F4 = 0;
 		clk = 0;
-		reset = 0;
-
+		reset = 1;
+		
+		#40;
+		
+		reset=0;
+		
+		#20
+		// floor 1 and u2 is pressed.
+		S1 =  1;
+		S2 = 0;
+		S3 = 0;
+		S4 = 0;
+		U1 = 0;
+		D1 = 0;
+		U2 = 1;
+		D2 = 0;
+		U3 = 0;
+		D3 = 0;
+		U4 = 0;
+		D4 = 0;
+		F1 = 0;
+		F2 = 0;
+		F3 = 0;
+		F4 = 0;
+		#60;
+		//before arrival in f2
+		S1 =  0;
+		S2 = 0;
+		S3 = 0;
+		S4 = 0;
+		U1 = 0;
+		D1 = 0;
+		U2 = 1;
+		D2 = 0;
+		U3 = 0;
+		D3 = 0;
+		U4 = 0;
+		D4 = 0;
+		F1 = 0;
+		F2 = 0;
+		F3 = 0;
+		F4 = 0;
+		#60;
+		
+		// arrival at f2
+		S1 =  0;
+		S2 = 1;
+		S3 = 0;
+		S4 = 0;
+		U1 = 0;
+		D1 = 0;
+		U2 = 1;
+		D2 = 0;
+		U3 = 0;
+		D3 = 0;
+		U4 = 0;
+		D4 = 0;
+		F1 = 0;
+		F2 = 0;
+		F3 = 0;
+		F4 = 0;
+		#60;
+		
+		// stopped at f2, D4 is pressed
+		S1 =  0;
+		S2 = 1;
+		S3 = 0;
+		S4 = 0;
+		U1 = 0;
+		D1 = 0;
+		U2 = 0;
+		D2 = 0;
+		U3 = 0;
+		D3 = 0;
+		U4 = 0;
+		D4 = 1;
+		F1 = 0;
+		F2 = 0;
+		F3 = 0;
+		F4 = 0;
+		#60;
+		// start going up to f4
+		S1 =  0;
+		S2 = 0;
+		S3 = 0;
+		S4 = 0;
+		U1 = 0;
+		D1 = 0;
+		U2 = 0;
+		D2 = 0;
+		U3 = 0;
+		D3 = 0;
+		U4 = 0;
+		D4 = 1;
+		F1 = 0;
+		F2 = 0;
+		F3 = 0;
+		F4 = 0;
+		#60;
+		// arrive at f3
+		/*S1 =  0;
+		S2 = 0;
+		S3 = 1;
+		S4 = 0;
+		U1 = 0;
+		D1 = 0;
+		U2 = 0;
+		D2 = 0;
+		U3 = 0;
+		D3 = 0;
+		U4 = 0;
+		D4 = 1;
+		F1 = 0;
+		F2 = 0;
+		F3 = 0;
+		F4 = 0;
+		#60;
+		// arrive at f4
+		S1 =  0;
+		S2 = 0;
+		S3 = 0;
+		S4 = 1;
+		U1 = 0;
+		D1 = 0;
+		U2 = 0;
+		D2 = 0;
+		U3 = 0;
+		D3 = 0;
+		U4 = 0;
+		D4 = 1;
+		F1 = 0;
+		F2 = 0;
+		F3 = 0;
+		F4 = 0;
+		#60;*/
 		// Wait 100 ns for global reset to finish
 		#100;
         

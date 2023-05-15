@@ -14,7 +14,7 @@ module controller (
     input clk, //clock
     input reset, //reset
     output reg up, down, stop, //motor statesnt
-    output reg opendoor //open door it means open the door 
+    output open_door //open door it means open the door 
 );
 
 //states
@@ -29,6 +29,7 @@ reg [1:0] next_state;
 reg [3:0] counter;
 reg last_direction; // if it is 1 it means up, if it is 0 it means down
 reg [1:0] state;
+reg opendoor;
 
 //next state logic
 always @ (posedge clk or posedge reset)
@@ -123,5 +124,6 @@ begin
         end
     endcase
 end
+assign open_door = opendoor;
 
 endmodule

@@ -8,7 +8,7 @@ module core (
     input reset, //reset
     output up, down, stop, //motor states
     output reg [1:0] monitor, //monitor
-    output reg open_door //open door it means open the door 
+    output open_door //open door it means open the door 
 );
 
 //Lacthing the buttons
@@ -23,9 +23,8 @@ controller ctrl(
     .U4(U4_latch), .D4(D4_latch), .F1(F1_latch),
     .F2(F2_latch), .F3(F3_latch), .F4(F4_latch),
     .clk(clk), .reset(reset), .up(up), .down(down),
-    .stop(stop), .opendoor(opendoor)
+    .stop(stop), .open_door(open_door)
 );
-
 
 always @ (S1 or S2 or S3 or S4 or U1 or D1 or U2 or D2 or U3 or D3 or U4 or D4 or F1 or F2 or F3 or F4)
 begin 

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2023-05-15T04:37:03</DateModified>
+  <DateModified>2023-05-15T05:31:49</DateModified>
   <ModuleName>core</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>//VBOXSVR/University/Digital-Logic-Design/Lab/p05/iseconfig/core.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>//VBOXSVR/University/Digital-Logic-Design/Lab/p05</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/mohsen/Desktop/verilog/p05/iseconfig/core.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/mohsen/Desktop/verilog/p05\</ImplementationReportsDirectory>
   <DateInitialized>2023-05-15T04:37:03</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
