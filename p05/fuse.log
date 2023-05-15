@@ -1,12 +1,12 @@
-Running: E:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/mohsen/Desktop/verilog/p05/testbench_isim_beh.exe -prj C:/Users/mohsen/Desktop/verilog/p05/testbench_beh.prj work.testbench work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o Z:/Lab/ALU/DLD_CA_lab/p05/testbench_isim_beh.exe -prj Z:/Lab/ALU/DLD_CA_lab/p05/testbench_beh.prj testbench work.glbl 
 ISim P.20131013 (signature 0x7708f090)
-Number of CPUs detected in this system: 1
-Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/mohsen/Desktop/verilog/p05/controller.v" into library work
-Analyzing Verilog file "C:/Users/mohsen/Desktop/verilog/p05/core.v" into library work
-Analyzing Verilog file "C:/Users/mohsen/Desktop/verilog/p05/testbench.v" into library work
-Analyzing Verilog file "E:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Analyzing Verilog file "Z:/Lab/ALU/DLD_CA_lab/p05/controller.v" into library work
+Analyzing Verilog file "Z:/Lab/ALU/DLD_CA_lab/p05/core.v" into library work
+Analyzing Verilog file "Z:/Lab/ALU/DLD_CA_lab/p05/testbench.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling module controller
@@ -14,7 +14,8 @@ Compiling module core
 Compiling module testbench
 Compiling module glbl
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 4 Verilog Units
-Built simulation executable C:/Users/mohsen/Desktop/verilog/p05/testbench_isim_beh.exe
-Fuse Memory Usage: 27868 KB
-Fuse CPU Usage: 405 ms
+Built simulation executable Z:/Lab/ALU/DLD_CA_lab/p05/testbench_isim_beh.exe
+Fuse Memory Usage: 30196 KB
+Fuse CPU Usage: 826 ms

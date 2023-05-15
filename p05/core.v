@@ -59,31 +59,35 @@ begin
 //begin 
     if (S1) begin 
         monitor <= 2'b00;
-        if (open_door)
+        if (open_door) begin 
         U1_latch <= 1'b0;
         D1_latch <= 1'b0;
         F1_latch <= 1'b0;
+        end 
     end 
     else if (S2) begin 
         monitor <= 2'b01;
-        if (open_door)
+        if (open_door) begin 
         U2_latch <= 1'b0;
         D2_latch <= 1'b0;
         F2_latch <= 1'b0;
+        end 
     end 
     else if (S3) begin 
         monitor <= 2'b10;
-        if (open_door)
+        if (open_door) begin 
         U3_latch <= 1'b0;
         D3_latch <= 1'b0;
         F3_latch <= 1'b0;
+        end 
     end 
     else if (S4) begin 
         monitor <= 2'b11;
-        if (open_door)
+        if (open_door) begin 
         U4_latch <= 1'b0;
         D4_latch <= 1'b0;
         F4_latch <= 1'b0;
+        end 
     end
 end 
 

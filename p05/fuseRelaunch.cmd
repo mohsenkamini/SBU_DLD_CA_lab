@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/mohsen/Desktop/verilog/p05/testbench_isim_beh.exe" -prj "C:/Users/mohsen/Desktop/verilog/p05/testbench_beh.prj" "work.testbench" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "Z:/Lab/ALU/DLD_CA_lab/p05/testbench_isim_beh.exe" -prj "Z:/Lab/ALU/DLD_CA_lab/p05/testbench_beh.prj" "testbench" "work.glbl" 
