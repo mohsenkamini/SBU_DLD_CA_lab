@@ -124,8 +124,11 @@ module RAM_tb;
 
 		wea = 0;
 		#40;
+<<<<<<< Updated upstream
 		
 		
+=======
+>>>>>>> Stashed changes
 	
       
 		// Add stimulus here

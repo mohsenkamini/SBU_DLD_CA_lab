@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream
 verilog work "ipcore_dir/RAM.v"
 verilog work "RAM_gen_tb.v"
 verilog work "E:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v"
+=======
+verilog work "ipcore_dir/RAM.v"
+verilog work "RAM_gen_tb.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
+>>>>>>> Stashed changes

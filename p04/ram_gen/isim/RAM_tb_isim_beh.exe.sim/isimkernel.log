@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Command line:
    RAM_tb_isim_beh.exe
      -simmode  gui
@@ -26,3 +27,15 @@ Mon May 01 08:33:47 2023
 
 Mon May 01 08:34:08 2023
 
+=======
+Command line:
+   RAM_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49179
+
+Mon May 01 19:30:45 2023
+
+
+ Elaboration Time: 0.0468 sec
+>>>>>>> Stashed changes

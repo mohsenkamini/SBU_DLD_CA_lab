@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
 
@@ -241,3 +242,236 @@
   </transforms>
 
 </generated_project>
+=======
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ram_gen.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAM_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RAM_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="RAM_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAM_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="ram_dar_had_no.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ram_dar_had_no.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ram_dar_had_no.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="ram_dar_had_no.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ram_dar_had_no.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="ram_dar_had_no.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="ram_dar_had_no.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="ram_dar_had_no.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="ram_dar_had_no.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="ram_dar_had_no.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ram_dar_had_no.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="ram_dar_had_no.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="ram_dar_had_no.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ram_dar_had_no.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="ram_dar_had_no.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="ram_dar_had_no.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="ram_dar_had_no.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="ram_dar_had_no.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ram_dar_had_no.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ram_dar_had_no_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="ram_dar_had_no_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ram_dar_had_no_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ram_dar_had_no_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="ram_dar_had_no_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="ram_dar_had_no_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ram_dar_had_no_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ram_dar_had_no_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="ram_dar_had_no_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="ram_dar_had_no_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ram_dar_had_no_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ram_dar_had_no_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ram_dar_had_no_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="ram_dar_had_no_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ram_dar_had_no_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1682952050" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1682952050">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1682953239" xil_pn:in_ck="-8792999980721357900" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1682953238">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RAM_gen_tb.v"/>
+      <outfile xil_pn:name="ram_dar_had_no.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1682952056" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6665862354235149492" xil_pn:start_ts="1682952056">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1682952056" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1187914524687939214" xil_pn:start_ts="1682952056">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1682952057" xil_pn:in_ck="-7186897610153307257" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="5320454259262346608" xil_pn:start_ts="1682952056">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/RAM.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/RAM.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1682953241" xil_pn:in_ck="-8792999980721357900" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1682953241">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RAM_gen_tb.v"/>
+      <outfile xil_pn:name="ram_dar_had_no.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1682953244" xil_pn:in_ck="-972656579757534521" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4048873663559011975" xil_pn:start_ts="1682953241">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="RAM_tb_beh.prj"/>
+      <outfile xil_pn:name="RAM_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1682953244" xil_pn:in_ck="-7101686168955300060" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4678989694478024484" xil_pn:start_ts="1682953244">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="RAM_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+    <transform xil_pn:end_ts="1682951735" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1682951735">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1682951735" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="1819103059238054551" xil_pn:start_ts="1682951735">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1682951735" xil_pn:in_ck="-7186897610153307257" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="5320454259262346608" xil_pn:start_ts="1682951735">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/RAM.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/RAM.v"/>
+    </transform>
+    <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1682951735" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="7956348006202354133" xil_pn:start_ts="1682951735">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1682951735" xil_pn:in_ck="2640051823165038294" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="2988080280845075520" xil_pn:start_ts="1682951735">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1682951735" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="2805014346373403130" xil_pn:start_ts="1682951735">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1682952345" xil_pn:in_ck="5077689880917595893" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-958045980611847837" xil_pn:start_ts="1682952339">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="ram_dar_had_no.lso"/>
+      <outfile xil_pn:name="ram_dar_had_no.ngc"/>
+      <outfile xil_pn:name="ram_dar_had_no.ngr"/>
+      <outfile xil_pn:name="ram_dar_had_no.prj"/>
+      <outfile xil_pn:name="ram_dar_had_no.stx"/>
+      <outfile xil_pn:name="ram_dar_had_no.syr"/>
+      <outfile xil_pn:name="ram_dar_had_no.xst"/>
+      <outfile xil_pn:name="ram_dar_had_no_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1682951741" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4830713304132475136" xil_pn:start_ts="1682951741">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1682952349" xil_pn:in_ck="4013655680654472377" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1722325000957343245" xil_pn:start_ts="1682952345">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="ram_dar_had_no.bld"/>
+      <outfile xil_pn:name="ram_dar_had_no.ngd"/>
+      <outfile xil_pn:name="ram_dar_had_no_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1682952352" xil_pn:in_ck="-7377681736450355195" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-873285459045022562" xil_pn:start_ts="1682952349">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="ram_dar_had_no.pcf"/>
+      <outfile xil_pn:name="ram_dar_had_no_map.map"/>
+      <outfile xil_pn:name="ram_dar_had_no_map.mrp"/>
+      <outfile xil_pn:name="ram_dar_had_no_map.ncd"/>
+      <outfile xil_pn:name="ram_dar_had_no_map.ngm"/>
+      <outfile xil_pn:name="ram_dar_had_no_map.xrpt"/>
+      <outfile xil_pn:name="ram_dar_had_no_summary.xml"/>
+      <outfile xil_pn:name="ram_dar_had_no_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1682952359" xil_pn:in_ck="-1648178193429653090" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1682952352">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="ram_dar_had_no.ncd"/>
+      <outfile xil_pn:name="ram_dar_had_no.pad"/>
+      <outfile xil_pn:name="ram_dar_had_no.par"/>
+      <outfile xil_pn:name="ram_dar_had_no.ptwx"/>
+      <outfile xil_pn:name="ram_dar_had_no.unroutes"/>
+      <outfile xil_pn:name="ram_dar_had_no.xpi"/>
+      <outfile xil_pn:name="ram_dar_had_no_pad.csv"/>
+      <outfile xil_pn:name="ram_dar_had_no_pad.txt"/>
+      <outfile xil_pn:name="ram_dar_had_no_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1682952359" xil_pn:in_ck="-7377681736450355327" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1682952357">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="ram_dar_had_no.twr"/>
+      <outfile xil_pn:name="ram_dar_had_no.twx"/>
+    </transform>
+  </transforms>
+
+</generated_project>
+>>>>>>> Stashed changes

@@ -2,8 +2,8 @@
 Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-E:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5 -n 3
--fastpaths -xml RAM.twx RAM.ncd -o RAM.twr RAM.pcf
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml RAM.twx RAM.ncd -o RAM.twr RAM.pcf
 
 Design file:              RAM.ncd
 Physical constraint file: RAM.pcf
@@ -118,14 +118,14 @@ WE             |Dout<9>        |    7.276|
 ---------------+---------------+---------+
 
 
-Analysis completed Mon May 01 08:09:47 2023 
+Analysis completed Mon May 01 19:39:49 2023 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 172 MB
+Peak Memory Usage: 156 MB
 
 
 

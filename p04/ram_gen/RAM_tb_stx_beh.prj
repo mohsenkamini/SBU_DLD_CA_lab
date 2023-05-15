@@ -1,2 +1,7 @@
+<<<<<<< Updated upstream
 verilog isim_temp "RAM_gen_tb.v"
 verilog isim_temp "E:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v"
+=======
+verilog isim_temp "RAM_gen_tb.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
+>>>>>>> Stashed changes
