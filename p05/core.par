@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-MOHSEN-PC::  Mon May 15 06:17:17 2023
+MOHSEN-PC::  Mon May 15 06:29:27 2023
 
 par -w -intstyle ise -ol high -t 1 core_map.ncd core.ncd core.pcf 
 
@@ -110,13 +110,13 @@ Phase  2  : 343 unrouted;      REAL time: 3 secs
 
 Phase  3  : 81 unrouted;      REAL time: 3 secs 
 
-Phase  4  : 85 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase  4  : 85 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
 Updating file: core.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
 Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
@@ -131,7 +131,7 @@ Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 4
 Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
 Total REAL time to Router completion: 4 secs 
-Total CPU time to Router completion: 4 secs 
+Total CPU time to Router completion: 3 secs 
 
 Partition Implementation Status
 -------------------------------

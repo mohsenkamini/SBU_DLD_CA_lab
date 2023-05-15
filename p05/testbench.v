@@ -199,7 +199,7 @@ module testbench;
 		F4 = 0;
 		#60;
 		// arrive at f3
-		/*S1 =  0;
+		S1 =  0;
 		S2 = 0;
 		S3 = 1;
 		S4 = 0;
@@ -233,7 +233,8 @@ module testbench;
 		F2 = 0;
 		F3 = 0;
 		F4 = 0;
-		#60;*/
+		#60;
+		
 		// Wait 100 ns for global reset to finish
 		#100;
         
