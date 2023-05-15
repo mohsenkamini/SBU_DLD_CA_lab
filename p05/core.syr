@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: core.prj
 
@@ -135,6 +135,8 @@ Analyzing module <controller> in library <work>.
 	state0 = 2'b00
 	state1 = 2'b01
 	state2 = 2'b10
+WARNING:Xst:905 - "controller.v" line 47: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <state>
 Module <controller> is correct for synthesis.
  
 
@@ -150,24 +152,23 @@ WARNING:Xst:647 - Input <D1> is never used. This port will be preserved and left
 WARNING:Xst:647 - Input <U4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1780 - Signal <last_direction> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <counter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 106 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 51 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
    	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
    	- use the attribute 'signal_encoding user' to avoid onehot optimization
    	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
     Using one-hot encoding for signal <state>.
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 106 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 108 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
    	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
    	- use the attribute 'signal_encoding user' to avoid onehot optimization
    	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 106 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 108 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
    	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
    	- use the attribute 'signal_encoding user' to avoid onehot optimization
    	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 49 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 108 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
    	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
    	- use the attribute 'signal_encoding user' to avoid onehot optimization
    	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-    Found 3-bit register for signal <next_state>.
     Found 3-bit register for signal <state>.
 Unit <controller> synthesized.
 
@@ -204,8 +205,8 @@ Unit <core> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 2
- 3-bit register                                        : 2
+# Registers                                            : 1
+ 3-bit register                                        : 1
 # Latches                                              : 13
  1-bit latch                                           : 12
  2-bit latch                                           : 1
@@ -221,8 +222,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 6
- Flip-Flops                                            : 6
+# Registers                                            : 3
+ Flip-Flops                                            : 3
 # Latches                                              : 13
  1-bit latch                                           : 12
  2-bit latch                                           : 1
@@ -241,7 +242,7 @@ WARNING:Xst:2677 - Node <D1_latch> of sequential type is unconnected in block <c
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block core, actual ratio is 6.
+Found area constraint ratio of 100 (+ 5) on block core, actual ratio is 5.
 
 Final Macro Processing ...
 
@@ -249,8 +250,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 6
- Flip-Flops                                            : 6
+# Registers                                            : 3
+ Flip-Flops                                            : 3
 
 =========================================================================
 
@@ -279,19 +280,18 @@ Design Statistics
 # IOs                              : 24
 
 Cell Usage :
-# BELS                             : 100
-#      GND                         : 1
+# BELS                             : 95
 #      INV                         : 2
-#      LUT2                        : 13
-#      LUT3                        : 16
+#      LUT2                        : 14
+#      LUT3                        : 14
 #      LUT3_L                      : 1
 #      LUT4                        : 58
 #      LUT4_L                      : 2
-#      MUXF5                       : 6
+#      MUXF5                       : 3
 #      VCC                         : 1
-# FlipFlops/Latches                : 18
-#      FDC                         : 4
-#      FDP                         : 2
+# FlipFlops/Latches                : 15
+#      FDC                         : 2
+#      FDP                         : 1
 #      LD                          : 9
 #      LDCE_1                      : 1
 #      LDCP                        : 2
@@ -308,9 +308,9 @@ Device utilization summary:
 
 Selected Device : 3s100evq100-5 
 
- Number of Slices:                       51  out of    960     5%  
- Number of Slice Flip Flops:             16  out of   1920     0%  
- Number of 4 input LUTs:                 92  out of   1920     4%  
+ Number of Slices:                       50  out of    960     5%  
+ Number of Slice Flip Flops:             13  out of   1920     0%  
+ Number of 4 input LUTs:                 91  out of   1920     4%  
  Number of IOs:                          24
  Number of bonded IOBs:                  24  out of     66    36%  
     IOB Flip Flops:                       2
@@ -348,7 +348,7 @@ U2_latch_not0001(U2_latch_not00011:O)| NONE(*)(U2_latch)      | 1     |
 U1_latch_not0001(U1_latch_not00011:O)| NONE(*)(U1_latch)      | 1     |
 D1                                   | IBUF+BUFG              | 1     |
 S4                                   | IBUF+BUFG              | 2     |
-clk                                  | BUFGP                  | 6     |
+clk                                  | BUFGP                  | 3     |
 -------------------------------------+------------------------+-------+
 (*) These 9 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -360,7 +360,7 @@ Asynchronous Control Signals Information:
 ----------------------------------------+------------------------+-------+
 Control Signal                          | Buffer(FF name)        | Load  |
 ----------------------------------------+------------------------+-------+
-reset                                   | IBUF                   | 6     |
+reset                                   | IBUF                   | 3     |
 S1                                      | IBUF                   | 1     |
 S2                                      | IBUF                   | 1     |
 S3                                      | IBUF                   | 1     |
@@ -372,8 +372,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 2.847ns (Maximum Frequency: 351.204MHz)
-   Minimum input arrival time before clock: 8.282ns
+   Minimum period: 2.932ns (Maximum Frequency: 341.058MHz)
+   Minimum input arrival time before clock: 7.244ns
    Maximum output required time after clock: 4.476ns
    Maximum combinational path delay: No path found
 
@@ -383,10 +383,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'D1'
-  Clock period: 2.040ns (frequency: 490.280MHz)
+  Clock period: 2.009ns (frequency: 497.748MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               2.040ns (Levels of Logic = 1)
+Delay:               2.009ns (Levels of Logic = 1)
   Source:            F1_latch (LATCH)
   Destination:       F1_latch (LATCH)
   Source Clock:      D1 rising
@@ -396,35 +396,35 @@ Delay:               2.040ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDCE_1:G->Q           6   0.588   0.572  F1_latch (F1_latch)
+     LDCE_1:G->Q           5   0.588   0.541  F1_latch (F1_latch)
      LUT4:I3->O            1   0.612   0.000  F1_latch_mux0000 (F1_latch_mux0000)
      LDCE_1:D                  0.268          F1_latch
     ----------------------------------------
-    Total                      2.040ns (1.468ns logic, 0.572ns route)
-                                       (72.0% logic, 28.0% route)
+    Total                      2.009ns (1.468ns logic, 0.541ns route)
+                                       (73.1% logic, 26.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 2.847ns (frequency: 351.204MHz)
-  Total number of paths / destination ports: 10 / 6
+  Clock period: 2.932ns (frequency: 341.058MHz)
+  Total number of paths / destination ports: 7 / 3
 -------------------------------------------------------------------------
-Delay:               2.847ns (Levels of Logic = 2)
-  Source:            ctrl/state_1 (FF)
-  Destination:       ctrl/next_state_0 (FF)
+Delay:               2.932ns (Levels of Logic = 2)
+  Source:            ctrl/state_0 (FF)
+  Destination:       ctrl/state_1 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: ctrl/state_1 to ctrl/next_state_0
+  Data Path: ctrl/state_0 to ctrl/state_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.514   0.481  ctrl/state_1 (ctrl/state_1)
-     LUT3:I2->O            1   0.612   0.360  ctrl/next_state_mux0000<2>181_SW0 (N61)
-     LUT4:I3->O            1   0.612   0.000  ctrl/next_state_mux0000<2>408 (ctrl/next_state_mux0000<2>)
-     FDP:D                     0.268          ctrl/next_state_0
+     FDP:C->Q             11   0.514   0.823  ctrl/state_0 (ctrl/state_0)
+     LUT3_L:I2->LO         1   0.612   0.103  ctrl/next_state<1>48 (ctrl/next_state<1>48)
+     LUT4:I3->O            1   0.612   0.000  ctrl/next_state<1>188 (ctrl/next_state<1>)
+     FDC:D                     0.268          ctrl/state_1
     ----------------------------------------
-    Total                      2.847ns (2.006ns logic, 0.841ns route)
-                                       (70.5% logic, 29.5% route)
+    Total                      2.932ns (2.006ns logic, 0.926ns route)
+                                       (68.4% logic, 31.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'F4_latch_not0001'
@@ -522,7 +522,7 @@ Offset:              4.874ns (Levels of Logic = 4)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'D3_latch_not0001'
   Total number of paths / destination ports: 9 / 1
 -------------------------------------------------------------------------
-Offset:              4.429ns (Levels of Logic = 3)
+Offset:              4.407ns (Levels of Logic = 3)
   Source:            S1 (PAD)
   Destination:       D3_latch (LATCH)
   Destination Clock: D3_latch_not0001 falling
@@ -531,19 +531,19 @@ Offset:              4.429ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            21   1.106   1.111  S1_IBUF (S1_IBUF)
+     IBUF:I->O            20   1.106   1.089  S1_IBUF (S1_IBUF)
      LUT3:I0->O            6   0.612   0.721  U3_latch_not0001_SW0 (N02)
      LUT4:I0->O            1   0.612   0.000  D3_latch_mux00001 (D3_latch_mux0000)
      LD:D                      0.268          D3_latch
     ----------------------------------------
-    Total                      4.429ns (2.598ns logic, 1.831ns route)
-                                       (58.7% logic, 41.3% route)
+    Total                      4.407ns (2.598ns logic, 1.809ns route)
+                                       (58.9% logic, 41.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'U3_latch_not0001'
   Total number of paths / destination ports: 8 / 1
 -------------------------------------------------------------------------
-Offset:              4.280ns (Levels of Logic = 3)
+Offset:              4.258ns (Levels of Logic = 3)
   Source:            S1 (PAD)
   Destination:       U3_latch (LATCH)
   Destination Clock: U3_latch_not0001 falling
@@ -552,19 +552,19 @@ Offset:              4.280ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            21   1.106   1.111  S1_IBUF (S1_IBUF)
+     IBUF:I->O            20   1.106   1.089  S1_IBUF (S1_IBUF)
      LUT3:I0->O            6   0.612   0.572  U3_latch_not0001_SW0 (N02)
      LUT4:I3->O            1   0.612   0.000  U3_latch_mux00001 (U3_latch_mux0000)
      LD:D                      0.268          U3_latch
     ----------------------------------------
-    Total                      4.280ns (2.598ns logic, 1.682ns route)
-                                       (60.7% logic, 39.3% route)
+    Total                      4.258ns (2.598ns logic, 1.660ns route)
+                                       (61.0% logic, 39.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'D2_latch_not0001'
   Total number of paths / destination ports: 6 / 1
 -------------------------------------------------------------------------
-Offset:              4.277ns (Levels of Logic = 3)
+Offset:              4.255ns (Levels of Logic = 3)
   Source:            S1 (PAD)
   Destination:       D2_latch (LATCH)
   Destination Clock: D2_latch_not0001 falling
@@ -573,19 +573,19 @@ Offset:              4.277ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            21   1.106   1.111  S1_IBUF (S1_IBUF)
+     IBUF:I->O            20   1.106   1.089  S1_IBUF (S1_IBUF)
      LUT2:I0->O            4   0.612   0.568  F2_latch_mux000011 (N4)
      LUT4:I1->O            1   0.612   0.000  D2_latch_mux00001 (D2_latch_mux0000)
      LD:D                      0.268          D2_latch
     ----------------------------------------
-    Total                      4.277ns (2.598ns logic, 1.679ns route)
-                                       (60.7% logic, 39.3% route)
+    Total                      4.255ns (2.598ns logic, 1.657ns route)
+                                       (61.1% logic, 38.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'U2_latch_not0001'
   Total number of paths / destination ports: 5 / 1
 -------------------------------------------------------------------------
-Offset:              4.211ns (Levels of Logic = 3)
+Offset:              4.189ns (Levels of Logic = 3)
   Source:            S1 (PAD)
   Destination:       U2_latch (LATCH)
   Destination Clock: U2_latch_not0001 falling
@@ -594,19 +594,19 @@ Offset:              4.211ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            21   1.106   1.111  S1_IBUF (S1_IBUF)
+     IBUF:I->O            20   1.106   1.089  S1_IBUF (S1_IBUF)
      LUT2:I0->O            4   0.612   0.502  F2_latch_mux000011 (N4)
      LUT4:I3->O            1   0.612   0.000  U2_latch_mux0000 (U2_latch_mux0000)
      LD:D                      0.268          U2_latch
     ----------------------------------------
-    Total                      4.211ns (2.598ns logic, 1.613ns route)
-                                       (61.7% logic, 38.3% route)
+    Total                      4.189ns (2.598ns logic, 1.591ns route)
+                                       (62.0% logic, 38.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'U1_latch_not0001'
   Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              2.975ns (Levels of Logic = 2)
+Offset:              2.953ns (Levels of Logic = 2)
   Source:            S1 (PAD)
   Destination:       U1_latch (LATCH)
   Destination Clock: U1_latch_not0001 falling
@@ -615,12 +615,12 @@ Offset:              2.975ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            21   1.106   0.989  S1_IBUF (S1_IBUF)
+     IBUF:I->O            20   1.106   0.967  S1_IBUF (S1_IBUF)
      LUT3:I2->O            1   0.612   0.000  U1_latch_mux00001 (U1_latch_mux0000)
      LD:D                      0.268          U1_latch
     ----------------------------------------
-    Total                      2.975ns (1.986ns logic, 0.989ns route)
-                                       (66.8% logic, 33.2% route)
+    Total                      2.953ns (1.986ns logic, 0.967ns route)
+                                       (67.3% logic, 32.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'D1'
@@ -647,7 +647,7 @@ Offset:              3.781ns (Levels of Logic = 3)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'S4'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              3.332ns (Levels of Logic = 2)
+Offset:              3.280ns (Levels of Logic = 2)
   Source:            S3 (PAD)
   Destination:       monitor_0 (LATCH)
   Destination Clock: S4 falling
@@ -656,37 +656,36 @@ Offset:              3.332ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            22   1.106   0.989  S3_IBUF (S3_IBUF)
+     IBUF:I->O            20   1.106   0.937  S3_IBUF (S3_IBUF)
      INV:I->O              1   0.612   0.357  monitor_mux0000<1>1_INV_0 (monitor_mux0000<1>)
      LDCP:D                    0.268          monitor_0
     ----------------------------------------
-    Total                      3.332ns (1.986ns logic, 1.346ns route)
-                                       (59.6% logic, 40.4% route)
+    Total                      3.280ns (1.986ns logic, 1.294ns route)
+                                       (60.6% logic, 39.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 55 / 3
+  Total number of paths / destination ports: 52 / 3
 -------------------------------------------------------------------------
-Offset:              8.282ns (Levels of Logic = 7)
+Offset:              7.244ns (Levels of Logic = 6)
   Source:            S1 (PAD)
-  Destination:       ctrl/next_state_0 (FF)
+  Destination:       ctrl/state_2 (FF)
   Destination Clock: clk rising
 
-  Data Path: S1 to ctrl/next_state_0
+  Data Path: S1 to ctrl/state_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            21   1.106   0.962  S1_IBUF (S1_IBUF)
-     LUT4:I3->O            1   0.612   0.387  ctrl/next_state_mux0000<2>202 (ctrl/next_state_mux0000<2>202)
-     LUT3:I2->O            1   0.612   0.360  ctrl/next_state_mux0000<2>236_SW0 (N181)
-     LUT4:I3->O            1   0.612   0.509  ctrl/next_state_mux0000<2>236 (ctrl/next_state_mux0000<2>236)
-     LUT4:I0->O            1   0.612   0.509  ctrl/next_state_mux0000<2>289 (ctrl/next_state_mux0000<2>289)
-     LUT4:I0->O            1   0.612   0.509  ctrl/next_state_mux0000<2>387 (ctrl/next_state_mux0000<2>387)
-     LUT4:I0->O            1   0.612   0.000  ctrl/next_state_mux0000<2>408 (ctrl/next_state_mux0000<2>)
-     FDP:D                     0.268          ctrl/next_state_0
+     IBUF:I->O            20   1.106   1.006  S1_IBUF (S1_IBUF)
+     LUT4:I1->O            1   0.612   0.509  ctrl/next_state<2>177 (ctrl/next_state<2>177)
+     LUT4:I0->O            1   0.612   0.360  ctrl/next_state<2>210_SW0 (N28)
+     LUT4:I3->O            1   0.612   0.426  ctrl/next_state<2>210 (ctrl/next_state<2>210)
+     LUT4:I1->O            1   0.612   0.509  ctrl/next_state<2>241_SW0 (N14)
+     LUT4:I0->O            1   0.612   0.000  ctrl/next_state<2>267 (ctrl/next_state<2>)
+     FDC:D                     0.268          ctrl/state_2
     ----------------------------------------
-    Total                      8.282ns (5.046ns logic, 3.236ns route)
-                                       (60.9% logic, 39.1% route)
+    Total                      7.244ns (4.434ns logic, 2.810ns route)
+                                       (61.2% logic, 38.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -729,14 +728,14 @@ Offset:              4.114ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.38 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.82 secs
  
 --> 
 
-Total memory usage is 259372 kilobytes
+Total memory usage is 259692 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   20 (   0 filtered)
+Number of warnings :   21 (   0 filtered)
 Number of infos    :   15 (   0 filtered)
 

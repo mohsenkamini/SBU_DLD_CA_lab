@@ -41,7 +41,9 @@ begin
 end
 
 //next state logic
-always @ (posedge clk or posedge reset)
+always @ (reset,S1, S2, S3, S4, //sensors
+			U1, D1, U2, D2, U3,
+			D3, U4, D4,F1, F2, F3, F4 )
 begin
     if (reset)
         next_state <= state0;
