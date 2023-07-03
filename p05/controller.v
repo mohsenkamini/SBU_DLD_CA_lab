@@ -5,7 +5,6 @@
 //this elevator has 4 buttons inside, one for each floor (F1, F2, F3, F4)
 //There are 4 sensors, one for each floor (S1, S2, S3, S4) which are used to detect the current floor
 //the elevator's motor has 3 states: up, down, and stop
-// this sistem has an asinc reset 
 
 module controller (
     input S1, S2, S3, S4, //sensors
